@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "MMDrawerController.h"
+#import "MMExampleDrawerVisualStateManager.h"
+#import "UserViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic , strong) MMDrawerController * drawerController;
 
 @end
 
@@ -16,7 +21,55 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UserViewController *leftVC = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
+    
+    //使用Storyboard初始化根界面
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *centVC = [storyBoard instantiateInitialViewController];
+    
+    self.drawerController = [[MMDrawerController alloc]
+                             initWithCenterViewController:centVC
+                             leftDrawerViewController:leftVC
+                             rightDrawerViewController:nil];
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumLeftDrawerWidth:240.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    MMExampleDrawerVisualStateManager *examleType = [MMExampleDrawerVisualStateManager sharedManager];
+    examleType.leftDrawerAnimationType = MMDrawerAnimationTypeSwingingDoor;
+    
+    [self.drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [examleType drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                          green:173.0/255.0
+                                           blue:234.0/255.0
+                                          alpha:1.0];
+    [self.window setTintColor:tintColor];
+    [self.window setRootViewController:self.drawerController];
+    
+    
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    //使用Storyboard初始化根界面
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    self.window.rootViewController = [storyBoard instantiateInitialViewController];
+    
+    
+    
+    
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

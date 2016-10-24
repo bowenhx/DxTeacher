@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  TeachingViewController.h
 //  DxTeacher
 //
 //  Created by Stray on 16/10/24.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface TeachingViewController : BaseViewController
 
 @end
-
