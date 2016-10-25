@@ -51,7 +51,7 @@
     
     float btn_wh = (self.screen_W - SPACE * 4) / 3;
     
-    
+    float line_Y = 0.0;
     for (int i= 0; i<images.count; i++) {
         float addBtnX = SPACE + (SPACE + btn_wh) * (i%3);
         float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
@@ -63,22 +63,27 @@
         iView.itemBtn.tag = i;
         [iView.itemBtn addTarget:self action:@selector(didSelectIndex:) forControlEvents:UIControlEventTouchUpInside];
         
-       
-        if (i == images.count -1) {
-            break;
+        //判断是否变化，当Y值变化时，再画
+        if (line_Y != iView.max_Y) {
+            //画横线
+            UILabel *lineX = [[UILabel alloc] initWithFrame:CGRectMake(0, iView.max_Y, self.screen_W, 1)];
+            lineX.backgroundColor = [UIColor redColor];
+            [self.scrollView addSubview:lineX];
         }
-        NSLog(@"i == %ld",(long)i);
-            //画线
-        UILabel *lineX = [[UILabel alloc] initWithFrame:CGRectMake(0, iView.max_Y, self.screen_W, 1)];
-        lineX.backgroundColor = [UIColor redColor];
-        [self.scrollView addSubview:lineX];
+       
+        line_Y = iView.max_Y;
+        
+        //只需要画两条就行
+        if (i < 2) {
+            //画竖线
+            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, 84, 1, self.screen_H)];
+            lineY.backgroundColor = [UIColor redColor];
+            [self.scrollView addSubview:lineY];
+        }
         
         
-        UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, 84, 1, self.screen_H)];
-        lineY.backgroundColor = [UIColor redColor];
-        [self.scrollView addSubview:lineY];
         
-      
+        
     }
 
     _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 100);

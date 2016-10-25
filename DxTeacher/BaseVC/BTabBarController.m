@@ -34,21 +34,21 @@
 
 //设置tabbar上的按钮图片
 -(void)setTabBarImage{
-   NSArray *imgs = @[@"dte_btn_dt_unpressed",
-                     @"dte_btn_gz_unpressed",
-                     @"dte_btn_txl_unpressed",
-                     @"dte_btn_gd_unpressed"];
+    NSArray *imgs = @[@"dte_btn_sy_unpressed",
+                      @"dte_btn_bjq_unpressed",
+                      @"dte_btn_fx_unpressed",
+                      @"dte_btn_jx_unpressed"];
     
-    NSArray *selectImgs = @[@"dte_btn_dt_pressed",
-                            @"dte_btn_gz_pressed",
-                            @"dte_btn_txl_pressed",
-                            @"dte_btn_gd_pressed"];
+    NSArray *selectImgs = @[@"dte_btn_sy_pressed",
+                            @"dte_btn_bjq_pressed",
+                            @"dte_btn_fx_pressed",
+                            @"dte_btn_jx_pressed"];
     
     for (int i= 0; i<self.tabBar.items.count; i++) {
         UITabBarItem *item = self.tabBar.items[i];
         item.image = [[UIImage imageNamed:imgs[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         item.selectedImage = [[UIImage imageNamed:selectImgs[i]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     }
 }
 

@@ -68,7 +68,7 @@
         <scene sceneID="7ie-9k-Xx3">
             <objects>
                 <navigationController id="rdW-LB-ATE" customClass="BNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="dte_btn_gd_unpressed" id="fIO-ja-PK0"/>
+                    <tabBarItem key="tabBarItem" title="" image="dte_btn_jx_unpressed" id="fIO-ja-PK0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T1O-gs-lKQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -116,7 +116,7 @@
         <scene sceneID="mYE-rx-1D5">
             <objects>
                 <navigationController id="sye-Zh-lhF" customClass="BNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="dte_btn_txl_unpressed" id="nkk-UO-1Aq"/>
+                    <tabBarItem key="tabBarItem" title="" image="dte_btn_fx_unpressed" id="nkk-UO-1Aq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rsE-hv-gjO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,7 +133,7 @@
         <scene sceneID="cxv-eA-Bls">
             <objects>
                 <navigationController id="5uH-Xa-s3C" customClass="BNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="dte_btn_gz_unpressed" id="yW9-Us-ey2"/>
+                    <tabBarItem key="tabBarItem" title="" image="dte_btn_bjq_unpressed" id="yW9-Us-ey2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="com-WU-ZD6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -150,7 +150,7 @@
         <scene sceneID="VJr-Bg-yMP">
             <objects>
                 <navigationController id="vIb-Gh-ssI" customClass="BNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="dte_btn_dt_unpressed" id="N6o-0p-VXT"/>
+                    <tabBarItem key="tabBarItem" title="" image="dte_btn_sy_unpressed" id="N6o-0p-VXT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MDf-6Z-eCr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -174,26 +174,9 @@
                     <view key="view" contentMode="scaleToFill" id="c8g-t7-gpV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYq-mh-H5H">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <connections>
-                                    <outlet property="delegate" destination="KlM-4Z-aIX" id="dUQ-BP-1kQ"/>
-                                </connections>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MYq-mh-H5H" firstAttribute="top" secondItem="nhP-Vg-A5O" secondAttribute="bottom" id="5m1-F3-irD"/>
-                            <constraint firstItem="hcc-by-82S" firstAttribute="top" secondItem="MYq-mh-H5H" secondAttribute="bottom" id="GKM-LN-05F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MYq-mh-H5H" secondAttribute="trailing" constant="-20" id="GvQ-7y-kEh"/>
-                            <constraint firstItem="MYq-mh-H5H" firstAttribute="leading" secondItem="c8g-t7-gpV" secondAttribute="leadingMargin" constant="-20" id="hAW-zc-yoM"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qxK-d4-ae2"/>
-                    <connections>
-                        <outlet property="scrollView" destination="MYq-mh-H5H" id="WeQ-9J-Nuf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgC-S3-bSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,9 +184,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dte_btn_dt_unpressed" width="93" height="63"/>
-        <image name="dte_btn_gd_unpressed" width="93" height="63"/>
-        <image name="dte_btn_gz_unpressed" width="93" height="63"/>
-        <image name="dte_btn_txl_unpressed" width="93" height="63"/>
+        <image name="dte_btn_bjq_unpressed" width="93" height="63"/>
+        <image name="dte_btn_fx_unpressed" width="93" height="63"/>
+        <image name="dte_btn_jx_unpressed" width="93" height="63"/>
+        <image name="dte_btn_sy_unpressed" width="93" height="63"/>
     </resources>
 </document>
