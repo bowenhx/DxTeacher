@@ -14,6 +14,7 @@
 		92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D841DBF3AC900AEF307 /* LoginViewController.xib */; };
 		92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */; };
 		92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */; };
+		92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D911DBF507500AEF307 /* ItemViewBtn.m */; };
 		B51539941DBE25EE00D839BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539931DBE25EE00D839BA /* main.m */; };
 		B51539971DBE25EE00D839BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539961DBE25EE00D839BA /* AppDelegate.m */; };
 		B515399D1DBE25EE00D839BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B515399B1DBE25EE00D839BA /* Main.storyboard */; };
@@ -114,6 +115,8 @@
 		92DD8D8B1DBF3B6E00AEF307 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		92DD8D901DBF507500AEF307 /* ItemViewBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewBtn.h; sourceTree = "<group>"; };
+		92DD8D911DBF507500AEF307 /* ItemViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewBtn.m; sourceTree = "<group>"; };
 		B515398F1DBE25ED00D839BA /* DxTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51539931DBE25EE00D839BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B51539951DBE25EE00D839BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 		B5153A9E1DBE374900D839BA /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				92DD8D901DBF507500AEF307 /* ItemViewBtn.h */,
+				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
 				B5153AA01DBE377200D839BA /* HomeViewController.h */,
 				B5153AA11DBE377200D839BA /* HomeViewController.m */,
 			);
@@ -997,6 +1002,7 @@
 				B5153AA81DBE379F00D839BA /* FindViewController.m in Sources */,
 				B5153A571DBE295700D839BA /* BTabBarController.m in Sources */,
 				B5153A731DBE295700D839BA /* SDWebImageManager.m in Sources */,
+				92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */,
 				B5153A781DBE295700D839BA /* UIImage+WebP.m in Sources */,
 				B51539941DBE25EE00D839BA /* main.m in Sources */,
 				B5153A651DBE295700D839BA /* UploadingFormData.m in Sources */,
@@ -1065,7 +1071,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1104,7 +1110,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1118,6 +1124,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.person.DxTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1130,6 +1137,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.person.DxTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
