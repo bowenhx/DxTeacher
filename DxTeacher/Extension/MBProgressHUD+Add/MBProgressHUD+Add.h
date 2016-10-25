@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 com.mobile-kingdom.bkapps All rights reserved.
 //
 
-//#import "MBProgressHUD.h"
+#import "MBProgressHUD.h"
 
 @interface UIView (MbProgressAdd)
 - (void)showError:(NSString *)error;

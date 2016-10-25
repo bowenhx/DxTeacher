@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */; };
+		92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */; };
+		92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D811DBF3AC900AEF307 /* GuideViewController.m */; };
+		92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D831DBF3AC900AEF307 /* LoginViewController.m */; };
+		92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D841DBF3AC900AEF307 /* LoginViewController.xib */; };
+		92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */; };
+		92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */; };
 		B51539941DBE25EE00D839BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539931DBE25EE00D839BA /* main.m */; };
 		B51539971DBE25EE00D839BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539961DBE25EE00D839BA /* AppDelegate.m */; };
 		B515399D1DBE25EE00D839BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B515399B1DBE25EE00D839BA /* Main.storyboard */; };
@@ -20,7 +27,6 @@
 		B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51539B21DBE295700D839BA /* Default@3x.png */; };
 		B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539B61DBE295700D839BA /* NSString+UIColor.m */; };
 		B5153A5C1DBE295700D839BA /* UIColor+app.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539B81DBE295700D839BA /* UIColor+app.m */; };
-		B5153A5D1DBE295700D839BA /* NSObject+BeeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539BC1DBE295700D839BA /* NSObject+BeeNotification.m */; };
 		B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539C31DBE295700D839BA /* CustomBarButtonItem.m */; };
 		B5153A611DBE295700D839BA /* UIButton+EXCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539C61DBE295700D839BA /* UIButton+EXCell.m */; };
 		B5153A621DBE295700D839BA /* UIImage+UIImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539C91DBE295700D839BA /* UIImage+UIImageExt.m */; };
@@ -92,9 +98,22 @@
 		B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */; };
 		B5153AC21DBE424300D839BA /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AC01DBE424300D839BA /* UserViewController.m */; };
 		B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5153AC11DBE424300D839BA /* UserViewController.xib */; };
+		FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BC45C0DF0BA880EF2200CF6 /* Pods-DxTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.debug.xcconfig"; sourceTree = "<group>"; };
+		92DD8D7D1DBF3AC900AEF307 /* ForgetPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
+		92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
+		92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
+		92DD8D801DBF3AC900AEF307 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		92DD8D811DBF3AC900AEF307 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		92DD8D821DBF3AC900AEF307 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		92DD8D831DBF3AC900AEF307 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		92DD8D841DBF3AC900AEF307 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		92DD8D8B1DBF3B6E00AEF307 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		B515398F1DBE25ED00D839BA /* DxTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51539931DBE25EE00D839BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B51539951DBE25EE00D839BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,9 +135,6 @@
 		B51539B61DBE295700D839BA /* NSString+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UIColor.m"; sourceTree = "<group>"; };
 		B51539B71DBE295700D839BA /* UIColor+app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+app.h"; sourceTree = "<group>"; };
 		B51539B81DBE295700D839BA /* UIColor+app.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+app.m"; sourceTree = "<group>"; };
-		B51539BA1DBE295700D839BA /* Bee_Precompile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_Precompile.h; sourceTree = "<group>"; };
-		B51539BB1DBE295700D839BA /* NSObject+BeeNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BeeNotification.h"; sourceTree = "<group>"; };
-		B51539BC1DBE295700D839BA /* NSObject+BeeNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BeeNotification.m"; sourceTree = "<group>"; };
 		B51539C21DBE295700D839BA /* CustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarButtonItem.h; sourceTree = "<group>"; };
 		B51539C31DBE295700D839BA /* CustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarButtonItem.m; sourceTree = "<group>"; };
 		B51539C51DBE295700D839BA /* UIButton+EXCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EXCell.h"; sourceTree = "<group>"; };
@@ -268,6 +284,8 @@
 		B5153ABF1DBE424300D839BA /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		B5153AC01DBE424300D839BA /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		B5153AC11DBE424300D839BA /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.release.xcconfig"; sourceTree = "<group>"; };
+		DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxTeacher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,17 +293,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B441DFFC81DE7F1DDCDFC2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92DD8D7C1DBF3AC900AEF307 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				92DD8D7D1DBF3AC900AEF307 /* ForgetPwViewController.h */,
+				92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */,
+				92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */,
+				92DD8D801DBF3AC900AEF307 /* GuideViewController.h */,
+				92DD8D811DBF3AC900AEF307 /* GuideViewController.m */,
+				92DD8D821DBF3AC900AEF307 /* LoginViewController.h */,
+				92DD8D831DBF3AC900AEF307 /* LoginViewController.m */,
+				92DD8D841DBF3AC900AEF307 /* LoginViewController.xib */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		92DD8D8A1DBF3B6E00AEF307 /* MBProgressHUD+Add */ = {
+			isa = PBXGroup;
+			children = (
+				92DD8D8B1DBF3B6E00AEF307 /* MBProgressHUD+Add.h */,
+				92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */,
+				92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */,
+			);
+			path = "MBProgressHUD+Add";
+			sourceTree = "<group>";
+		};
 		B51539861DBE25ED00D839BA = {
 			isa = PBXGroup;
 			children = (
 				B51539911DBE25EE00D839BA /* DxTeacher */,
 				B51539901DBE25ED00D839BA /* Products */,
+				DBED4C58791E40095C8D8B14 /* Pods */,
+				5B441DFFC81DE7F1DDCDFC2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +366,7 @@
 				B5153A9C1DBE374900D839BA /* CircleVC */,
 				B5153A9D1DBE374900D839BA /* FindVC */,
 				B5153A9F1DBE374900D839BA /* TeachingVC */,
+				92DD8D7C1DBF3AC900AEF307 /* LoginVC */,
 				B51539B31DBE295700D839BA /* Extension */,
 				B51539D11DBE295700D839BA /* NetWorking */,
 				B51539D91DBE295700D839BA /* Utilities */,
@@ -351,8 +406,8 @@
 		B51539B31DBE295700D839BA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				92DD8D8A1DBF3B6E00AEF307 /* MBProgressHUD+Add */,
 				B51539B41DBE295700D839BA /* Color */,
-				B51539B91DBE295700D839BA /* EKNotification */,
 				B51539C11DBE295700D839BA /* UIBarItem */,
 				B51539C41DBE295700D839BA /* UIButton+EXCell */,
 				B51539C71DBE295700D839BA /* UIImage+EXT */,
@@ -374,16 +429,6 @@
 				B51539B81DBE295700D839BA /* UIColor+app.m */,
 			);
 			path = Color;
-			sourceTree = "<group>";
-		};
-		B51539B91DBE295700D839BA /* EKNotification */ = {
-			isa = PBXGroup;
-			children = (
-				B51539BA1DBE295700D839BA /* Bee_Precompile.h */,
-				B51539BB1DBE295700D839BA /* NSObject+BeeNotification.h */,
-				B51539BC1DBE295700D839BA /* NSObject+BeeNotification.m */,
-			);
-			path = EKNotification;
 			sourceTree = "<group>";
 		};
 		B51539C11DBE295700D839BA /* UIBarItem */ = {
@@ -740,6 +785,15 @@
 			path = VisualStateManager;
 			sourceTree = "<group>";
 		};
+		DBED4C58791E40095C8D8B14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BC45C0DF0BA880EF2200CF6 /* Pods-DxTeacher.debug.xcconfig */,
+				C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -747,9 +801,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B51539A61DBE25EE00D839BA /* Build configuration list for PBXNativeTarget "DxTeacher" */;
 			buildPhases = (
+				BE0F4098808B6E933FBF88B4 /* [CP] Check Pods Manifest.lock */,
 				B515398B1DBE25ED00D839BA /* Sources */,
 				B515398C1DBE25ED00D839BA /* Frameworks */,
 				B515398D1DBE25ED00D839BA /* Resources */,
+				C34A2FA3B97D1D40EFB4376A /* [CP] Embed Pods Frameworks */,
+				EB0B59084A1598F16292B8AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -797,7 +854,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
+				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
+				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
@@ -809,6 +869,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE0F4098808B6E933FBF88B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C34A2FA3B97D1D40EFB4376A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0B59084A1598F16292B8AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B515398B1DBE25ED00D839BA /* Sources */ = {
@@ -822,6 +930,7 @@
 				B5153A881DBE295700D839BA /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				B5153A981DBE295700D839BA /* ZLPhotoPickerImageView.m in Sources */,
 				B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */,
+				92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */,
 				B5153AC21DBE424300D839BA /* UserViewController.m in Sources */,
 				B5153A901DBE295700D839BA /* ZLNavigationController.m in Sources */,
 				B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */,
@@ -835,17 +944,19 @@
 				B5153A5C1DBE295700D839BA /* UIColor+app.m in Sources */,
 				B5153A7B1DBE295700D839BA /* UIImageView+WebCache.m in Sources */,
 				B5153A971DBE295700D839BA /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
+				92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */,
 				B5153A661DBE295700D839BA /* ANet.m in Sources */,
 				B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */,
 				B5153A6E1DBE295700D839BA /* SDWebImageCompat.m in Sources */,
+				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
 				B5153A6D1DBE295700D839BA /* SDImageCache.m in Sources */,
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
+				92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */,
 				B5153A801DBE295700D839BA /* ZLCameraImageView.m in Sources */,
 				B5153AB81DBE3CED00D839BA /* MMDrawerController.m in Sources */,
 				B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				B5153A701DBE295700D839BA /* SDWebImageDownloader.m in Sources */,
 				B5153A551DBE295700D839BA /* BaseViewController.m in Sources */,
-				B5153A5D1DBE295700D839BA /* NSObject+BeeNotification.m in Sources */,
 				B5153A821DBE295700D839BA /* ZLCameraViewController.m in Sources */,
 				B5153A8B1DBE295700D839BA /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				B5153A7D1DBE295700D839BA /* UIImage+ZLPhotoLib.m in Sources */,
@@ -1003,6 +1114,7 @@
 		};
 		B51539A71DBE25EE00D839BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC45C0DF0BA880EF2200CF6 /* Pods-DxTeacher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxTeacher/Info.plist;
@@ -1014,6 +1126,7 @@
 		};
 		B51539A81DBE25EE00D839BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DxTeacher/Info.plist;
@@ -1042,6 +1155,7 @@
 				B51539A81DBE25EE00D839BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

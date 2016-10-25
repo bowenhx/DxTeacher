@@ -12,7 +12,7 @@
 #import "UIView+Ex.h"
 #import "SavaData.h"
 #import "UIColor+app.h"
-//#import "MBProgressHUD+Add.h"
+#import "MBProgressHUD+Add.h"
 #import "ANet.h"
 #import "EKURL.h"
 #import "BNetData.h"
