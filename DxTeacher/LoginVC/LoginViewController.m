@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "AppDefine.h"
 #import "ForgetPwViewController.h"
+#import "AppDelegate.h"
+
 
 @interface LoginViewController ()<UITextFieldDelegate>
 {
@@ -26,7 +28,7 @@
     [super viewDidLoad];
     _viewY = self.view.y;
     self.title = @"登录";
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIImage *image = [[UIImage imageNamed:@"dte_nav_icon"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
@@ -67,6 +69,7 @@
     return [regextestmobile evaluateWithObject:mobileNum];
 }
 - (IBAction)loginAction:(UIButton *)sender {
+
     if (![self isMobileNumber:_phoneNumTextField.text]) {
         [self.view showHUDTitleView:@"请输入正确的手机号" image:nil];
         return;
@@ -87,7 +90,7 @@
 //    [[ANet share] get:@"?action=doLogin&username=15806381115&password=admin888" completion:^(BNetData *model, NSString *netErr) {
 //         [self.view removeHUDActivity];
 //    }];
-
+    
     [[ANet share] post:BASE_URL params:@{@"action":@"doLogin",@"username":_phoneNumTextField.text,@"password":_passwordTextField.text} completion:^(BNetData *model, NSString *netErr) {
          [self.view removeHUDActivity];
         //保存用户信息
@@ -96,16 +99,13 @@
             NSDictionary *info = model.data;
             [SavaData writeDicToFile:info FileName:User_File];
             
-            //跳转登陆页面
-            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            [self presentViewController:[mainStoryboard instantiateInitialViewController] animated:YES completion:^{
-                [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
-                _passwordTextField.text = @"";
-                _phoneNumTextField.text = @"";
-                
-            }];
-
+            [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
+            _passwordTextField.text = @"";
+            _phoneNumTextField.text = @"";
             
+            //跳转主页面
+            [[AppDelegate getAppDelegate] showTabBarVC];
+
         }
         
     }];

@@ -10,6 +10,10 @@
 #import "MMDrawerController.h"
 #import "MMExampleDrawerVisualStateManager.h"
 #import "UserViewController.h"
+#import "LoginViewController.h"
+#import "GuideViewController.h"
+
+static AppDelegate *_appDelegate;
 
 @interface AppDelegate ()
 
@@ -19,8 +23,32 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)getAppDelegate{
+    return _appDelegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setTintColor:RGB(29,173,234)];
+    self.window.backgroundColor = [UIColor whiteColor];
+    _appDelegate = self;
+
+    [self showTabBarVC];
+    /*
+    if (isFinishGuide == 0) {
+        [self welcomePage];
+    }else if (isFinishGuide == 1) {
+        [self beginShowLoginView];
+    }else if (isFinishGuide == 2){
+        [self showTabBarVC];
+    }*/
+
+    
+    
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+- (void)showTabBarVC{
     UserViewController *leftVC = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
     
     //使用Storyboard初始化根界面
@@ -48,29 +76,44 @@
              block(drawerController, drawerSide, percentVisible);
          }
      }];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
-                                          green:173.0/255.0
-                                           blue:234.0/255.0
-                                          alpha:1.0];
-    [self.window setTintColor:tintColor];
     [self.window setRootViewController:self.drawerController];
     
     
     
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
+    //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //使用Storyboard初始化根界面
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    self.window.rootViewController = [storyBoard instantiateInitialViewController];
+    //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //    self.window.rootViewController = [storyBoard instantiateInitialViewController];
     
+
+}
+- (void)showLoginVC{
+    if (self.window.rootViewController.view != nil) {
+        [self.window.rootViewController.view removeFromSuperview];
+    }
+    [self beginShowLoginView];
+}
+
+- (void)beginShowLoginView{
+    //启动后首先进入登陆界面
+    LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    self.window.rootViewController = nav;
     
+}
+
+
+/**
+ *  加载欢迎页方法
+ */
+- (void)welcomePage
+{
+    GuideViewController *guideVC = [[GuideViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:guideVC];
+    nav.navigationBar.hidden = YES;
+    self.window.rootViewController = nav;
     
-    
-    
-    [self.window makeKeyAndVisible];
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

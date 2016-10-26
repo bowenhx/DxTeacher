@@ -16,6 +16,8 @@
 
 @property (nonatomic , copy) NSString *titles;
 
+@property (nonatomic , copy) NSArray *items;
+
 @property (nonatomic , strong) UIButton *itemBtn;
 
 @end

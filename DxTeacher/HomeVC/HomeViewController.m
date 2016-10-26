@@ -37,16 +37,16 @@
     
     
     NSArray *images = @[
-                        @[@"vi_jztxl",@"通讯录"],
-                        @[@"vi_kqg",@"考勤管理"],
-                        @[@"vi_bjqgl",@"班级圈管理"],
-                        @[@"vi_dxfm",@"大象FM"],
-                        @[@"vi_spjkgl",@"视频监控管理"],
-                        @[@"vi_yytgl",@"用药条管理"],
-                        @[@"vi_jxjh",@"教学计划"],
-                        @[@"vi_ystz",@"园所通知"],
-                        @[@"vi_hdts",@"互动投诉"],
-                        @[@"vi_tcwj",@"调查问卷"]
+                        @[@"kqgl_1_unpressed",@"kqgl_1_pressed",@"考勤管理"],
+                        @[@"xwjll_1_unpressed",@"xwjll_1_pressed",@"行为记录"],
+                        @[@"fbgl_1_unpressed",@"fbgl_1_pressed",@"发布管理"],
+                        @[@"jcsj_1_unpressed",@"jcsj_1_pressed",@"精彩瞬间"],
+                        @[@"dxfm_1_unpressed",@"dxfm_1_pressed",@"大象FM"],
+                        @[@"czrz-_1_unpressed",@"czrz_1_pressed",@"成长日志"],
+                        @[@"yytgl_1_unpressed",@"yytgl_1_pressed",@"用药条管理"],
+                        @[@"ystz_1_unpressed",@"ystz_1_pressed",@"园所通知"],
+                        @[@"wdsh_1_unpressed",@"wdsh_1_pressed",@"我的审核"],
+                        @[@"aqtx_1_unpressed",@"aqtx_1_pressed",@"安全提醒"]
                         ];
     
     float btn_wh = (self.screen_W - SPACE * 4) / 3;
@@ -57,8 +57,7 @@
         float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
-        iView.itemImgs = images[i][0];
-        iView.titles = images[i][1];
+        iView.items = images[i];
         [self.scrollView addSubview:iView];
         iView.itemBtn.tag = i;
         [iView.itemBtn addTarget:self action:@selector(didSelectIndex:) forControlEvents:UIControlEventTouchUpInside];
