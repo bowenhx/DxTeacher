@@ -8,9 +8,9 @@
 #define SPACE 0  //图片间隔20
 
 #import "HomeViewController.h"
-#import "UIViewController+MMDrawerController.h"
-#import "ItemViewBtn.h"
 
+#import "ItemViewBtn.h"
+#import "WorkManageViewController.h"
 
 
 
@@ -58,6 +58,7 @@
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
         iView.items = images[i];
+        iView.tag = i;
         [self.scrollView addSubview:iView];
         iView.itemBtn.tag = i;
         [iView.itemBtn addTarget:self action:@selector(didSelectIndex:) forControlEvents:UIControlEventTouchUpInside];
@@ -66,7 +67,7 @@
         if (line_Y != iView.max_Y) {
             //画横线
             UILabel *lineX = [[UILabel alloc] initWithFrame:CGRectMake(0, iView.max_Y, self.screen_W, 1)];
-            lineX.backgroundColor = [UIColor redColor];
+            lineX.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineX];
         }
        
@@ -76,7 +77,7 @@
         if (i < 2) {
             //画竖线
             UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, 84, 1, self.screen_H)];
-            lineY.backgroundColor = [UIColor redColor];
+            lineY.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineY];
         }
         
@@ -89,6 +90,64 @@
 }
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
+    switch (btn.tag) {
+        case 0:
+        {//考勤管理
+            WorkManageViewController *workManageVC = [[WorkManageViewController alloc] initWithNibName:@"WorkManageViewController" bundle:nil];
+            [self.navigationController pushViewController:workManageVC animated:YES];
+        }
+            break;
+        case 1:
+        {//
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+        case 5:
+        {
+            
+        }
+            break;
+        case 6:
+        {
+            
+        }
+            break;
+        case 7:
+        {
+            
+        }
+            break;
+        case 8:
+        {
+            
+        }
+            break;
+        case 9:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+   
+    
 }
 
 - (void)showLeftVCAction{

@@ -10,6 +10,7 @@
 #import "UIColor+app.h"
 #import "UIView+Ex.h"
 #import "AppDefine.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface BaseViewController : UIViewController
 

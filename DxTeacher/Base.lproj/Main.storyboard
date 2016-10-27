@@ -37,9 +37,28 @@
                     <view key="view" contentMode="scaleToFill" id="ubH-vc-3LC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="90C-gj-q9g">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="O0x-4e-6SO" id="MNM-8m-szD"/>
+                                    <outlet property="delegate" destination="O0x-4e-6SO" id="32f-0f-VfK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="90C-gj-q9g" firstAttribute="top" secondItem="Olw-Kc-14g" secondAttribute="bottom" id="SxG-4y-T1r"/>
+                            <constraint firstItem="90C-gj-q9g" firstAttribute="leading" secondItem="ubH-vc-3LC" secondAttribute="leadingMargin" constant="-20" id="XJd-TU-swu"/>
+                            <constraint firstItem="mYb-TP-ETr" firstAttribute="top" secondItem="90C-gj-q9g" secondAttribute="bottom" id="bBn-LX-Dg4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="90C-gj-q9g" secondAttribute="trailing" constant="-20" id="lMv-B2-2Pg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xmi-dC-taE"/>
+                    <connections>
+                        <outlet property="_tableView" destination="90C-gj-q9g" id="bbG-Wc-nRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEr-lU-hSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,9 +75,23 @@
                     <view key="view" contentMode="scaleToFill" id="Tgr-8c-MTn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTi-hu-niy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mTi-hu-niy" firstAttribute="leading" secondItem="Tgr-8c-MTn" secondAttribute="leadingMargin" constant="-20" id="VO1-xm-fMY"/>
+                            <constraint firstItem="mTi-hu-niy" firstAttribute="top" secondItem="Tgr-8c-MTn" secondAttribute="topMargin" id="noq-lb-TPt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mTi-hu-niy" secondAttribute="trailing" constant="-20" id="rnY-zQ-4lt"/>
+                            <constraint firstItem="24U-Ok-gda" firstAttribute="top" secondItem="mTi-hu-niy" secondAttribute="bottom" id="u65-ii-dkA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SZE-gB-emf"/>
+                    <connections>
+                        <outlet property="scrollView" destination="mTi-hu-niy" id="QLH-cV-a7T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAz-s2-bQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

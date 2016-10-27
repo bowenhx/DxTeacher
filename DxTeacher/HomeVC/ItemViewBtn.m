@@ -7,7 +7,8 @@
 //
 
 #import "ItemViewBtn.h"
-#import "UIView+Ex.h"
+#import "AppDefine.h"
+
 @implementation ItemViewBtn
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -21,7 +22,7 @@
 - (void)setItemImgs:(NSString *)itemImgs{
     _itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _itemBtn.frame = self.bounds;
-//    [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
+    [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
     _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
 //    _itemBtn.layer.borderWidth = 1;
 //    _itemBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -53,11 +54,13 @@
     [self addSubview:_itemBtn];
     
     
-    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-30, self.w, 20)];
-    labTitle.text = items[2];
-    labTitle.font = [UIFont systemFontOfSize:13];
-    labTitle.textAlignment = NSTextAlignmentCenter;
-    labTitle.textColor = [UIColor darkGrayColor];
-    [self addSubview:labTitle];
+    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-30, self.w, 20)];
+    _labTitle.text = items[2];
+    _labTitle.font = [UIFont systemFontOfSize:13];
+//    _labTitle.highlightedTextColor = 
+    _labTitle.textColor = @"#7d7d7d".color;
+    _labTitle.textAlignment = NSTextAlignmentCenter;
+    _labTitle.textColor = [UIColor darkGrayColor];
+    [self addSubview:_labTitle];
 }
 @end

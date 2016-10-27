@@ -10,4 +10,6 @@
 
 @interface UserViewController : BaseViewController
 
++ (UserViewController *)share;
+
 @end

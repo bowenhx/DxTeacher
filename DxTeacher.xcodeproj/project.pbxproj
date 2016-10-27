@@ -99,6 +99,12 @@
 		B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */; };
 		B5153AC21DBE424300D839BA /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AC01DBE424300D839BA /* UserViewController.m */; };
 		B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5153AC11DBE424300D839BA /* UserViewController.xib */; };
+		B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */; };
+		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
+		B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */; };
+		B5B7E1271DC21BEF009B3DCC /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */; };
+		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
+		B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */; };
 		FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */; };
 /* End PBXBuildFile section */
 
@@ -287,6 +293,16 @@
 		B5153ABF1DBE424300D839BA /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		B5153AC01DBE424300D839BA /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		B5153AC11DBE424300D839BA /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkManageViewController.h; sourceTree = "<group>"; };
+		B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkManageViewController.m; sourceTree = "<group>"; };
+		B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkManageViewController.xib; sourceTree = "<group>"; };
+		B5B7E1231DC21BEF009B3DCC /* TrendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsTableViewCell.h; sourceTree = "<group>"; };
+		B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsTableViewCell.m; sourceTree = "<group>"; };
+		B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
+		B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
+		B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
+		B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVIewsHeight.m; sourceTree = "<group>"; };
 		C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.release.xcconfig"; sourceTree = "<group>"; };
 		DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxTeacher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -731,6 +747,13 @@
 			children = (
 				B5153AA31DBE378C00D839BA /* CircleViewController.h */,
 				B5153AA41DBE378C00D839BA /* CircleViewController.m */,
+				B5B7E1231DC21BEF009B3DCC /* TrendsTableViewCell.h */,
+				B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */,
+				B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */,
+				B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */,
+				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
+				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
+				B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */,
 			);
 			path = CircleVC;
 			sourceTree = "<group>";
@@ -747,10 +770,12 @@
 		B5153A9E1DBE374900D839BA /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				92DD8D901DBF507500AEF307 /* ItemViewBtn.h */,
-				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
 				B5153AA01DBE377200D839BA /* HomeViewController.h */,
 				B5153AA11DBE377200D839BA /* HomeViewController.m */,
+				B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */,
+				B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */,
+				B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */,
+				B5B7E11D1DC20BC5009B3DCC /* View */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -788,6 +813,15 @@
 				B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */,
 			);
 			path = VisualStateManager;
+			sourceTree = "<group>";
+		};
+		B5B7E11D1DC20BC5009B3DCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92DD8D901DBF507500AEF307 /* ItemViewBtn.h */,
+				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		DBED4C58791E40095C8D8B14 /* Pods */ = {
@@ -863,7 +897,9 @@
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
+				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
+				B5B7E1271DC21BEF009B3DCC /* TrendsTableViewCell.xib in Resources */,
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
 				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
@@ -956,18 +992,21 @@
 				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
 				B5153A6D1DBE295700D839BA /* SDImageCache.m in Sources */,
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
+				B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */,
 				92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */,
 				B5153A801DBE295700D839BA /* ZLCameraImageView.m in Sources */,
 				B5153AB81DBE3CED00D839BA /* MMDrawerController.m in Sources */,
 				B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				B5153A701DBE295700D839BA /* SDWebImageDownloader.m in Sources */,
 				B5153A551DBE295700D839BA /* BaseViewController.m in Sources */,
+				B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */,
 				B5153A821DBE295700D839BA /* ZLCameraViewController.m in Sources */,
 				B5153A8B1DBE295700D839BA /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				B5153A7D1DBE295700D839BA /* UIImage+ZLPhotoLib.m in Sources */,
 				B5153A9A1DBE295700D839BA /* DALabeledCircularProgressView.m in Sources */,
 				B5153A961DBE295700D839BA /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				B5153AA21DBE377200D839BA /* HomeViewController.m in Sources */,
+				B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */,
 				B5153AA51DBE378C00D839BA /* CircleViewController.m in Sources */,
 				B5153A871DBE295700D839BA /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				B5153A851DBE295700D839BA /* ZLPhotoRect.m in Sources */,
@@ -996,6 +1035,7 @@
 				B5153A8E1DBE295700D839BA /* ZLPhotoPickerGroup.m in Sources */,
 				B5153A941DBE295700D839BA /* ZLPhotoPickerCollectionView.m in Sources */,
 				B5153A8C1DBE295700D839BA /* ZLPhotoAssets.m in Sources */,
+				B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */,
 				B5153A741DBE295700D839BA /* SDWebImagePrefetcher.m in Sources */,
 				B5153A631DBE295700D839BA /* UIImageView+NSString.m in Sources */,
 				B5153A7E1DBE295700D839BA /* UIView+ZLExtension.m in Sources */,

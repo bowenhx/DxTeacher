@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "UserViewController.h"
 @interface BaseViewController ()
 
 @end
@@ -16,18 +16,32 @@
 
 - (void)loadNavBar{
     
-   
+    
     //当不是首个控制器时显示返回按钮
     NSInteger count = self.navigationController.viewControllers.count;
     if ( count >1 ) {
-        [self backBtn];
+        [self.mm_drawerController
+         closeDrawerAnimated:YES
+         completion:^(BOOL finished) {
+            [self.mm_drawerController setLeftDrawerViewController:nil];
+             
+         }];
+        
+    }else{
+        UserViewController *userVC = [UserViewController share];
+        [self.mm_drawerController setLeftDrawerViewController:userVC];
+
     }
     
 }
 
 //初始化view
 - (void)loadNewView{
-    
+    //当不是首个控制器时显示返回按钮
+    NSInteger count = self.navigationController.viewControllers.count;
+    if ( count >1 ) {
+        [self backBtn];
+    }
 }
 
 //初始化数据
@@ -38,8 +52,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    //设置导航条
-    [self loadNavBar];
+    
     
     //初始化view
     [self loadNewView];
@@ -47,6 +60,11 @@
     //初始化数据
     [self loadNewData];
     
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //设置导航条
+    [self loadNavBar];
 }
 - (UILabel *)navTitleLab{
     if (nil == _navTitleLab) {

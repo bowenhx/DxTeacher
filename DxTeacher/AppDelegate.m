@@ -49,7 +49,7 @@ static AppDelegate *_appDelegate;
     return YES;
 }
 - (void)showTabBarVC{
-    UserViewController *leftVC = [[UserViewController alloc] initWithNibName:@"UserViewController" bundle:nil];
+    UserViewController *leftVC = [UserViewController share];
     
     //使用Storyboard初始化根界面
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
