@@ -74,6 +74,7 @@
     _scrollView.layer.borderColor = [UIColor redColor].CGColor;
     //添加循环轮播图片view
     [self.scrollView addSubview:self.headView];
+
     
     NSArray *images = @[
                         @[@"kqgl_1_unpressed",@"vi_jztxl",@"教堂与课件"],

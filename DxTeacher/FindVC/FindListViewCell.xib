@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FindListViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门课件" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OJ-Tg-GeQ">
+                    <rect key="frame" x="7" y="8" width="56" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Bm2-6h-PYU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vi_vi" translatesAutoresizingMaskIntoConstraints="NO" id="pZW-vL-J9p">
+                    <rect key="frame" x="4" y="26" width="25" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="863-E0-zS5"/>
+                        <constraint firstAttribute="width" constant="25" id="qp4-8m-OLR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奇智奇才-社会（小班）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-qy-62o">
+                    <rect key="frame" x="28" y="26" width="147" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6IW-ZU-Ypz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共20节" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1R-di-uVt">
+                    <rect key="frame" x="273" y="26" width="39" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="bR5-Li-OAh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-v5-qij">
+                    <rect key="frame" x="244" y="8" width="68" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="tpp-nb-5pi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="添加关注" image="vi_tjgz">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="培养小朋友的交往能力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TM-jo-zvm">
+                    <rect key="frame" x="28" y="42" width="120" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="hbd-Vd-NOf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="F1R-di-uVt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="BHz-Wu-rd5"/>
+                <constraint firstItem="nJd-qy-62o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="EqD-DQ-VaJ"/>
+                <constraint firstItem="pZW-vL-J9p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="HPi-LV-vsE"/>
+                <constraint firstItem="9OJ-Tg-GeQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="7" id="IEm-CC-8ON"/>
+                <constraint firstAttribute="trailing" secondItem="gTd-v5-qij" secondAttribute="trailing" constant="8" id="Py6-pN-gIq"/>
+                <constraint firstItem="gTd-v5-qij" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Qa2-Qi-X8V"/>
+                <constraint firstItem="8TM-jo-zvm" firstAttribute="top" secondItem="9OJ-Tg-GeQ" secondAttribute="bottom" constant="13" id="Zdx-AQ-mH1"/>
+                <constraint firstItem="pZW-vL-J9p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="dFK-m4-MAT"/>
+                <constraint firstAttribute="trailing" secondItem="F1R-di-uVt" secondAttribute="trailing" constant="8" id="mPy-qJ-ezF"/>
+                <constraint firstItem="8TM-jo-zvm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="t3e-28-8zC"/>
+                <constraint firstItem="9OJ-Tg-GeQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="uQa-id-sgP"/>
+                <constraint firstItem="nJd-qy-62o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="z8T-7H-WDo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnMore" destination="gTd-v5-qij" id="9PD-3M-r94"/>
+                <outlet property="labAbout" destination="8TM-jo-zvm" id="CNa-LL-FMT"/>
+                <outlet property="labSection" destination="F1R-di-uVt" id="MSq-y2-j3N"/>
+                <outlet property="labTitle" destination="nJd-qy-62o" id="iM6-Ne-lBF"/>
+                <outlet property="labType" destination="9OJ-Tg-GeQ" id="LGA-Vn-VJc"/>
+            </connections>
+            <point key="canvasLocation" x="490" y="220.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vi_tjgz" width="20" height="20"/>
+        <image name="vi_vi" width="25" height="20"/>
+    </resources>
+</document>

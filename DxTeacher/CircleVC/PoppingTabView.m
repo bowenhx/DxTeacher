@@ -23,16 +23,19 @@
 - (UITableView *)tableView
 {
     if (!_tableView) {
+        
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        _tableView.backgroundColor = [UIColor colorAppBg];
+//        _tableView.backgroundColor = [UIColor colorAppBg];
         _tableView.scrollEnabled = NO;
-        _tableView.separatorColor = @"#31B7B6".color;
+//        _tableView.separatorColor = @"#31B7B6".color;
 //        _tableView.separatorColor = @"#D04476".color;
-        _tableView.rowHeight = 35;
+        _tableView.rowHeight = 40;
+        _tableView.backgroundColor = [UIColor clearColor];
         [self addSubview:_tableView];
+        
     }
     return _tableView;
 }
@@ -46,6 +49,11 @@
 - (void)layoutSubviews
 {
     self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.bounds));
+    
+    UIImageView *imgBg = [[UIImageView alloc] initWithFrame:CGRectMake(3, 3, self.w-6, self.h-6)];
+    UIImage *image = [UIImage imageNamed:@"xinxi"];
+    imgBg.image = image;
+    _tableView.backgroundView = imgBg;
 }
 - (void)awakeFromNib {
     // Initialization code
@@ -71,7 +79,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:defineCell];
     }
-    cell.backgroundColor = [UIColor colorAppBg];
+//    cell.backgroundColor = [UIColor colorAppBg];
     //cell.imageView.image = [UIImage imageNamed:self.itemArrs[indexPath.row][0]];
     cell.textLabel.text = self.itemArrs[indexPath.row];
    
@@ -85,7 +93,6 @@
 //        }
 //    }
    
-    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont systemFontOfSize:17];
     return cell;
 }
@@ -96,7 +103,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (_delegate) {
-        [_delegate selectItemViewIndex:indexPath.row];
+        [_delegate selectItem:self.itemArrs[indexPath.row] index:indexPath.row];
     }
 }
 @end

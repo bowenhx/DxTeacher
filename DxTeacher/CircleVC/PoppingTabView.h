@@ -10,7 +10,7 @@
 
 @protocol PoppingTabViewDelegate <NSObject>
 
-- (void)selectItemViewIndex:(NSInteger)index;
+- (void)selectItem:(id)obj index:(NSInteger)index;
 
 @end
 

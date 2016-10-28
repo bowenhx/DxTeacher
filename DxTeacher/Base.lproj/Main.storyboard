@@ -231,9 +231,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dte_btn_bjq_unpressed" width="93" height="63"/>
-        <image name="dte_btn_fx_unpressed" width="93" height="63"/>
-        <image name="dte_btn_jx_unpressed" width="93" height="63"/>
-        <image name="dte_btn_sy_unpressed" width="93" height="63"/>
+        <image name="dte_btn_bjq_unpressed" width="93" height="49"/>
+        <image name="dte_btn_fx_unpressed" width="93" height="49"/>
+        <image name="dte_btn_jx_unpressed" width="93" height="49"/>
+        <image name="dte_btn_sy_unpressed" width="93" height="49"/>
     </resources>
 </document>

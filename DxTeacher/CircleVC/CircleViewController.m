@@ -15,7 +15,7 @@
 @interface CircleViewController ()<PoppingTabViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
-    
+    UIButton *_titleBtn;//标题title
 }
 @property (nonatomic , strong) PoppingTabView   *popTabView;        //弹窗tabView
 @property (nonatomic , strong) UITableView      *typeTabView;
@@ -29,35 +29,38 @@
 }
 
 - (void)loadNewView{
-    UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    titleBtn.frame = CGRectMake(120, 0, self.screen_W - 240, 40);
-    titleBtn.layer.borderWidth = 1;
-    [titleBtn setTitle:@"班级圈" forState:0];
-    [titleBtn addTarget:self action:@selector(selectTitleType:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.titleView = titleBtn;
-    
+    _titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _titleBtn.frame = CGRectMake(120, 0, self.screen_W - 240, 40);
+    [_titleBtn setTitle:@"班级圈" forState:0];
+    [_titleBtn addTarget:self action:@selector(selectTitleType:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = _titleBtn;
+    [self.rightBtn setImage:[UIImage imageNamed:@"dte_vi_Add_1"] forState:0];
+    [self.rightBtn setTitle:@"发布" forState:0];
     
     NSArray *types = @[@"通知通告",@"精彩瞬间",@"每周食谱",@"计程计划",@"园所安全"];
-    
     self.popTabView.itemArrs = types;
     
 }
 #pragma mark popView
 - (PoppingTabView *)popTabView{
     if (!_popTabView) {
-        _popTabView = [[PoppingTabView alloc] initWithFrame:CGRectMake( (self.screen_W - 120)/2, -200, 120, 200)];
+        _popTabView = [[PoppingTabView alloc] initWithFrame:CGRectMake( (self.screen_W - 100)/2, -200, 100, 200)];
         _popTabView.delegate = self;
-        _popTabView.backgroundColor = [UIColor colorAppBg];
+        _popTabView.backgroundColor = [UIColor clearColor];//[UIColor colorWithPatternImage:[UIImage imageNamed:@"xinxi"]];
         [self.view addSubview:_popTabView];
-        _popTabView.layer.borderWidth = 1;
-        _popTabView.layer.borderColor = [UIColor redColor].CGColor;
+//        _popTabView.layer.borderWidth = 1;
+//        _popTabView.layer.borderColor = [UIColor redColor].CGColor;
     }
     return _popTabView;
 }
-
+#pragma mark 发布
+- (void)tapRightBtn{
+    
+}
 - (void)selectTitleType:(UIButton *)button{
     [self showPopSubTabView];
 }
+
 - (void)showPopSubTabView
 {
     [UIView animateWithDuration:.35 animations:^{
@@ -80,20 +83,22 @@
 - (void)changeViewStatus:(BOOL)status
 {
     if (status) {
-    
+        _tableView.userInteractionEnabled   = NO;
         self.view.backgroundColor          = [UIColor grayColor];
        _tableView.backgroundColor          = [UIColor grayColor];
         _tableView.alpha                   = .4;
         
     }else{
-
         _tableView.userInteractionEnabled   = YES;
         self.view.backgroundColor           =  RGB(240, 239, 245);
        _tableView.backgroundColor          =  RGB(240, 239, 245);
        _tableView.alpha                    = 1;
     }
 }
-
+//控制点击页面其他位置区域去隐藏选择框操作
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self hiddenPopSubTabView];
+}
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(52)} completion:^(BNetData *model, NSString *netErr) {
@@ -150,8 +155,10 @@
     return 172 + height;
 }
 #pragma mark PoppingTableViewDelegate
-- (void)selectItemViewIndex:(NSInteger)index{
-    NSLog(@"index");
+- (void)selectItem:(id)obj index:(NSInteger)index{
+    NSLog(@"obj = %@",obj);
+    [_titleBtn setTitle:obj forState:0];
+    [self hiddenPopSubTabView];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

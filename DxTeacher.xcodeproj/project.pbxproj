@@ -102,6 +102,10 @@
 		B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */; };
 		B5153AC21DBE424300D839BA /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AC01DBE424300D839BA /* UserViewController.m */; };
 		B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5153AC11DBE424300D839BA /* UserViewController.xib */; };
+		B599D4EA1DC38895006DA4F6 /* FindListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4E91DC38895006DA4F6 /* FindListViewCell.m */; };
+		B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */; };
+		B599D4F01DC397C6006DA4F6 /* FindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */; };
+		B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */; };
 		B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */; };
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
 		B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */; };
@@ -302,6 +306,12 @@
 		B5153ABF1DBE424300D839BA /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		B5153AC01DBE424300D839BA /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		B5153AC11DBE424300D839BA /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		B599D4E81DC38895006DA4F6 /* FindListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindListViewCell.h; sourceTree = "<group>"; };
+		B599D4E91DC38895006DA4F6 /* FindListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindListViewCell.m; sourceTree = "<group>"; };
+		B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindListViewCell.xib; sourceTree = "<group>"; };
+		B599D4ED1DC397C6006DA4F6 /* FindTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewCell.h; sourceTree = "<group>"; };
+		B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewCell.m; sourceTree = "<group>"; };
+		B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindTableViewCell.xib; sourceTree = "<group>"; };
 		B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkManageViewController.h; sourceTree = "<group>"; };
 		B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkManageViewController.m; sourceTree = "<group>"; };
 		B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkManageViewController.xib; sourceTree = "<group>"; };
@@ -774,6 +784,7 @@
 			children = (
 				B5153AA61DBE379F00D839BA /* FindViewController.h */,
 				B5153AA71DBE379F00D839BA /* FindViewController.m */,
+				B599D4E71DC3884D006DA4F6 /* Views */,
 			);
 			path = FindVC;
 			sourceTree = "<group>";
@@ -824,6 +835,19 @@
 				B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */,
 			);
 			path = VisualStateManager;
+			sourceTree = "<group>";
+		};
+		B599D4E71DC3884D006DA4F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B599D4E81DC38895006DA4F6 /* FindListViewCell.h */,
+				B599D4E91DC38895006DA4F6 /* FindListViewCell.m */,
+				B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */,
+				B599D4ED1DC397C6006DA4F6 /* FindTableViewCell.h */,
+				B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */,
+				B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B5B7E11D1DC20BC5009B3DCC /* View */ = {
@@ -911,6 +935,7 @@
 				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
+				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
@@ -919,6 +944,7 @@
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
 				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
+				B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */,
 				B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */,
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
 			);
@@ -1010,6 +1036,7 @@
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */,
 				92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */,
+				B599D4EA1DC38895006DA4F6 /* FindListViewCell.m in Sources */,
 				B5153A801DBE295700D839BA /* ZLCameraImageView.m in Sources */,
 				B5153AB81DBE3CED00D839BA /* MMDrawerController.m in Sources */,
 				B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */,
@@ -1050,6 +1077,7 @@
 				B5153A8D1DBE295700D839BA /* ZLPhotoPickerDatas.m in Sources */,
 				B5153AB71DBE3CED00D839BA /* MMDrawerBarButtonItem.m in Sources */,
 				B5153A8E1DBE295700D839BA /* ZLPhotoPickerGroup.m in Sources */,
+				B599D4F01DC397C6006DA4F6 /* FindTableViewCell.m in Sources */,
 				B5153A941DBE295700D839BA /* ZLPhotoPickerCollectionView.m in Sources */,
 				B5153A8C1DBE295700D839BA /* ZLPhotoAssets.m in Sources */,
 				B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */,
