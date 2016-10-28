@@ -10,13 +10,15 @@
 #import "TrendsTableViewCell.h"
 #import "ItemVIewsHeight.h"
 #import "AppDefine.h"
+#import "PoppingTabView.h"
 
-@interface CircleViewController ()
+@interface CircleViewController ()<PoppingTabViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
     
 }
-@property (nonatomic , strong) UITableView *typeTabView;
+@property (nonatomic , strong) PoppingTabView   *popTabView;        //弹窗tabView
+@property (nonatomic , strong) UITableView      *typeTabView;
 @end
 
 @implementation CircleViewController
@@ -33,14 +35,65 @@
     [titleBtn setTitle:@"班级圈" forState:0];
     [titleBtn addTarget:self action:@selector(selectTitleType:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.titleView = titleBtn;
-}
-//- (UITableView *)typeTabView{
-//    
-//}
-
-- (void)selectTitleType:(UIButton *)button{
+    
+    
+    NSArray *types = @[@"通知通告",@"精彩瞬间",@"每周食谱",@"计程计划",@"园所安全"];
+    
+    self.popTabView.itemArrs = types;
     
 }
+#pragma mark popView
+- (PoppingTabView *)popTabView{
+    if (!_popTabView) {
+        _popTabView = [[PoppingTabView alloc] initWithFrame:CGRectMake( - 120, -150, 110, 130)];
+        _popTabView.delegate = self;
+        _popTabView.backgroundColor = [UIColor colorAppBg];
+        [self.view addSubview:_popTabView];
+        _popTabView.layer.borderWidth = 1;
+        _popTabView.layer.borderColor = [UIColor redColor].CGColor;
+    }
+    return _popTabView;
+}
+
+- (void)selectTitleType:(UIButton *)button{
+    [self showPopSubTabView];
+}
+- (void)showPopSubTabView
+{
+    [UIView animateWithDuration:.35 animations:^{
+         [_popTabView setY:64];
+    } completion:^(BOOL finished) {
+        [self changeViewStatus:YES];
+    }];
+    
+}
+- (void)hiddenPopSubTabView
+{
+    [UIView animateWithDuration:.35 animations:^{
+        [_popTabView setY:-_popTabView.h];
+    } completion:^(BOOL finished) {
+        [self changeViewStatus:NO];
+    }];
+    
+}
+//改变视图状态背景色
+- (void)changeViewStatus:(BOOL)status
+{
+    if (status) {
+    
+        self.view.backgroundColor          = [UIColor grayColor];
+       _tableView.backgroundColor          = [UIColor grayColor];
+        _tableView.alpha                   = .4;
+        
+    }else{
+
+        _tableView.userInteractionEnabled   = YES;
+        self.view.backgroundColor           =  RGB(240, 239, 245);
+       _tableView.backgroundColor          =  RGB(240, 239, 245);
+       _tableView.alpha                    = 1;
+    }
+}
+
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(52)} completion:^(BNetData *model, NSString *netErr) {

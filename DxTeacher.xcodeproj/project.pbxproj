@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A40A751DC3325A00C9B436 /* PoppingTabView.m */; };
+		92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A40A771DC34C4700C9B436 /* Main.storyboard */; };
 		92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */; };
 		92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */; };
 		92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D811DBF3AC900AEF307 /* GuideViewController.m */; };
@@ -15,9 +17,10 @@
 		92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D8C1DBF3B6E00AEF307 /* MBProgressHUD+Add.m */; };
 		92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */; };
 		92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D911DBF507500AEF307 /* ItemViewBtn.m */; };
+		92DE35AF1DC2F24000531CDD /* BLoopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35AE1DC2F24000531CDD /* BLoopImageView.m */; };
+		92DE35B21DC2F27500531CDD /* BLoopImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35B11DC2F27500531CDD /* BLoopImageItem.m */; };
 		B51539941DBE25EE00D839BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539931DBE25EE00D839BA /* main.m */; };
 		B51539971DBE25EE00D839BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539961DBE25EE00D839BA /* AppDelegate.m */; };
-		B515399D1DBE25EE00D839BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B515399B1DBE25EE00D839BA /* Main.storyboard */; };
 		B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B515399E1DBE25EE00D839BA /* Assets.xcassets */; };
 		B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51539A01DBE25EE00D839BA /* LaunchScreen.storyboard */; };
 		B5153A551DBE295700D839BA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539AB1DBE295700D839BA /* BaseViewController.m */; };
@@ -110,6 +113,9 @@
 
 /* Begin PBXFileReference section */
 		8BC45C0DF0BA880EF2200CF6 /* Pods-DxTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.debug.xcconfig"; sourceTree = "<group>"; };
+		92A40A741DC3325A00C9B436 /* PoppingTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoppingTabView.h; sourceTree = "<group>"; };
+		92A40A751DC3325A00C9B436 /* PoppingTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoppingTabView.m; sourceTree = "<group>"; };
+		92A40A781DC34C4700C9B436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92DD8D7D1DBF3AC900AEF307 /* ForgetPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
 		92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
 		92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
@@ -123,11 +129,14 @@
 		92DD8D8D1DBF3B6E00AEF307 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		92DD8D901DBF507500AEF307 /* ItemViewBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewBtn.h; sourceTree = "<group>"; };
 		92DD8D911DBF507500AEF307 /* ItemViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewBtn.m; sourceTree = "<group>"; };
+		92DE35AD1DC2F24000531CDD /* BLoopImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLoopImageView.h; sourceTree = "<group>"; };
+		92DE35AE1DC2F24000531CDD /* BLoopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageView.m; sourceTree = "<group>"; };
+		92DE35B01DC2F27500531CDD /* BLoopImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLoopImageItem.h; sourceTree = "<group>"; };
+		92DE35B11DC2F27500531CDD /* BLoopImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageItem.m; sourceTree = "<group>"; };
 		B515398F1DBE25ED00D839BA /* DxTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51539931DBE25EE00D839BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B51539951DBE25EE00D839BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B51539961DBE25EE00D839BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B515399C1DBE25EE00D839BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B515399E1DBE25EE00D839BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B51539A11DBE25EE00D839BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B51539A31DBE25EE00D839BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -379,7 +388,7 @@
 				B5153ABF1DBE424300D839BA /* UserViewController.h */,
 				B5153AC01DBE424300D839BA /* UserViewController.m */,
 				B5153AC11DBE424300D839BA /* UserViewController.xib */,
-				B515399B1DBE25EE00D839BA /* Main.storyboard */,
+				92A40A771DC34C4700C9B436 /* Main.storyboard */,
 				B51539A91DBE295700D839BA /* BaseVC */,
 				B5153A9E1DBE374900D839BA /* HomeVC */,
 				B5153A9C1DBE374900D839BA /* CircleVC */,
@@ -754,6 +763,8 @@
 				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
 				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
 				B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */,
+				92A40A741DC3325A00C9B436 /* PoppingTabView.h */,
+				92A40A751DC3325A00C9B436 /* PoppingTabView.m */,
 			);
 			path = CircleVC;
 			sourceTree = "<group>";
@@ -818,6 +829,10 @@
 		B5B7E11D1DC20BC5009B3DCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92DE35B01DC2F27500531CDD /* BLoopImageItem.h */,
+				92DE35B11DC2F27500531CDD /* BLoopImageItem.m */,
+				92DE35AD1DC2F24000531CDD /* BLoopImageView.h */,
+				92DE35AE1DC2F24000531CDD /* BLoopImageView.m */,
 				92DD8D901DBF507500AEF307 /* ItemViewBtn.h */,
 				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
 			);
@@ -900,12 +915,12 @@
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
 				B5B7E1271DC21BEF009B3DCC /* TrendsTableViewCell.xib in Resources */,
+				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
 				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
 				B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */,
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
-				B515399D1DBE25EE00D839BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,6 +1005,7 @@
 				B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */,
 				B5153A6E1DBE295700D839BA /* SDWebImageCompat.m in Sources */,
 				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
+				92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */,
 				B5153A6D1DBE295700D839BA /* SDImageCache.m in Sources */,
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */,
@@ -999,6 +1015,7 @@
 				B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				B5153A701DBE295700D839BA /* SDWebImageDownloader.m in Sources */,
 				B5153A551DBE295700D839BA /* BaseViewController.m in Sources */,
+				92DE35AF1DC2F24000531CDD /* BLoopImageView.m in Sources */,
 				B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */,
 				B5153A821DBE295700D839BA /* ZLCameraViewController.m in Sources */,
 				B5153A8B1DBE295700D839BA /* ZLPhotoPickerCustomToolBarView.m in Sources */,
@@ -1042,6 +1059,7 @@
 				B5153AA81DBE379F00D839BA /* FindViewController.m in Sources */,
 				B5153A571DBE295700D839BA /* BTabBarController.m in Sources */,
 				B5153A731DBE295700D839BA /* SDWebImageManager.m in Sources */,
+				92DE35B21DC2F27500531CDD /* BLoopImageItem.m in Sources */,
 				92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */,
 				B5153A781DBE295700D839BA /* UIImage+WebP.m in Sources */,
 				B51539941DBE25EE00D839BA /* main.m in Sources */,
@@ -1055,10 +1073,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B515399B1DBE25EE00D839BA /* Main.storyboard */ = {
+		92A40A771DC34C4700C9B436 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B515399C1DBE25EE00D839BA /* Base */,
+				92A40A781DC34C4700C9B436 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

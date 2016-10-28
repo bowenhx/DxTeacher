@@ -8,13 +8,15 @@
 #define SPACE 0  //图片间隔20
 
 #import "HomeViewController.h"
-
+#import "BLoopImageView.h"
 #import "ItemViewBtn.h"
 #import "WorkManageViewController.h"
 
 
 
-@interface HomeViewController ()
+@interface HomeViewController ()<BLoopImageViewDelegate>
+
+@property (nonatomic , strong) BLoopImageView *headView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -24,17 +26,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationItem.title = @"首页";
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showLeftVCAction)];
-    self.navigationItem.leftBarButtonItem = leftItem;
+}
+- (BLoopImageView *)headView{
+    if (!_headView) {
+        float height = 0;
+        if (self.screen_W > 320){
+            height = 200;
+        }else{
+            height = 170;
+        }
+        _headView = [[BLoopImageView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, height) delegate:self imageItems:nil isAuto:YES];
+//        _headView.layer.borderColor = [UIColor greenColor].CGColor;
+//        _headView.layer.borderWidth = 1;
+    }
+    return _headView;
+}
+//处理Head展示图片无限循环
+- (void)refreshHeadImages:(NSArray *)images
+{
+    if (_headView.itemsArr.count) {
+        for (UIView *view in _headView.subviews) {
+            [view removeFromSuperview];
+        }
+    }
+    //添加最后一张图 用于循环
+    int length = (unsigned)images.count;
+    NSMutableArray *itemArray = [NSMutableArray arrayWithCapacity:length+2];
+    if (length > 1)
+    {
+//        NSDictionary *dict = images[length-1];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:images[length-1] tag:-1];//initWithDict:dict tag:-1];
+        [itemArray addObject:item];
+    }
+    for (int i = 0; i < length; i++)
+    {
+        NSString *img = images[i];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:img tag:i];//initWithDict:dict tag:i];
+        [itemArray addObject:item];
+    }
+    //添加第一张图 用于循环
+    if (length >1)
+    {
+        NSString *img = images[0];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:img tag:length];//initWithDict:dict tag:length];
+        [itemArray addObject:item];
+    }
+    [self.headView setItemsArr:itemArray];
 }
 
+- (void)addNavLeftItem{
+    UIButton *item = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:@"dte_vi_caidan"];
+    item.frame = CGRectMake(0, 0, image.size.width , image.size.height);
+    // 这里需要注意：由于是想让图片右移，所以left需要设置为正，right需要设置为负。正在是相反的。
+    [item setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+    [item setImage:image forState:UIControlStateNormal];
+    [item addTarget:self action:@selector(showLeftVCAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *itemLeft = [[UIBarButtonItem alloc] initWithCustomView:item];
+    self.navigationItem.leftBarButtonItem = itemLeft;
+}
 - (void)loadNewView{
 //    self.scrollView.layer.borderWidth = 1;
 //    self.scrollView.layer.borderColor = [UIColor redColor].CGColor;
     
+    [self addNavLeftItem];
+    
+    //添加循环轮播图片view
+    [self.scrollView addSubview:self.headView];
     
     NSArray *images = @[
                         @[@"kqgl_1_unpressed",@"kqgl_1_pressed",@"考勤管理"],
@@ -54,7 +114,7 @@
     float line_Y = 0.0;
     for (int i= 0; i<images.count; i++) {
         float addBtnX = SPACE + (SPACE + btn_wh) * (i%3);
-        float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
+        float addBtnY = self.headView.max_Y + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
         iView.items = images[i];
@@ -76,7 +136,7 @@
         //只需要画两条就行
         if (i < 2) {
             //画竖线
-            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, 84, 1, self.screen_H)];
+            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*4)];
             lineY.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineY];
         }
@@ -88,6 +148,19 @@
 
     _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 100);
 }
+
+- (void)loadNewData{
+    NSArray *items = [NSArray arrayWithObjects:
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/903/847d2925-7d03-40dd-90d9-429d13aabab8_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/888/4f564995-a919-4c7f-ae8f-d8d0bda1d7f4_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/869/2ebc752a-5176-4f16-b7b5-2233d4ddcc87_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/888/4f564995-a919-4c7f-ae8f-d8d0bda1d7f4_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/903/847d2925-7d03-40dd-90d9-429d13aabab8_100x100.jpg", nil];
+    
+    [self refreshHeadImages:items];
+}
+
+
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
     switch (btn.tag) {

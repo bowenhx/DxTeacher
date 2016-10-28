@@ -8,7 +8,11 @@
 
 #import "BaseViewController.h"
 #import "UserViewController.h"
+
+
 @interface BaseViewController ()
+
+
 
 @end
 
@@ -34,7 +38,6 @@
     }
     
 }
-
 //初始化view
 - (void)loadNewView{
     //当不是首个控制器时显示返回按钮
@@ -42,6 +45,7 @@
     if ( count >1 ) {
         [self backBtn];
     }
+    
 }
 
 //初始化数据

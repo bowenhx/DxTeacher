@@ -8,8 +8,10 @@
 #define SPACE 0  //图片间隔20
 #import "FindViewController.h"
 #import "ItemViewBtn.h"
+#import "BLoopImageView.h"
 
-@interface FindViewController ()
+@interface FindViewController ()<BLoopImageViewDelegate>
+@property (nonatomic , strong) BLoopImageView *headView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
@@ -19,10 +21,62 @@
     [super viewDidLoad];
      self.navigationItem.title = @"发现";
 }
+
+- (BLoopImageView *)headView{
+    if (!_headView) {
+        float height = 0;
+        if (self.screen_W > 320){
+            height = 200;
+        }else{
+            height = 170;
+        }
+        _headView = [[BLoopImageView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, height) delegate:self imageItems:nil isAuto:YES];
+        //        _headView.layer.borderColor = [UIColor greenColor].CGColor;
+        //        _headView.layer.borderWidth = 1;
+    }
+    return _headView;
+}
+//处理Head展示图片无限循环
+- (void)refreshHeadImages:(NSArray *)images
+{
+    if (_headView.itemsArr.count) {
+        for (UIView *view in _headView.subviews) {
+            [view removeFromSuperview];
+        }
+    }
+    //添加最后一张图 用于循环
+    int length = (unsigned)images.count;
+    NSMutableArray *itemArray = [NSMutableArray arrayWithCapacity:length+2];
+    if (length > 1)
+    {
+        //        NSDictionary *dict = images[length-1];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:images[length-1] tag:-1];//initWithDict:dict tag:-1];
+        [itemArray addObject:item];
+    }
+    for (int i = 0; i < length; i++)
+    {
+        NSString *img = images[i];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:img tag:i];//initWithDict:dict tag:i];
+        [itemArray addObject:item];
+    }
+    //添加第一张图 用于循环
+    if (length >1)
+    {
+        NSString *img = images[0];
+        BLoopImageItem *item = [[BLoopImageItem alloc] initWithTitle:@"" image:img tag:length];//initWithDict:dict tag:length];
+        [itemArray addObject:item];
+    }
+    [self.headView setItemsArr:itemArray];
+}
+
 - (void)loadNewView{
+    _scrollView.layer.borderWidth = 1;
+    _scrollView.layer.borderColor = [UIColor redColor].CGColor;
+    //添加循环轮播图片view
+    [self.scrollView addSubview:self.headView];
     
     NSArray *images = @[
-                        @[@"kqgl_1_unpressed",@"kqgl_1_pressed",@"教堂与课件"],
+                        @[@"kqgl_1_unpressed",@"vi_jztxl",@"教堂与课件"],
                         @[@"xwjll_1_unpressed",@"vi_jxzd",@"教学指导"],
                         @[@"fbgl_1_unpressed",@"vi_czlj",@"成长路径"],
                         @[@"jcsj_1_unpressed",@"vi_jchd",@"精彩活动"],
@@ -35,10 +89,11 @@
     float line_Y = 0.0;
     for (int i= 0; i<images.count; i++) {
         float addBtnX = SPACE + (SPACE + btn_wh) * (i%3);
-        float addBtnY = 84 + (SPACE + btn_wh) * (i/3);
+        float addBtnY = self.headView.max_Y + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
         iView.itemImgs = images[i][1];
+        iView.titles = images[i][2];
         iView.tag = i;
         [self.scrollView addSubview:iView];
         iView.itemBtn.tag = i;
@@ -57,7 +112,7 @@
         //只需要画两条就行
         if (i < 2) {
             //画竖线
-            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, 84, 1, self.screen_H)];
+              UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*2)];
             lineY.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineY];
         }
@@ -69,6 +124,8 @@
     
     _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 100);
 }
+
+
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
     switch (btn.tag) {

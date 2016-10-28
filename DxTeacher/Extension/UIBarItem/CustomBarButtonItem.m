@@ -10,6 +10,18 @@
 
 @implementation CustomBarButtonItem
 
++ (UIBarButtonItem *)leftItemAddButton:(NSString *)img{
+    UIButton *item = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:img];
+    item.frame = CGRectMake(0, 0, image.size.width , image.size.height);
+    // 这里需要注意：由于是想让图片右移，所以left需要设置为正，right需要设置为负。正在是相反的。
+    [item setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+    [item setImage:image forState:UIControlStateNormal];
+    [item addTarget:self action:@selector(itemAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *itemLeft = [[UIBarButtonItem alloc] initWithCustomView:item];
+    return itemLeft;
+}
+
 + (NSArray <UIBarButtonItem *>*)rightItemAddButton:(NSArray *)imgs{
     
     NSMutableArray *items = [NSMutableArray arrayWithCapacity:imgs.count];

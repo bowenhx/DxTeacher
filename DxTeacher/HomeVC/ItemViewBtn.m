@@ -33,7 +33,7 @@
 }
 
 - (void)setTitles:(NSString *)titles{
-    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-30, self.w, 20)];
+    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
     labTitle.text = titles;
     labTitle.font = [UIFont systemFontOfSize:13];
     labTitle.textAlignment = NSTextAlignmentCenter;
@@ -54,7 +54,7 @@
     [self addSubview:_itemBtn];
     
     
-    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-30, self.w, 20)];
+    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
     _labTitle.text = items[2];
     _labTitle.font = [UIFont systemFontOfSize:13];
 //    _labTitle.highlightedTextColor = 
