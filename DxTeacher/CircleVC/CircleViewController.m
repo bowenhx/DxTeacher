@@ -45,7 +45,7 @@
 #pragma mark popView
 - (PoppingTabView *)popTabView{
     if (!_popTabView) {
-        _popTabView = [[PoppingTabView alloc] initWithFrame:CGRectMake( - 120, -150, 110, 130)];
+        _popTabView = [[PoppingTabView alloc] initWithFrame:CGRectMake( (self.screen_W - 120)/2, -200, 120, 200)];
         _popTabView.delegate = self;
         _popTabView.backgroundColor = [UIColor colorAppBg];
         [self.view addSubview:_popTabView];

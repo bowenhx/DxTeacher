@@ -31,7 +31,7 @@
         _tableView.scrollEnabled = NO;
         _tableView.separatorColor = @"#31B7B6".color;
 //        _tableView.separatorColor = @"#D04476".color;
-
+        _tableView.rowHeight = 35;
         [self addSubview:_tableView];
     }
     return _tableView;
@@ -86,7 +86,7 @@
 //    }
    
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.font = [UIFont systemFontOfSize:17];
     return cell;
 }
 
