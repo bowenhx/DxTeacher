@@ -149,7 +149,10 @@
     CGFloat height = [self itemsImages:self.dataSource[indexPath.row]];
     return 172 + height;
 }
-
+#pragma mark PoppingTableViewDelegate
+- (void)selectItemViewIndex:(NSInteger)index{
+    NSLog(@"index");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
