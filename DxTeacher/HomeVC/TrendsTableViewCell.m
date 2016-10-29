@@ -22,7 +22,7 @@
     
 //    self.imagesView.layer.borderWidth = 1;
     
-    self.labLineBg.backgroundColor = [UIColor colorCellLineBg];
+    self.labLineBg.backgroundColor = [UIColor colorLineBg];
     self.labCheck.textColor = @"ff0000".color;
     self.labCheck.layer.borderWidth = 1;
     self.labCheck.layer.borderColor = @"ff0000".color.CGColor;

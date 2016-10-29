@@ -63,9 +63,10 @@
     button.frame = CGRectMake(80, self.screen_H-100, self.screen_W-160, 40);
     [button setTitle:@"进入" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:0];
-//    button.backgroundColor = [UIColor colorBlue];
-    button.layer.cornerRadius = 3;
-    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    UIImage *img = [[UIImage imageNamed:@"det_vi_rad"] stretchableImageWithLeftCapWidth:5 topCapHeight:5];
+    [button setBackgroundImage:img forState:0];
+//    button.layer.cornerRadius = 3;
+//    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [button addTarget:self action:@selector(accessRootViewAction) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }

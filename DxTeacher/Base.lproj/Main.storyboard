@@ -77,13 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTi-hu-niy">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mTi-hu-niy" firstAttribute="leading" secondItem="Tgr-8c-MTn" secondAttribute="leadingMargin" constant="-20" id="VO1-xm-fMY"/>
-                            <constraint firstItem="mTi-hu-niy" firstAttribute="top" secondItem="Tgr-8c-MTn" secondAttribute="topMargin" id="noq-lb-TPt"/>
+                            <constraint firstItem="mTi-hu-niy" firstAttribute="top" secondItem="Tgr-8c-MTn" secondAttribute="topMargin" constant="64" id="noq-lb-TPt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mTi-hu-niy" secondAttribute="trailing" constant="-20" id="rnY-zQ-4lt"/>
                             <constraint firstItem="24U-Ok-gda" firstAttribute="top" secondItem="mTi-hu-niy" secondAttribute="bottom" id="u65-ii-dkA"/>
                         </constraints>

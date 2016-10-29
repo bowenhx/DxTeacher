@@ -9,6 +9,8 @@
 #import "FindViewController.h"
 #import "ItemViewBtn.h"
 #import "BLoopImageView.h"
+#import "FindListViewCell.h"
+#import "CoursewareViewController.h"
 
 @interface FindViewController ()<BLoopImageViewDelegate>
 @property (nonatomic , strong) BLoopImageView *headView;
@@ -71,7 +73,7 @@
 
 - (void)loadNewView{
     _scrollView.layer.borderWidth = 1;
-    _scrollView.layer.borderColor = [UIColor redColor].CGColor;
+    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
     //添加循环轮播图片view
     [self.scrollView addSubview:self.headView];
 
@@ -123,7 +125,23 @@
         
     }
     
-    _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 100);
+    
+     _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 100);
+    
+    
+    FindListViewCell *listView = [[FindListViewCell alloc] initWithFrame:CGRectMake(0, line_Y, self.screen_W, 70)];
+//    listView.layer.borderWidth = 1;
+//    listView.layer.borderColor = [UIColor greenColor].CGColor;
+    listView.labLine.backgroundColor = @"#cccccc".color;
+    [_scrollView addSubview:listView];
+    
+    
+    FindListViewCell *listImgView = [FindListViewCell findListImgView];
+    listImgView.frame = CGRectMake(0, listView.max_Y, self.screen_W, 100);
+    listImgView.labLine.backgroundColor = @"#cccccc".color;
+    [_scrollView addSubview:listImgView];
+    
+   
 }
 
 
@@ -132,7 +150,8 @@
     switch (btn.tag) {
         case 0:
         {//教堂与课件
-        
+            CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
+            [self.navigationController pushViewController:couresewareVC animated:YES];
         }
             break;
         case 1:

@@ -11,8 +11,9 @@
 #import "BLoopImageView.h"
 #import "ItemViewBtn.h"
 #import "WorkManageViewController.h"
-
-
+#import "DeedViewController.h"
+#import "SendManageViewController.h"
+#import "ClassesViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -171,47 +172,51 @@
         }
             break;
         case 1:
-        {//
+        {//行为记录
+            DeedViewController *deedVC = [[DeedViewController alloc] initWithNibName:@"DeedViewController" bundle:nil];
+            [self.navigationController pushViewController:deedVC animated:YES];
             
         }
             break;
         case 2:
-        {
+        {//发布管理
+            SendManageViewController *sendManageVC = [[SendManageViewController alloc] initWithNibName:@"SendManageViewController" bundle:nil];
+            [self.navigationController pushViewController:sendManageVC animated:YES];
             
         }
             break;
         case 3:
-        {
-            
+        {//精彩瞬间
+            [self classesViewControllerTitle:@"精彩瞬间" index:62];
         }
             break;
         case 4:
-        {
-            
+        {//大象FM
+            [self classesViewControllerTitle:@"大象FM" index:67];
         }
             break;
         case 5:
-        {
+        {//成长日志
             
         }
             break;
         case 6:
-        {
+        {//用药条管理
             
         }
             break;
         case 7:
-        {
-            
+        {//园所通知
+            [self classesViewControllerTitle:@"园所通知" index:52];
         }
             break;
         case 8:
-        {
+        {//我的审核
             
         }
             break;
         case 9:
-        {
+        {//安全提醒
             
         }
             break;
@@ -222,10 +227,24 @@
    
     
 }
-
+- (void)classesViewControllerTitle:(NSString *)title index:(NSInteger)index{
+    ClassesViewController *classesVC = [[ClassesViewController alloc] initWithNibName:@"ClassesViewController" bundle:nil];
+    classesVC.index = index;
+    classesVC.navigationItem.title = title;
+    [self.navigationController pushViewController:classesVC animated:YES];
+}
 - (void)showLeftVCAction{
       [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
+
+- (void)foucusImageFrame:(BLoopImageView *)imageView didSelectItem:(BLoopImageItem *)item{
+    NSLog(@"item = %@",item.imgurl);
+}
+- (void)foucusImageFrame:(BLoopImageView *)imageView currentItem:(int)index{
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -35,8 +35,9 @@
     btnVerify.layer.borderColor = [UIColor lightGrayColor].CGColor;
     btnVerify.layer.cornerRadius = 3;
     
-    btnConfirm.backgroundColor = [UIColor colorAppBg];
-    btnConfirm.layer.cornerRadius = 3;
+    UIImage *img = [[UIImage imageNamed:@"det_vi_rad"] stretchableImageWithLeftCapWidth:5 topCapHeight:5];
+    [btnConfirm setBackgroundImage:img forState:0];;
+    
     
     _textFieldPhone.text = @"15806381115";
 }

@@ -8,7 +8,7 @@
 //所有的 url 宏
 
 // API host url
-#define BASE_URL @"http://dx.sitemn.com/Ser/Managers.ashx"
+#define BASE_URL @"http://dx.sitemn.com/ser/familys.ashx"//@"http://dx.sitemn.com/Ser/Managers.ashx"
 
 //图片 根地址
 #define BASE_IMG_URL  @"http://dx.sitemn.com"

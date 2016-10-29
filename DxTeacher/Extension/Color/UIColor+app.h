@@ -27,6 +27,9 @@
 //设置cell head view 背景
 + (UIColor *)colorCellHeadBg;
 
+
++ (UIColor *)colorLineBg;
+
 //取随机色
 + (UIColor *)randomColor;
 

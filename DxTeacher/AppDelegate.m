@@ -33,15 +33,15 @@ static AppDelegate *_appDelegate;
     self.window.backgroundColor = [UIColor whiteColor];
     _appDelegate = self;
 
-    [self showTabBarVC];
-    /*
+    //[self showTabBarVC];
+    
     if (isFinishGuide == 0) {
         [self welcomePage];
     }else if (isFinishGuide == 1) {
         [self beginShowLoginView];
     }else if (isFinishGuide == 2){
         [self showTabBarVC];
-    }*/
+    }
 
     
     

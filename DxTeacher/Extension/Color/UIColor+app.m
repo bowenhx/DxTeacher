@@ -26,6 +26,9 @@
 + (UIColor *)colorCellHeadBg{
     return @"#ebebeb".color;
 }
++ (UIColor *)colorLineBg{
+    return @"#cccccc".color;
+}
 + (UIColor *)randomColor
 {
     CGFloat hue = ( arc4random() / (CGFloat)RAND_MAX ); //0.0 to 1.0

@@ -10,7 +10,7 @@
 #import "AppDefine.h"
 #import "ForgetPwViewController.h"
 #import "AppDelegate.h"
-
+#import "RegisterViewController.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 {
@@ -69,7 +69,6 @@
     return [regextestmobile evaluateWithObject:mobileNum];
 }
 - (IBAction)loginAction:(UIButton *)sender {
-
     if (![self isMobileNumber:_phoneNumTextField.text]) {
         [self.view showHUDTitleView:@"请输入正确的手机号" image:nil];
         return;
@@ -82,16 +81,14 @@
     
     /**
      登陆接口地址
-     http://dx.sitemn.com/Ser/Managers.ashx?action=doLogin&username=manager&password=admin888
+     http://dx.sitemn.com/ser/familys.ashx?action=doLogin&username=15806381113&password=111111
      */
     
     [self.view showHUDActivityView:@"正在登录..." shade:YES];
-//    
-//    [[ANet share] get:@"?action=doLogin&username=15806381115&password=admin888" completion:^(BNetData *model, NSString *netErr) {
-//         [self.view removeHUDActivity];
-//    }];
     
-    [[ANet share] post:BASE_URL params:@{@"action":@"doLogin",@"username":_phoneNumTextField.text,@"password":_passwordTextField.text} completion:^(BNetData *model, NSString *netErr) {
+    /*
+    NSString *url = [NSString stringWithFormat:@"%@?action=doLogin&username=%@&password=%@",BASE_URL,_phoneNumTextField.text,_passwordTextField.text];
+    [[ANet share] get:url completion:^(BNetData *model, NSString *netErr) {
          [self.view removeHUDActivity];
         //保存用户信息
         if (model.status == 0) {
@@ -105,9 +102,41 @@
             
             //跳转主页面
             [[AppDelegate getAppDelegate] showTabBarVC];
-
+            
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
         }
         
+    }];*/
+    
+
+    
+    [[ANet share] post:BASE_URL params:@{@"action":@"doLogin",@"username":_phoneNumTextField.text,@"password":_passwordTextField.text} completion:^(BNetData *model, NSString *netErr) {
+         [self.view removeHUDActivity];
+        //保存用户信息
+        if (model.status == 0) {
+            //请求成功
+            NSDictionary *info = model.data;
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+            [info enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                if (![obj isEqual:[NSNull null]]) {
+                    userInfo[key] = obj;
+                }
+            }];
+            
+            [SavaData writeDicToFile:userInfo FileName:User_File];
+            
+            [[SavaData shareInstance] savaDataInteger:2 KeyString:@"finishGuide"];
+            _passwordTextField.text = @"";
+            _phoneNumTextField.text = @"";
+            
+            //跳转主页面
+            [[AppDelegate getAppDelegate] showTabBarVC];
+
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+     
     }];
     
 //    //模拟登陆，后面需要与接口对接
@@ -118,7 +147,12 @@
 //    });
     
 }
-
+//注册
+- (IBAction)registerUserAction:(UIButton *)sender {
+    RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    [self.navigationController pushViewController:registerVC animated:YES];
+}
+//忘记密码
 - (IBAction)forgetPasswordAction:(id)sender {
     ForgetPwViewController *forgetPwVC = [[ForgetPwViewController alloc] initWithNibName:@"ForgetPwViewController" bundle:nil];
     [self.navigationController pushViewController:forgetPwVC animated:YES];

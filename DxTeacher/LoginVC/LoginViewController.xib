@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="det_vi_dl" translatesAutoresizingMaskIntoConstraints="NO" id="qKE-NX-Oxg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled-11" translatesAutoresizingMaskIntoConstraints="NO" id="qKE-NX-Oxg">
                     <rect key="frame" x="0.0" y="64" width="320" height="187"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="187" id="LQ7-BH-LiU"/>
@@ -58,6 +58,9 @@
                             <state key="normal" title="我要注册" image="vi_wyzc">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="registerUserAction:" destination="-1" eventType="touchUpInside" id="2dc-lf-Qcr"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-ng-AUi">
                             <rect key="frame" x="223" y="247" width="80" height="20"/>
@@ -123,7 +126,7 @@
         </view>
     </objects>
     <resources>
-        <image name="det_vi_dl" width="375" height="224"/>
+        <image name="Untitled-11" width="722" height="456"/>
         <image name="vi_wjmm" width="20" height="20"/>
         <image name="vi_wyzc" width="20" height="20"/>
     </resources>

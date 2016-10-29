@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
 /**
- *  创建存储对象 （首页论坛headImage）
+ *  创建存储对象 （首页headImage）
  *
  *  @param nonatomic 图片信息
  *  @param retain

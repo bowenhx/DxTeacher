@@ -7,12 +7,15 @@
 //
 
 #import "FindTableViewCell.h"
+#import "FindListViewCell.h"
 
 @implementation FindTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    FindListViewCell *listView = [FindListViewCell findListViewCell];
+    [self addSubview:listView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

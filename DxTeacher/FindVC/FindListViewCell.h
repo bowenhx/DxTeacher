@@ -12,6 +12,8 @@
 
 + (instancetype)findListViewCell;
 
++ (instancetype)findListImgView;
+
 @property (weak, nonatomic) IBOutlet UILabel *labType;
 
 @property (weak, nonatomic) IBOutlet UILabel *labTitle;
@@ -21,5 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labSection;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnMore;
+
+@property (nonatomic , strong) UILabel *labLine;
 
 @end

@@ -33,12 +33,12 @@
 }
 
 - (void)setTitles:(NSString *)titles{
-    UILabel *labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
-    labTitle.text = titles;
-    labTitle.font = [UIFont systemFontOfSize:13];
-    labTitle.textAlignment = NSTextAlignmentCenter;
-    labTitle.textColor = [UIColor darkGrayColor];
-    [self addSubview:labTitle];
+    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
+    _labTitle.text = titles;
+    _labTitle.font = [UIFont systemFontOfSize:13];
+    _labTitle.textAlignment = NSTextAlignmentCenter;
+    _labTitle.textColor = [UIColor darkGrayColor];
+    [self addSubview:_labTitle];
     
 }
 

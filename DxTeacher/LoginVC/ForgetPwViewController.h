@@ -6,8 +6,8 @@
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ForgetPwViewController : UIViewController
+@interface ForgetPwViewController : BaseViewController
 
 @end

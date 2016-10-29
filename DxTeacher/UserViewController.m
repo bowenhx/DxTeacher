@@ -42,22 +42,22 @@
     headView.backgroundColor = [UIColor clearColor];
     //头像
     UIImageView *headImg = [[UIImageView alloc] initWithFrame:CGRectMake((headView.w - 70)/2, 70, 70, 70)];
-    headImg.layer.borderWidth = 1;
-    [headImg img_setImageWithURL:info[@"email"] placeholderImage:[UIImage imageNamed:@"userDefineIcon"]];
+    //headImg.layer.borderWidth = 1;
+    [headImg img_setImageWithURL:info[@"avatar"] placeholderImage:[UIImage imageNamed:@"userDefineIcon"]];
     [headView addSubview:headImg];
     
     //用户名
     UILabel *userName = [[UILabel alloc] initWithFrame:CGRectMake(headImg.x, headImg.max_Y + 5, headImg.w, 25)];
     userName.textAlignment = NSTextAlignmentCenter;
     userName.textColor = [UIColor whiteColor];
-    userName.text = info[@"real_name"];
+    userName.text = info[@"nick_name"];
     [headView addSubview:userName];
     //内容电话
     UILabel *textLab = [[UILabel alloc] initWithFrame:CGRectMake(userName.x - 50, userName.max_Y, userName.w + 100, 25)];
     textLab.font = [UIFont systemFontOfSize:13];
     textLab.textAlignment = NSTextAlignmentCenter;
     textLab.textColor = [UIColor whiteColor];
-    textLab.text = [NSString stringWithFormat:@"%@ 大象顺义园所",info[@"telephone"]];
+    textLab.text = [NSString stringWithFormat:@"%@ 大象顺义园所",info[@"mobile"]];
     [headView addSubview:textLab];
     
     return headView;

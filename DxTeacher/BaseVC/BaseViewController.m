@@ -18,45 +18,18 @@
 
 @implementation BaseViewController
 
-- (void)loadNavBar{
-    
-    
-    //当不是首个控制器时显示返回按钮
-    NSInteger count = self.navigationController.viewControllers.count;
-    if ( count >1 ) {
-        [self.mm_drawerController
-         closeDrawerAnimated:YES
-         completion:^(BOOL finished) {
-            [self.mm_drawerController setLeftDrawerViewController:nil];
-             
-         }];
-        
-    }else{
-        UserViewController *userVC = [UserViewController share];
-        [self.mm_drawerController setLeftDrawerViewController:userVC];
 
-    }
-    
-}
 //初始化view
 - (void)loadNewView{
-    //当不是首个控制器时显示返回按钮
-    NSInteger count = self.navigationController.viewControllers.count;
-    if ( count >1 ) {
-        [self backBtn];
-    }
-    
 }
 
 //初始化数据
 - (void)loadNewData{
-    
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    
     
     //初始化view
     [self loadNewView];
@@ -67,8 +40,9 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //设置导航条
-    [self loadNavBar];
+    
+    //设置关闭或打开滑动手势
+    [self setOpenDrawerGesture];
 }
 - (UILabel *)navTitleLab{
     if (nil == _navTitleLab) {
@@ -123,6 +97,37 @@
 }
 - (void)tapRightBtn{
 }
+
+
+//设置关闭或者打开滑动手势
+- (void)setOpenDrawerGesture{
+    
+    //当不是首个控制器时显示返回按钮
+    NSInteger count = self.navigationController.viewControllers.count;
+    if ( count >1 ) {
+        //当不是首个控制器时显示返回按钮
+        [self backBtn];
+    
+        self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
+        self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeNone;
+        
+//                [self.mm_drawerController
+//                 closeDrawerAnimated:YES
+//                 completion:^(BOOL finished) {
+//                    [self.mm_drawerController setLeftDrawerViewController:nil];
+//        
+//                 }];
+        
+    }else{
+        self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+        self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+//                UserViewController *userVC = [UserViewController share];
+//                [self.mm_drawerController setLeftDrawerViewController:userVC];
+        
+    }
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

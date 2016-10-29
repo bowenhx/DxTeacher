@@ -1,15 +1,21 @@
 PODS:
+  - HTHorizontalSelectionList (0.7.3):
+    - M13BadgeView (~> 1.0.4)
+  - M13BadgeView (1.0.4)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.12)
 
 DEPENDENCIES:
+  - HTHorizontalSelectionList (~> 0.7.3)
   - MBProgressHUD (~> 0.8)
   - MJRefresh
 
 SPEC CHECKSUMS:
+  HTHorizontalSelectionList: f7db90d6e14849eed337236dc30ad82ee883eadf
+  M13BadgeView: 700dd0714fdc837c0cf1c8c004454963ec22441f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
 
-PODFILE CHECKSUM: 2bfc237edafb72ba226229a9414436bd7960d1bd
+PODFILE CHECKSUM: 19cf3357e29c3b0095822445f96e66a1dd1c21aa
 
 COCOAPODS: 1.0.1

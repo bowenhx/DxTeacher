@@ -19,6 +19,26 @@
 		92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D911DBF507500AEF307 /* ItemViewBtn.m */; };
 		92DE35AF1DC2F24000531CDD /* BLoopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35AE1DC2F24000531CDD /* BLoopImageView.m */; };
 		92DE35B21DC2F27500531CDD /* BLoopImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35B11DC2F27500531CDD /* BLoopImageItem.m */; };
+		B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C22A1DC44329001115BB /* FindListImgView.xib */; };
+		B509C22F1DC445C3001115BB /* CoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C22D1DC445C3001115BB /* CoursewareViewController.m */; };
+		B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C22E1DC445C3001115BB /* CoursewareViewController.xib */; };
+		B509C2331DC46F68001115BB /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2321DC46F68001115BB /* CustomTableView.m */; };
+		B509C2361DC47205001115BB /* CustomItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2351DC47205001115BB /* CustomItemView.m */; };
+		B509C23A1DC490F6001115BB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2381DC490F6001115BB /* RegisterViewController.m */; };
+		B509C23B1DC490F6001115BB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2391DC490F6001115BB /* RegisterViewController.xib */; };
+		B509C23F1DC4B45F001115BB /* DeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C23D1DC4B45F001115BB /* DeedViewController.m */; };
+		B509C2401DC4B45F001115BB /* DeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C23E1DC4B45F001115BB /* DeedViewController.xib */; };
+		B509C2441DC4BE84001115BB /* SendManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2421DC4BE84001115BB /* SendManageViewController.m */; };
+		B509C2451DC4BE84001115BB /* SendManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2431DC4BE84001115BB /* SendManageViewController.xib */; };
+		B509C2491DC4E374001115BB /* DrugManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2471DC4E374001115BB /* DrugManageViewController.m */; };
+		B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2481DC4E374001115BB /* DrugManageViewController.xib */; };
+		B509C24E1DC4E43E001115BB /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */; };
+		B509C24F1DC4E43E001115BB /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */; };
+		B509C2531DC4EE8D001115BB /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2511DC4EE8D001115BB /* ClassesViewController.m */; };
+		B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2521DC4EE8D001115BB /* ClassesViewController.xib */; };
+		B509C2581DC4F324001115BB /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2561DC4F324001115BB /* TrendsTableViewCell.m */; };
+		B509C2591DC4F324001115BB /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2571DC4F324001115BB /* TrendsTableViewCell.xib */; };
+		B509C25C1DC4F3C1001115BB /* HomeCustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C25B1DC4F3C1001115BB /* HomeCustomTableView.m */; };
 		B51539941DBE25EE00D839BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539931DBE25EE00D839BA /* main.m */; };
 		B51539971DBE25EE00D839BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539961DBE25EE00D839BA /* AppDelegate.m */; };
 		B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B515399E1DBE25EE00D839BA /* Assets.xcassets */; };
@@ -108,8 +128,6 @@
 		B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */; };
 		B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */; };
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
-		B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */; };
-		B5B7E1271DC21BEF009B3DCC /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */; };
 		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
 		B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */; };
 		FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */; };
@@ -137,6 +155,37 @@
 		92DE35AE1DC2F24000531CDD /* BLoopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageView.m; sourceTree = "<group>"; };
 		92DE35B01DC2F27500531CDD /* BLoopImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLoopImageItem.h; sourceTree = "<group>"; };
 		92DE35B11DC2F27500531CDD /* BLoopImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageItem.m; sourceTree = "<group>"; };
+		B509C22A1DC44329001115BB /* FindListImgView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindListImgView.xib; sourceTree = "<group>"; };
+		B509C22C1DC445C3001115BB /* CoursewareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursewareViewController.h; sourceTree = "<group>"; };
+		B509C22D1DC445C3001115BB /* CoursewareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursewareViewController.m; sourceTree = "<group>"; };
+		B509C22E1DC445C3001115BB /* CoursewareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursewareViewController.xib; sourceTree = "<group>"; };
+		B509C2311DC46F68001115BB /* CustomTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
+		B509C2321DC46F68001115BB /* CustomTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
+		B509C2341DC47205001115BB /* CustomItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItemView.h; sourceTree = "<group>"; };
+		B509C2351DC47205001115BB /* CustomItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItemView.m; sourceTree = "<group>"; };
+		B509C2371DC490F6001115BB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B509C2381DC490F6001115BB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B509C2391DC490F6001115BB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		B509C23C1DC4B45F001115BB /* DeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeedViewController.h; sourceTree = "<group>"; };
+		B509C23D1DC4B45F001115BB /* DeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeedViewController.m; sourceTree = "<group>"; };
+		B509C23E1DC4B45F001115BB /* DeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeedViewController.xib; sourceTree = "<group>"; };
+		B509C2411DC4BE84001115BB /* SendManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendManageViewController.h; sourceTree = "<group>"; };
+		B509C2421DC4BE84001115BB /* SendManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendManageViewController.m; sourceTree = "<group>"; };
+		B509C2431DC4BE84001115BB /* SendManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendManageViewController.xib; sourceTree = "<group>"; };
+		B509C2461DC4E374001115BB /* DrugManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageViewController.h; sourceTree = "<group>"; };
+		B509C2471DC4E374001115BB /* DrugManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageViewController.m; sourceTree = "<group>"; };
+		B509C2481DC4E374001115BB /* DrugManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageViewController.xib; sourceTree = "<group>"; };
+		B509C24B1DC4E43E001115BB /* DrugManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageTableViewCell.h; sourceTree = "<group>"; };
+		B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageTableViewCell.m; sourceTree = "<group>"; };
+		B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
+		B509C2501DC4EE8D001115BB /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
+		B509C2511DC4EE8D001115BB /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
+		B509C2521DC4EE8D001115BB /* ClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassesViewController.xib; sourceTree = "<group>"; };
+		B509C2551DC4F324001115BB /* TrendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsTableViewCell.h; sourceTree = "<group>"; };
+		B509C2561DC4F324001115BB /* TrendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsTableViewCell.m; sourceTree = "<group>"; };
+		B509C2571DC4F324001115BB /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
+		B509C25A1DC4F3C1001115BB /* HomeCustomTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCustomTableView.h; sourceTree = "<group>"; };
+		B509C25B1DC4F3C1001115BB /* HomeCustomTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCustomTableView.m; sourceTree = "<group>"; };
 		B515398F1DBE25ED00D839BA /* DxTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DxTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51539931DBE25EE00D839BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B51539951DBE25EE00D839BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -315,9 +364,6 @@
 		B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkManageViewController.h; sourceTree = "<group>"; };
 		B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkManageViewController.m; sourceTree = "<group>"; };
 		B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkManageViewController.xib; sourceTree = "<group>"; };
-		B5B7E1231DC21BEF009B3DCC /* TrendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsTableViewCell.h; sourceTree = "<group>"; };
-		B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsTableViewCell.m; sourceTree = "<group>"; };
-		B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
 		B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
 		B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
@@ -352,6 +398,9 @@
 				92DD8D7D1DBF3AC900AEF307 /* ForgetPwViewController.h */,
 				92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */,
 				92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */,
+				B509C2371DC490F6001115BB /* RegisterViewController.h */,
+				B509C2381DC490F6001115BB /* RegisterViewController.m */,
+				B509C2391DC490F6001115BB /* RegisterViewController.xib */,
 				92DD8D801DBF3AC900AEF307 /* GuideViewController.h */,
 				92DD8D811DBF3AC900AEF307 /* GuideViewController.m */,
 				92DD8D821DBF3AC900AEF307 /* LoginViewController.h */,
@@ -766,9 +815,6 @@
 			children = (
 				B5153AA31DBE378C00D839BA /* CircleViewController.h */,
 				B5153AA41DBE378C00D839BA /* CircleViewController.m */,
-				B5B7E1231DC21BEF009B3DCC /* TrendsTableViewCell.h */,
-				B5B7E1241DC21BEF009B3DCC /* TrendsTableViewCell.m */,
-				B5B7E1251DC21BEF009B3DCC /* TrendsTableViewCell.xib */,
 				B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */,
 				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
 				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
@@ -784,6 +830,9 @@
 			children = (
 				B5153AA61DBE379F00D839BA /* FindViewController.h */,
 				B5153AA71DBE379F00D839BA /* FindViewController.m */,
+				B509C22C1DC445C3001115BB /* CoursewareViewController.h */,
+				B509C22D1DC445C3001115BB /* CoursewareViewController.m */,
+				B509C22E1DC445C3001115BB /* CoursewareViewController.xib */,
 				B599D4E71DC3884D006DA4F6 /* Views */,
 			);
 			path = FindVC;
@@ -797,6 +846,18 @@
 				B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */,
 				B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */,
 				B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */,
+				B509C23C1DC4B45F001115BB /* DeedViewController.h */,
+				B509C23D1DC4B45F001115BB /* DeedViewController.m */,
+				B509C23E1DC4B45F001115BB /* DeedViewController.xib */,
+				B509C2411DC4BE84001115BB /* SendManageViewController.h */,
+				B509C2421DC4BE84001115BB /* SendManageViewController.m */,
+				B509C2431DC4BE84001115BB /* SendManageViewController.xib */,
+				B509C2461DC4E374001115BB /* DrugManageViewController.h */,
+				B509C2471DC4E374001115BB /* DrugManageViewController.m */,
+				B509C2481DC4E374001115BB /* DrugManageViewController.xib */,
+				B509C2501DC4EE8D001115BB /* ClassesViewController.h */,
+				B509C2511DC4EE8D001115BB /* ClassesViewController.m */,
+				B509C2521DC4EE8D001115BB /* ClassesViewController.xib */,
 				B5B7E11D1DC20BC5009B3DCC /* View */,
 			);
 			path = HomeVC;
@@ -840,9 +901,14 @@
 		B599D4E71DC3884D006DA4F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B509C2341DC47205001115BB /* CustomItemView.h */,
+				B509C2351DC47205001115BB /* CustomItemView.m */,
+				B509C2311DC46F68001115BB /* CustomTableView.h */,
+				B509C2321DC46F68001115BB /* CustomTableView.m */,
 				B599D4E81DC38895006DA4F6 /* FindListViewCell.h */,
 				B599D4E91DC38895006DA4F6 /* FindListViewCell.m */,
 				B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */,
+				B509C22A1DC44329001115BB /* FindListImgView.xib */,
 				B599D4ED1DC397C6006DA4F6 /* FindTableViewCell.h */,
 				B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */,
 				B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */,
@@ -853,12 +919,20 @@
 		B5B7E11D1DC20BC5009B3DCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B509C25A1DC4F3C1001115BB /* HomeCustomTableView.h */,
+				B509C25B1DC4F3C1001115BB /* HomeCustomTableView.m */,
+				B509C2551DC4F324001115BB /* TrendsTableViewCell.h */,
+				B509C2561DC4F324001115BB /* TrendsTableViewCell.m */,
+				B509C2571DC4F324001115BB /* TrendsTableViewCell.xib */,
 				92DE35B01DC2F27500531CDD /* BLoopImageItem.h */,
 				92DE35B11DC2F27500531CDD /* BLoopImageItem.m */,
 				92DE35AD1DC2F24000531CDD /* BLoopImageView.h */,
 				92DE35AE1DC2F24000531CDD /* BLoopImageView.m */,
 				92DD8D901DBF507500AEF307 /* ItemViewBtn.h */,
 				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
+				B509C24B1DC4E43E001115BB /* DrugManageTableViewCell.h */,
+				B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */,
+				B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -932,18 +1006,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B509C24F1DC4E43E001115BB /* DrugManageTableViewCell.xib in Resources */,
 				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
+				B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
+				B509C23B1DC490F6001115BB /* RegisterViewController.xib in Resources */,
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
+				B509C2451DC4BE84001115BB /* SendManageViewController.xib in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
-				B5B7E1271DC21BEF009B3DCC /* TrendsTableViewCell.xib in Resources */,
+				B509C2591DC4F324001115BB /* TrendsTableViewCell.xib in Resources */,
+				B509C2401DC4B45F001115BB /* DeedViewController.xib in Resources */,
+				B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */,
 				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
+				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
 				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
+				B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */,
 				B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */,
 				B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */,
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
@@ -1016,21 +1098,26 @@
 				B5153AC21DBE424300D839BA /* UserViewController.m in Sources */,
 				B5153A901DBE295700D839BA /* ZLNavigationController.m in Sources */,
 				B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */,
+				B509C2581DC4F324001115BB /* TrendsTableViewCell.m in Sources */,
 				B5153A691DBE295700D839BA /* SavaData.m in Sources */,
 				B5153A671DBE295700D839BA /* BNetData.m in Sources */,
 				B5153A8A1DBE295700D839BA /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
+				B509C2491DC4E374001115BB /* DrugManageViewController.m in Sources */,
+				B509C25C1DC4F3C1001115BB /* HomeCustomTableView.m in Sources */,
 				B5153A751DBE295700D839BA /* UIButton+WebCache.m in Sources */,
 				B5153A991DBE295700D839BA /* DACircularProgressView.m in Sources */,
 				B5153A611DBE295700D839BA /* UIButton+EXCell.m in Sources */,
 				B5153A771DBE295700D839BA /* UIImage+MultiFormat.m in Sources */,
 				B5153A5C1DBE295700D839BA /* UIColor+app.m in Sources */,
 				B5153A7B1DBE295700D839BA /* UIImageView+WebCache.m in Sources */,
+				B509C22F1DC445C3001115BB /* CoursewareViewController.m in Sources */,
 				B5153A971DBE295700D839BA /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 				92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */,
 				B5153A661DBE295700D839BA /* ANet.m in Sources */,
 				B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */,
 				B5153A6E1DBE295700D839BA /* SDWebImageCompat.m in Sources */,
 				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
+				B509C2331DC46F68001115BB /* CustomTableView.m in Sources */,
 				92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */,
 				B5153A6D1DBE295700D839BA /* SDImageCache.m in Sources */,
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
@@ -1042,6 +1129,7 @@
 				B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				B5153A701DBE295700D839BA /* SDWebImageDownloader.m in Sources */,
 				B5153A551DBE295700D839BA /* BaseViewController.m in Sources */,
+				B509C2441DC4BE84001115BB /* SendManageViewController.m in Sources */,
 				92DE35AF1DC2F24000531CDD /* BLoopImageView.m in Sources */,
 				B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */,
 				B5153A821DBE295700D839BA /* ZLCameraViewController.m in Sources */,
@@ -1059,9 +1147,12 @@
 				B5153A931DBE295700D839BA /* ZLPhotoPickerViewController.m in Sources */,
 				B5153A7F1DBE295700D839BA /* ZLCamera.m in Sources */,
 				B5153A621DBE295700D839BA /* UIImage+UIImageExt.m in Sources */,
+				B509C2361DC47205001115BB /* CustomItemView.m in Sources */,
 				B5153A791DBE295700D839BA /* UIImageView+HighlightedWebCache.m in Sources */,
 				B5153A7A1DBE295700D839BA /* UIImageView+MJWebCache.m in Sources */,
+				B509C23F1DC4B45F001115BB /* DeedViewController.m in Sources */,
 				B5153AB91DBE3CED00D839BA /* MMDrawerVisualState.m in Sources */,
+				B509C2531DC4EE8D001115BB /* ClassesViewController.m in Sources */,
 				B5153AAB1DBE37B300D839BA /* TeachingViewController.m in Sources */,
 				B5153A681DBE295700D839BA /* BNetworkConfig.m in Sources */,
 				B5153A6A1DBE295700D839BA /* MKAnnotationView+WebCache.m in Sources */,
@@ -1080,11 +1171,11 @@
 				B599D4F01DC397C6006DA4F6 /* FindTableViewCell.m in Sources */,
 				B5153A941DBE295700D839BA /* ZLPhotoPickerCollectionView.m in Sources */,
 				B5153A8C1DBE295700D839BA /* ZLPhotoAssets.m in Sources */,
-				B5B7E1261DC21BEF009B3DCC /* TrendsTableViewCell.m in Sources */,
 				B5153A741DBE295700D839BA /* SDWebImagePrefetcher.m in Sources */,
 				B5153A631DBE295700D839BA /* UIImageView+NSString.m in Sources */,
 				B5153A7E1DBE295700D839BA /* UIView+ZLExtension.m in Sources */,
 				B5153AA81DBE379F00D839BA /* FindViewController.m in Sources */,
+				B509C23A1DC490F6001115BB /* RegisterViewController.m in Sources */,
 				B5153A571DBE295700D839BA /* BTabBarController.m in Sources */,
 				B5153A731DBE295700D839BA /* SDWebImageManager.m in Sources */,
 				92DE35B21DC2F27500531CDD /* BLoopImageItem.m in Sources */,
@@ -1094,6 +1185,7 @@
 				B5153A651DBE295700D839BA /* UploadingFormData.m in Sources */,
 				B5153A811DBE295700D839BA /* ZLCameraView.m in Sources */,
 				B5153A831DBE295700D839BA /* NSArray+Photos.m in Sources */,
+				B509C24E1DC4E43E001115BB /* DrugManageTableViewCell.m in Sources */,
 				B5153A861DBE295700D839BA /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

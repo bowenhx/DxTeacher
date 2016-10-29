@@ -283,13 +283,13 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 5.0; //switch interval time
             page = _pageControl.numberOfPages -1;
         }
     }
-    if (page!= _pageControl.currentPage)
-    {
-        if ([_delegate respondsToSelector:@selector(foucusImageFrame:currentItem:)])
-        {
-            [_delegate foucusImageFrame:self currentItem:page];
-        }
-    }
+//    if (page!= _pageControl.currentPage)
+//    {
+//        if (_delegate && [_delegate respondsToSelector:@selector(foucusImageFrame:currentItem:)])
+//        {
+//            [_delegate foucusImageFrame:self currentItem:page];
+//        }
+//    }
     _pageControl.currentPage = page;
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
