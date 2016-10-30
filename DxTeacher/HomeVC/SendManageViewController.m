@@ -9,9 +9,12 @@
 #import "SendManageViewController.h"
 #import "AppDefine.h"
 #import "ItemViewBtn.h"
-
+#import "SendMegViewController.h"
 @interface SendManageViewController ()
-
+{
+    NSInteger _aidIndex;
+    NSArray *_images;
+}
 @end
 
 @implementation SendManageViewController
@@ -24,15 +27,15 @@
 }
 
 - (void)loadNewView{
-    NSArray *images = @[
-                        @[@"tztg_unpressed",@"tztg_pressed",@"通知通告"],
-                        @[@"jcsj_unpressed",@"jcsj_pressed",@"精彩瞬间"],
-                        @[@"mzsp_unpressed",@"mzsp_pressed",@"每周食谱"],
-                        @[@"kcjh_unpressed",@"kcjh_pressed",@"课程计划"],
-                        @[@"ysaq_unpressed",@"ysaq_pressed",@"园所安全"]
-                        ];
+    _images = @[
+                @[@"tztg_unpressed",@"tztg_pressed",@"通知通告"],
+                @[@"jcsj_unpressed",@"jcsj_pressed",@"精彩瞬间"],
+                @[@"mzsp_unpressed",@"mzsp_pressed",@"每周食谱"],
+                @[@"kcjh_unpressed",@"kcjh_pressed",@"课程计划"],
+                @[@"ysaq_unpressed",@"ysaq_pressed",@"园所安全"]
+                ];
     
-    [self addItemView:images];
+    [self addItemView:_images];
     
 }
 
@@ -55,8 +58,40 @@
     }
 }
 - (void)didSelectIndex:(UIButton *)btn{
+    if (btn.tag == 0) {
+        _aidIndex = 52;
+    }else{
+        _aidIndex = btn.tag + 61;
+    }
     
+    //检查发布权限
+    [self sendJurisdictionManageBlock:^(bool bPush) {
+        if (bPush == 0) {
+            SendMegViewController *sendMegVC = [[SendMegViewController alloc] initWithNibName:@"SendMegViewController" bundle:nil];
+            sendMegVC.title = [NSString stringWithFormat:@"发布%@",_images[btn.tag][2]];
+            sendMegVC.index = _aidIndex;
+            [self.navigationController pushViewController:sendMegVC animated:YES];
+        }
+    }];
 }
+
+//判断发布权限
+- (void)sendJurisdictionManageBlock:(void(^)(bool bPush))block{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    NSLog(@"info = %@",info);
+    [[ANet share] post:BASE_URL params:@{@"action":@"checkDoPublishAuth",@"uid":info[@"id"],@"categoryid":@(_aidIndex)} completion:^(BNetData *model, NSString *netErr) {
+        
+        NSLog(@"data = %@",model.data);
+        block (model.status);
+        if (model.status == 0) {
+            
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

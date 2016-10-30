@@ -63,7 +63,7 @@
 - (void)setIndex:(NSUInteger)index{
     _index = index;
     [self showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(index)} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":self.action ? self.action : @"getNewsList",@"aid":@(index)} completion:^(BNetData *model, NSString *netErr) {
         [self removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
@@ -82,6 +82,55 @@
         
     }];
     
+}
+#pragma mark 加载未审核数据（精彩瞬间和用药条管理）
+- (void)loadManageDataAction:(NSString *)typeAction{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    [self showHUDActivityView:@"正在加载" shade:NO];
+    [[ANet share] post:BASE_URL params:@{@"action":typeAction,@"userid":info[@"id"]} completion:^(BNetData *model, NSString *netErr) {
+        [self removeHUDActivity];
+        
+        NSLog(@"data = %@",model.data);
+        if (model.status == 0) {
+            //请求成功
+            [self.dataSource setArray:model.data];
+            [_tableView reloadData];
+            
+            if (self.dataSource.count == 0) {
+                [self showHUDTitleView:@"此分类暂无数据" image:nil];
+            }
+            
+        }else{
+            [self showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+
+}
+#pragma mark 审核操作
+- (void)reviewedActonDictionary:(NSDictionary *)dict{
+    [self showHUDActivityView:@"正在加载" shade:NO];
+    NSInteger status = [dict[@"status"] integerValue] ? 0 : 2;
+    NSDictionary *info = @{@"action":@"doReviewed",
+                           @"id":dict[@"id"],
+                           @"uid":dict[@"fields"][@"AuthorID"],
+                           @"uname":dict[@"user_name"],
+                           @"state":@(status)};
+    
+    [[ANet share] post:BASE_URL params:info completion:^(BNetData *model, NSString *netErr) {
+        [self removeHUDActivity];
+        
+        NSLog(@"data = %@",model.data);
+        if (model.status == 0) {
+            [self showSuccess:model.message];
+            
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
+//            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
+        }else{
+            [self showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
 }
 - (void)handleNotification:(NSNotification *)notification{
     NSDictionary *info = [notification object];
@@ -106,6 +155,11 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
+    if ([self.homeVC.title isEqualToString:@"我的审核"]) {
+        [cell.btnCheck setTitle:@"待确认" forState:0];
+        [cell.btnCheck setTitleColor:[UIColor colorAppBg] forState:0];
+        
+    }
     cell.imagesView.viewController = self.homeVC;
     [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
@@ -113,7 +167,9 @@
     
 }
 - (void)didDetailAction:(UIButton *)btn{
-   
+    if ([self.homeVC.title isEqualToString:@"我的审核"]) {
+        [self reviewedActonDictionary:self.dataSource[btn.tag]];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

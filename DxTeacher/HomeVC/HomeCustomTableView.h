@@ -16,7 +16,10 @@
 
 @property (nonatomic , strong) UIViewController *homeVC;
 
+@property (nonatomic , copy) NSString *action;
 @property (nonatomic , assign) NSUInteger index;
 
+#pragma mark 加载未审核数据（精彩瞬间和用药条管理）
+- (void)loadManageDataAction:(NSString *)typeAction;
 
 @end

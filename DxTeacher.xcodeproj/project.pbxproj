@@ -126,6 +126,16 @@
 		B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */; };
 		B599D4F01DC397C6006DA4F6 /* FindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */; };
 		B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */; };
+		B5AE182D1DC58C5900E45412 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE182B1DC58C5900E45412 /* FMViewController.m */; };
+		B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE182C1DC58C5900E45412 /* FMViewController.xib */; };
+		B5AE18351DC58C8500E45412 /* FMAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */; };
+		B5AE18361DC58C8500E45412 /* FMAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */; };
+		B5AE183C1DC5968700E45412 /* FMVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */; };
+		B5AE183D1DC5968700E45412 /* FMVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE183B1DC5968700E45412 /* FMVideoTableViewCell.xib */; };
+		B5AE18411DC5AEEC00E45412 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE183F1DC5AEEC00E45412 /* VerifyViewController.m */; };
+		B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE18401DC5AEEC00E45412 /* VerifyViewController.xib */; };
+		B5AE18461DC61E8D00E45412 /* SendMegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE18441DC61E8D00E45412 /* SendMegViewController.m */; };
+		B5AE18471DC61E8D00E45412 /* SendMegViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE18451DC61E8D00E45412 /* SendMegViewController.xib */; };
 		B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */; };
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
 		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
@@ -361,6 +371,21 @@
 		B599D4ED1DC397C6006DA4F6 /* FindTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewCell.h; sourceTree = "<group>"; };
 		B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewCell.m; sourceTree = "<group>"; };
 		B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindTableViewCell.xib; sourceTree = "<group>"; };
+		B5AE182A1DC58C5900E45412 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
+		B5AE182B1DC58C5900E45412 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		B5AE182C1DC58C5900E45412 /* FMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMViewController.xib; sourceTree = "<group>"; };
+		B5AE182F1DC58C8500E45412 /* FMAudioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioTableViewCell.h; sourceTree = "<group>"; };
+		B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioTableViewCell.m; sourceTree = "<group>"; };
+		B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMAudioTableViewCell.xib; sourceTree = "<group>"; };
+		B5AE18391DC5968700E45412 /* FMVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoTableViewCell.h; sourceTree = "<group>"; };
+		B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoTableViewCell.m; sourceTree = "<group>"; };
+		B5AE183B1DC5968700E45412 /* FMVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMVideoTableViewCell.xib; sourceTree = "<group>"; };
+		B5AE183E1DC5AEEC00E45412 /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyViewController.h; sourceTree = "<group>"; };
+		B5AE183F1DC5AEEC00E45412 /* VerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyViewController.m; sourceTree = "<group>"; };
+		B5AE18401DC5AEEC00E45412 /* VerifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyViewController.xib; sourceTree = "<group>"; };
+		B5AE18431DC61E8D00E45412 /* SendMegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMegViewController.h; sourceTree = "<group>"; };
+		B5AE18441DC61E8D00E45412 /* SendMegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMegViewController.m; sourceTree = "<group>"; };
+		B5AE18451DC61E8D00E45412 /* SendMegViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMegViewController.xib; sourceTree = "<group>"; };
 		B5B7E11E1DC20C2A009B3DCC /* WorkManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkManageViewController.h; sourceTree = "<group>"; };
 		B5B7E11F1DC20C2A009B3DCC /* WorkManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkManageViewController.m; sourceTree = "<group>"; };
 		B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkManageViewController.xib; sourceTree = "<group>"; };
@@ -815,6 +840,9 @@
 			children = (
 				B5153AA31DBE378C00D839BA /* CircleViewController.h */,
 				B5153AA41DBE378C00D839BA /* CircleViewController.m */,
+				B5AE18431DC61E8D00E45412 /* SendMegViewController.h */,
+				B5AE18441DC61E8D00E45412 /* SendMegViewController.m */,
+				B5AE18451DC61E8D00E45412 /* SendMegViewController.xib */,
 				B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */,
 				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
 				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
@@ -858,6 +886,12 @@
 				B509C2501DC4EE8D001115BB /* ClassesViewController.h */,
 				B509C2511DC4EE8D001115BB /* ClassesViewController.m */,
 				B509C2521DC4EE8D001115BB /* ClassesViewController.xib */,
+				B5AE182A1DC58C5900E45412 /* FMViewController.h */,
+				B5AE182B1DC58C5900E45412 /* FMViewController.m */,
+				B5AE182C1DC58C5900E45412 /* FMViewController.xib */,
+				B5AE183E1DC5AEEC00E45412 /* VerifyViewController.h */,
+				B5AE183F1DC5AEEC00E45412 /* VerifyViewController.m */,
+				B5AE18401DC5AEEC00E45412 /* VerifyViewController.xib */,
 				B5B7E11D1DC20BC5009B3DCC /* View */,
 			);
 			path = HomeVC;
@@ -919,6 +953,12 @@
 		B5B7E11D1DC20BC5009B3DCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5AE182F1DC58C8500E45412 /* FMAudioTableViewCell.h */,
+				B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */,
+				B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */,
+				B5AE18391DC5968700E45412 /* FMVideoTableViewCell.h */,
+				B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */,
+				B5AE183B1DC5968700E45412 /* FMVideoTableViewCell.xib */,
 				B509C25A1DC4F3C1001115BB /* HomeCustomTableView.h */,
 				B509C25B1DC4F3C1001115BB /* HomeCustomTableView.m */,
 				B509C2551DC4F324001115BB /* TrendsTableViewCell.h */,
@@ -1008,11 +1048,13 @@
 			files = (
 				B509C24F1DC4E43E001115BB /* DrugManageTableViewCell.xib in Resources */,
 				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
+				B5AE18361DC58C8500E45412 /* FMAudioTableViewCell.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
 				B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
+				B5AE18471DC61E8D00E45412 /* SendMegViewController.xib in Resources */,
 				B509C23B1DC490F6001115BB /* RegisterViewController.xib in Resources */,
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
 				B509C2451DC4BE84001115BB /* SendManageViewController.xib in Resources */,
@@ -1021,11 +1063,14 @@
 				B509C2401DC4B45F001115BB /* DeedViewController.xib in Resources */,
 				B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */,
 				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
+				B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
+				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
 				B5153A581DBE295700D839BA /* Default-568h@2x.png in Resources */,
 				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
 				B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */,
+				B5AE183D1DC5968700E45412 /* FMVideoTableViewCell.xib in Resources */,
 				B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */,
 				B5153AC31DBE424300D839BA /* UserViewController.xib in Resources */,
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
@@ -1092,6 +1137,7 @@
 				B5153A891DBE295700D839BA /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				B5153A6F1DBE295700D839BA /* SDWebImageDecoder.m in Sources */,
 				B5153A881DBE295700D839BA /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
+				B5AE183C1DC5968700E45412 /* FMVideoTableViewCell.m in Sources */,
 				B5153A981DBE295700D839BA /* ZLPhotoPickerImageView.m in Sources */,
 				B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */,
 				92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */,
@@ -1147,6 +1193,8 @@
 				B5153A931DBE295700D839BA /* ZLPhotoPickerViewController.m in Sources */,
 				B5153A7F1DBE295700D839BA /* ZLCamera.m in Sources */,
 				B5153A621DBE295700D839BA /* UIImage+UIImageExt.m in Sources */,
+				B5AE182D1DC58C5900E45412 /* FMViewController.m in Sources */,
+				B5AE18351DC58C8500E45412 /* FMAudioTableViewCell.m in Sources */,
 				B509C2361DC47205001115BB /* CustomItemView.m in Sources */,
 				B5153A791DBE295700D839BA /* UIImageView+HighlightedWebCache.m in Sources */,
 				B5153A7A1DBE295700D839BA /* UIImageView+MJWebCache.m in Sources */,
@@ -1161,6 +1209,7 @@
 				B5153A711DBE295700D839BA /* SDWebImageDownloaderOperation.m in Sources */,
 				B5153A561DBE295700D839BA /* BNavigationController.m in Sources */,
 				B5153A921DBE295700D839BA /* ZLPhotoPickerGroupViewController.m in Sources */,
+				B5AE18411DC5AEEC00E45412 /* VerifyViewController.m in Sources */,
 				B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */,
 				B5153A6C1DBE295700D839BA /* NSData+ImageContentType.m in Sources */,
 				B5153A641DBE295700D839BA /* UIView+Ex.m in Sources */,
@@ -1175,6 +1224,7 @@
 				B5153A631DBE295700D839BA /* UIImageView+NSString.m in Sources */,
 				B5153A7E1DBE295700D839BA /* UIView+ZLExtension.m in Sources */,
 				B5153AA81DBE379F00D839BA /* FindViewController.m in Sources */,
+				B5AE18461DC61E8D00E45412 /* SendMegViewController.m in Sources */,
 				B509C23A1DC490F6001115BB /* RegisterViewController.m in Sources */,
 				B5153A571DBE295700D839BA /* BTabBarController.m in Sources */,
 				B5153A731DBE295700D839BA /* SDWebImageManager.m in Sources */,

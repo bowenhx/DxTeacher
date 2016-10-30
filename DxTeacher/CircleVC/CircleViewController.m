@@ -11,6 +11,7 @@
 #import "ItemVIewsHeight.h"
 #import "AppDefine.h"
 #import "PoppingTabView.h"
+#import "SendMegViewController.h"
 
 @interface CircleViewController ()<PoppingTabViewDelegate>
 {
@@ -19,6 +20,7 @@
 }
 @property (nonatomic , strong) PoppingTabView   *popTabView;        //弹窗tabView
 @property (nonatomic , strong) UITableView      *typeTabView;
+@property (nonatomic , assign) NSInteger aidIndex;
 @end
 
 @implementation CircleViewController
@@ -37,7 +39,7 @@
     [self.rightBtn setImage:[UIImage imageNamed:@"dte_vi_Add_1"] forState:0];
     [self.rightBtn setTitle:@"发布" forState:0];
     
-    NSArray *types = @[@"通知通告",@"精彩瞬间",@"每周食谱",@"计程计划",@"园所安全"];
+    NSArray *types = @[@"通知通告",@"精彩瞬间",@"每周食谱",@"课程计划",@"园所安全"];
     self.popTabView.itemArrs = types;
     
 }
@@ -55,7 +57,20 @@
 }
 #pragma mark 发布
 - (void)tapRightBtn{
-    
+   
+    //检查发布权限
+    [self sendJurisdictionManageBlock:^(bool bPush) {
+        if (bPush == 0) {
+            SendMegViewController *sendMegVC = [[SendMegViewController alloc] initWithNibName:@"SendMegViewController" bundle:nil];
+            if ([_titleBtn.titleLabel.text isEqualToString:@"班级圈"]) {
+                 sendMegVC.title = @"发布通知通告";
+            }else{
+                sendMegVC.title = [NSString stringWithFormat:@"发布%@",_titleBtn.titleLabel.text];
+            }
+            sendMegVC.index = _aidIndex;
+            [self.navigationController pushViewController:sendMegVC animated:YES];
+        }
+    }];
 }
 - (void)selectTitleType:(UIButton *)button{
     [self showPopSubTabView];
@@ -100,8 +115,30 @@
     [self hiddenPopSubTabView];
 }
 - (void)loadNewData{
+    self.aidIndex = 52;
+
+}
+//判断发布权限
+- (void)sendJurisdictionManageBlock:(void(^)(bool bPush))block{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    NSLog(@"info = %@",info);
+    [[ANet share] post:BASE_URL params:@{@"action":@"checkDoPublishAuth",@"uid":info[@"id"],@"categoryid":@(_aidIndex)} completion:^(BNetData *model, NSString *netErr) {
+        
+        NSLog(@"data = %@",model.data);
+        block (model.status);
+        if (model.status == 0) {
+           
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+}
+//请求列表数据
+- (void)setAidIndex:(NSInteger)aidIndex{
+    _aidIndex = aidIndex;
     [self.view showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(52)} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(aidIndex)} completion:^(BNetData *model, NSString *netErr) {
         [self.view removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
@@ -119,7 +156,6 @@
         }
         
     }];
-
 }
 #pragma mark
 #pragma mark UITableViewDelegate
@@ -156,9 +192,18 @@
 }
 #pragma mark PoppingTableViewDelegate
 - (void)selectItem:(id)obj index:(NSInteger)index{
-    NSLog(@"obj = %@",obj);
+   
+    if (index == 0) {
+        self.aidIndex = 52;
+    }else{
+        self.aidIndex = index + 61;
+    }
+    
     [_titleBtn setTitle:obj forState:0];
     [self hiddenPopSubTabView];
+    
+     NSLog(@"obj = %@,aid = %ld",obj,(long)self.aidIndex);
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

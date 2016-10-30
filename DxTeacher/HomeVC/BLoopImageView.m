@@ -96,7 +96,7 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 5.0; //switch interval time
     if (imageItems.count ==0) return;
     
     UIImage *image = [UIImage imageNamed:@"def_iv_Lace"];
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH(self), self.frame.size.height-image.size.height-5)];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH(self), self.frame.size.height-image.size.height)];
     _scrollView.scrollsToTop = NO;
 //    _scrollView.layer.borderWidth = 1;
     

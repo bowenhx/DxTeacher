@@ -14,6 +14,8 @@
 #import "DeedViewController.h"
 #import "SendManageViewController.h"
 #import "ClassesViewController.h"
+#import "FMViewController.h"
+#import "VerifyViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -192,7 +194,8 @@
             break;
         case 4:
         {//大象FM
-            [self classesViewControllerTitle:@"大象FM" index:67];
+            FMViewController *fmVC = [[FMViewController alloc] initWithNibName:@"FMViewController" bundle:nil];
+            [self.navigationController pushViewController:fmVC animated:YES];
         }
             break;
         case 5:
@@ -212,7 +215,8 @@
             break;
         case 8:
         {//我的审核
-            
+            VerifyViewController *verifyVC = [[VerifyViewController alloc] initWithNibName:@"VerifyViewController" bundle:nil];
+            [self.navigationController pushViewController:verifyVC animated:YES];
         }
             break;
         case 9:
