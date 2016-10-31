@@ -169,6 +169,8 @@
 - (void)didDetailAction:(UIButton *)btn{
     if ([self.homeVC.title isEqualToString:@"我的审核"]) {
         [self reviewedActonDictionary:self.dataSource[btn.tag]];
+    }else{
+        
     }
 }
 

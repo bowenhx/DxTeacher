@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929FD7BA1DC73CB100C68589 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FD7B81DC73CB100C68589 /* ReportTableViewCell.m */; };
+		929FD7BB1DC73CB100C68589 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FD7B91DC73CB100C68589 /* ReportTableViewCell.xib */; };
+		929FD7BE1DC73D2400C68589 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FD7BD1DC73D2400C68589 /* CommentView.m */; };
+		929FD7C31DC7421A00C68589 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FD7C11DC7421A00C68589 /* DetailViewController.m */; };
+		929FD7C41DC7421A00C68589 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FD7C21DC7421A00C68589 /* DetailViewController.xib */; };
 		92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A40A751DC3325A00C9B436 /* PoppingTabView.m */; };
 		92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A40A771DC34C4700C9B436 /* Main.storyboard */; };
 		92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */; };
@@ -145,6 +150,14 @@
 
 /* Begin PBXFileReference section */
 		8BC45C0DF0BA880EF2200CF6 /* Pods-DxTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.debug.xcconfig"; sourceTree = "<group>"; };
+		929FD7B71DC73CB100C68589 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
+		929FD7B81DC73CB100C68589 /* ReportTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewCell.m; sourceTree = "<group>"; };
+		929FD7B91DC73CB100C68589 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
+		929FD7BC1DC73D2400C68589 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		929FD7BD1DC73D2400C68589 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		929FD7C01DC7421A00C68589 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		929FD7C11DC7421A00C68589 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		929FD7C21DC7421A00C68589 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		92A40A741DC3325A00C9B436 /* PoppingTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoppingTabView.h; sourceTree = "<group>"; };
 		92A40A751DC3325A00C9B436 /* PoppingTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoppingTabView.m; sourceTree = "<group>"; };
 		92A40A781DC34C4700C9B436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -415,6 +428,24 @@
 				DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		929FD7BF1DC73E6100C68589 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */,
+				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
+				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
+				B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */,
+				92A40A741DC3325A00C9B436 /* PoppingTabView.h */,
+				92A40A751DC3325A00C9B436 /* PoppingTabView.m */,
+				929FD7B71DC73CB100C68589 /* ReportTableViewCell.h */,
+				929FD7B81DC73CB100C68589 /* ReportTableViewCell.m */,
+				929FD7B91DC73CB100C68589 /* ReportTableViewCell.xib */,
+				929FD7BC1DC73D2400C68589 /* CommentView.h */,
+				929FD7BD1DC73D2400C68589 /* CommentView.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		92DD8D7C1DBF3AC900AEF307 /* LoginVC */ = {
@@ -843,12 +874,10 @@
 				B5AE18431DC61E8D00E45412 /* SendMegViewController.h */,
 				B5AE18441DC61E8D00E45412 /* SendMegViewController.m */,
 				B5AE18451DC61E8D00E45412 /* SendMegViewController.xib */,
-				B5B7E1281DC21D6C009B3DCC /* CustomImageView.h */,
-				B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */,
-				B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */,
-				B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */,
-				92A40A741DC3325A00C9B436 /* PoppingTabView.h */,
-				92A40A751DC3325A00C9B436 /* PoppingTabView.m */,
+				929FD7C01DC7421A00C68589 /* DetailViewController.h */,
+				929FD7C11DC7421A00C68589 /* DetailViewController.m */,
+				929FD7C21DC7421A00C68589 /* DetailViewController.xib */,
+				929FD7BF1DC73E6100C68589 /* view */,
 			);
 			path = CircleVC;
 			sourceTree = "<group>";
@@ -1053,12 +1082,14 @@
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
 				B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */,
+				929FD7C41DC7421A00C68589 /* DetailViewController.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
 				B5AE18471DC61E8D00E45412 /* SendMegViewController.xib in Resources */,
 				B509C23B1DC490F6001115BB /* RegisterViewController.xib in Resources */,
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
 				B509C2451DC4BE84001115BB /* SendManageViewController.xib in Resources */,
 				B51539A21DBE25EE00D839BA /* LaunchScreen.storyboard in Resources */,
+				929FD7BB1DC73CB100C68589 /* ReportTableViewCell.xib in Resources */,
 				B509C2591DC4F324001115BB /* TrendsTableViewCell.xib in Resources */,
 				B509C2401DC4B45F001115BB /* DeedViewController.xib in Resources */,
 				B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */,
@@ -1132,6 +1163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929FD7BE1DC73D2400C68589 /* CommentView.m in Sources */,
 				B5153A761DBE295700D839BA /* UIImage+GIF.m in Sources */,
 				B5153A7C1DBE295700D839BA /* UIView+WebCacheOperation.m in Sources */,
 				B5153A891DBE295700D839BA /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
@@ -1199,6 +1231,7 @@
 				B5153A791DBE295700D839BA /* UIImageView+HighlightedWebCache.m in Sources */,
 				B5153A7A1DBE295700D839BA /* UIImageView+MJWebCache.m in Sources */,
 				B509C23F1DC4B45F001115BB /* DeedViewController.m in Sources */,
+				929FD7BA1DC73CB100C68589 /* ReportTableViewCell.m in Sources */,
 				B5153AB91DBE3CED00D839BA /* MMDrawerVisualState.m in Sources */,
 				B509C2531DC4EE8D001115BB /* ClassesViewController.m in Sources */,
 				B5153AAB1DBE37B300D839BA /* TeachingViewController.m in Sources */,
@@ -1213,6 +1246,7 @@
 				B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */,
 				B5153A6C1DBE295700D839BA /* NSData+ImageContentType.m in Sources */,
 				B5153A641DBE295700D839BA /* UIView+Ex.m in Sources */,
+				929FD7C31DC7421A00C68589 /* DetailViewController.m in Sources */,
 				B5153A721DBE295700D839BA /* SDWebImageManager+MJ.m in Sources */,
 				B5153A8D1DBE295700D839BA /* ZLPhotoPickerDatas.m in Sources */,
 				B5153AB71DBE3CED00D839BA /* MMDrawerBarButtonItem.m in Sources */,

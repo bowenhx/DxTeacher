@@ -41,7 +41,6 @@
         [iView img_setImageWithURL:imgItems[i][@"thumb_path"] placeholderImage:nil];
         [self addSubview:iView];
        
-        
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh);
         btn.tag = i;

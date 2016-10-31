@@ -12,7 +12,7 @@
 #import "AppDefine.h"
 #import "PoppingTabView.h"
 #import "SendMegViewController.h"
-
+#import "DetailViewController.h"
 @interface CircleViewController ()<PoppingTabViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
@@ -175,7 +175,7 @@
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
     cell.imagesView.viewController = self;
-    //[cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
         
     
@@ -189,6 +189,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = [self itemsImages:self.dataSource[indexPath.row]];
     return 172 + height;
+}
+- (void)didDetailAction:(UIButton *)btn{
+    DetailViewController *detail = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    detail.cid = [self.dataSource[btn.tag][@"albums"][0][@"id"] integerValue];
+    [self.navigationController pushViewController:detail animated:YES];
 }
 #pragma mark PoppingTableViewDelegate
 - (void)selectItem:(id)obj index:(NSInteger)index{
