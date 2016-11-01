@@ -21,7 +21,6 @@
     self.btnCheck.layer.borderWidth = 1;
     self.btnCheck.layer.borderColor = [UIColor colorAppBg].CGColor;
     self.btnCheck.layer.cornerRadius = 3;
-    self.btnCheck.hidden = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -269,60 +269,61 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
 }
 
 -(void)closeDrawerAnimated:(BOOL)animated velocity:(CGFloat)velocity animationOptions:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion{
-    if(self.isAnimatingDrawer){
-        if(completion){
-            completion(NO);
-        }
-    }
-    else {
-        [self setAnimatingDrawer:animated];
-        CGRect newFrame = self.childControllerContainerView.bounds;
-        
-        CGFloat distance = ABS(CGRectGetMinX(self.centerContainerView.frame));
-        NSTimeInterval duration = MAX(distance/ABS(velocity),MMDrawerMinimumAnimationDuration);
-        
-        BOOL leftDrawerVisible = CGRectGetMinX(self.centerContainerView.frame) > 0;
-        BOOL rightDrawerVisible = CGRectGetMinX(self.centerContainerView.frame) < 0;
-        
-        MMDrawerSide visibleSide = MMDrawerSideNone;
-        CGFloat percentVisble = 0.0;
-        
-        if(leftDrawerVisible){
-            CGFloat visibleDrawerPoints = CGRectGetMinX(self.centerContainerView.frame);
-            percentVisble = MAX(0.0,visibleDrawerPoints/self.maximumLeftDrawerWidth);
-            visibleSide = MMDrawerSideLeft;
-        }
-        else if(rightDrawerVisible){
-            CGFloat visibleDrawerPoints = CGRectGetWidth(self.centerContainerView.frame)-CGRectGetMaxX(self.centerContainerView.frame);
-            percentVisble = MAX(0.0,visibleDrawerPoints/self.maximumRightDrawerWidth);
-            visibleSide = MMDrawerSideRight;
-        }
-        
-        UIViewController * sideDrawerViewController = [self sideDrawerViewControllerForSide:visibleSide];
-        
-        [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:percentVisble];
-        
-        [sideDrawerViewController beginAppearanceTransition:NO animated:animated];
-        
-        [UIView
-         animateWithDuration:(animated?duration:0.0)
-         delay:0.0
-         options:options
-         animations:^{
-             [self setNeedsStatusBarAppearanceUpdateIfSupported];
-             [self.centerContainerView setFrame:newFrame];
-             [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:0.0];
-         }
-         completion:^(BOOL finished) {
-             [sideDrawerViewController endAppearanceTransition];
-             [self setOpenSide:MMDrawerSideNone];
-             [self resetDrawerVisualStateForDrawerSide:visibleSide];
-             [self setAnimatingDrawer:NO];
-             if(completion){
-                 completion(finished);
-             }
-         }];
-    }
+      if(self.isAnimatingDrawer){
+          if(completion){
+              completion(NO);
+          }
+      }
+      else {
+          [self setAnimatingDrawer:animated];
+          CGRect newFrame = self.childControllerContainerView.bounds;
+          
+          CGFloat distance = ABS(CGRectGetMinX(self.centerContainerView.frame));
+          NSTimeInterval duration = MAX(distance/ABS(velocity),MMDrawerMinimumAnimationDuration);
+          
+          BOOL leftDrawerVisible = CGRectGetMinX(self.centerContainerView.frame) > 0;
+          BOOL rightDrawerVisible = CGRectGetMinX(self.centerContainerView.frame) < 0;
+          
+          MMDrawerSide visibleSide = MMDrawerSideNone;
+          CGFloat percentVisble = 0.0;
+          
+          if(leftDrawerVisible){
+              CGFloat visibleDrawerPoints = CGRectGetMinX(self.centerContainerView.frame);
+              percentVisble = MAX(0.0,visibleDrawerPoints/self.maximumLeftDrawerWidth);
+              visibleSide = MMDrawerSideLeft;
+          }
+          else if(rightDrawerVisible){
+              CGFloat visibleDrawerPoints = CGRectGetWidth(self.centerContainerView.frame)-CGRectGetMaxX(self.centerContainerView.frame);
+              percentVisble = MAX(0.0,visibleDrawerPoints/self.maximumRightDrawerWidth);
+              visibleSide = MMDrawerSideRight;
+          }
+          
+          UIViewController * sideDrawerViewController = [self sideDrawerViewControllerForSide:visibleSide];
+          
+          [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:percentVisble];
+          
+          [sideDrawerViewController beginAppearanceTransition:NO animated:animated];
+          
+          [UIView
+           animateWithDuration:(animated?duration:0.0)
+           delay:0.0
+           options:options
+           animations:^{
+               [self setNeedsStatusBarAppearanceUpdateIfSupported];
+               [self.centerContainerView setFrame:newFrame];
+               [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:0.0];
+           }
+           completion:^(BOOL finished) {
+               [sideDrawerViewController endAppearanceTransition];
+               [self setOpenSide:MMDrawerSideNone];
+               [self resetDrawerVisualStateForDrawerSide:visibleSide];
+               [self setAnimatingDrawer:NO];
+               if(completion){
+                   completion(finished);
+               }
+           }];
+      }
+
 }
 
 -(void)openDrawerSide:(MMDrawerSide)drawerSide animated:(BOOL)animated completion:(void (^)(BOOL finished))completion{

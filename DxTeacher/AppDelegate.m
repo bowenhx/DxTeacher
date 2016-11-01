@@ -52,8 +52,9 @@ static AppDelegate *_appDelegate;
     UserViewController *leftVC = [UserViewController share];
     
     //使用Storyboard初始化根界面
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *centVC = [storyBoard instantiateInitialViewController];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[self class]]];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *centVC = [storyboard instantiateInitialViewController];
     
     self.drawerController = [[MMDrawerController alloc]
                              initWithCenterViewController:centVC

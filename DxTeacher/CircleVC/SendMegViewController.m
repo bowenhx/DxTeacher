@@ -54,7 +54,7 @@
 - (UIButton *)photoBtn{
     if (!_photoBtn) {
         _photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _photoBtn.frame = CGRectMake(SPACE,_textView.max_Y + 10, img_W, img_W);
+        _photoBtn.frame = CGRectMake(SPACE,85 + 150 + 10, img_W, img_W);
         [_photoBtn setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:UIControlStateNormal];
         [_photoBtn addTarget:self action:@selector(selectPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_photoBtn];

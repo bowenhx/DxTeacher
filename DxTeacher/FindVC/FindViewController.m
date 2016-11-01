@@ -72,8 +72,8 @@
 }
 
 - (void)loadNewView{
-    _scrollView.layer.borderWidth = 1;
-    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
+//    _scrollView.layer.borderWidth = 1;
+//    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
     //添加循环轮播图片view
     [self.scrollView addSubview:self.headView];
 
@@ -143,7 +143,16 @@
     
    
 }
-
+- (void)loadNewData{
+    NSArray *items = [NSArray arrayWithObjects:
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/903/847d2925-7d03-40dd-90d9-429d13aabab8_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/888/4f564995-a919-4c7f-ae8f-d8d0bda1d7f4_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/869/2ebc752a-5176-4f16-b7b5-2233d4ddcc87_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/888/4f564995-a919-4c7f-ae8f-d8d0bda1d7f4_100x100.jpg",
+                      @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/903/847d2925-7d03-40dd-90d9-429d13aabab8_100x100.jpg", nil];
+    
+    [self refreshHeadImages:items];
+}
 
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);

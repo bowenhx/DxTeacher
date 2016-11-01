@@ -16,6 +16,7 @@
 #import "ClassesViewController.h"
 #import "FMViewController.h"
 #import "VerifyViewController.h"
+#import "AddressViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -30,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"首页";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSelectUserType:) name:@"selectActionTypeNotification" object:nil];
     
 }
 - (BLoopImageView *)headView{
@@ -248,6 +251,21 @@
     
 }
 
+- (void)didSelectUserType:(NSNotification *)notification{
+    NSDictionary *obj = [notification object];
+    NSInteger index = [obj[@"row"] integerValue];
+    switch (index) {
+        case 0:
+        {
+            AddressViewController *addressVC = [[AddressViewController alloc] initWithNibName:@"AddressViewController" bundle:nil];
+            [self.navigationController pushViewController:addressVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

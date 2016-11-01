@@ -96,11 +96,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *centVC = [storyBoard instantiateInitialViewController];
-    [self.mm_drawerController setCenterViewController:centVC withCloseAnimation:YES completion:nil];
     
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"selectActionTypeNotification" object:@{@"row":@(indexPath.row)}];
+//        });
+    });
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *centVC = [storyBoard instantiateInitialViewController];
+//    [self.mm_drawerController setCenterViewController:centVC withCloseAnimation:YES completion:nil];
+   
+
+   
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

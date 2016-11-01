@@ -30,8 +30,7 @@
                         <outlet property="delegate" destination="-1" id="OS4-BJ-iPv"/>
                     </connections>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="这一刻说点什么吧..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZs-dF-cYH">
-                    <frame key="frameInset" minX="15" minY="92" width="125" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这一刻说点什么吧..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZs-dF-cYH">
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="OEB-BM-eVn"/>
                     </constraints>
@@ -48,7 +47,7 @@
                 <constraint firstItem="xZs-dF-cYH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ars-UE-Ug7"/>
                 <constraint firstItem="n2A-Lf-lCj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="eYB-0e-I4J"/>
             </constraints>
-            <point key="canvasLocation" x="311.5" y="179.5"/>
+            <point key="canvasLocation" x="33" y="156"/>
         </view>
     </objects>
 </document>
