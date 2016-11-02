@@ -59,9 +59,6 @@
 		B5153A551DBE295700D839BA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539AB1DBE295700D839BA /* BaseViewController.m */; };
 		B5153A561DBE295700D839BA /* BNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539AD1DBE295700D839BA /* BNavigationController.m */; };
 		B5153A571DBE295700D839BA /* BTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539AF1DBE295700D839BA /* BTabBarController.m */; };
-		B5153A581DBE295700D839BA /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = B51539B01DBE295700D839BA /* Default-568h.png */; };
-		B5153A591DBE295700D839BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51539B11DBE295700D839BA /* Default@2x.png */; };
-		B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51539B21DBE295700D839BA /* Default@3x.png */; };
 		B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539B61DBE295700D839BA /* NSString+UIColor.m */; };
 		B5153A5C1DBE295700D839BA /* UIColor+app.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539B81DBE295700D839BA /* UIColor+app.m */; };
 		B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B51539C31DBE295700D839BA /* CustomBarButtonItem.m */; };
@@ -241,9 +238,6 @@
 		B51539AD1DBE295700D839BA /* BNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNavigationController.m; sourceTree = "<group>"; };
 		B51539AE1DBE295700D839BA /* BTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTabBarController.h; sourceTree = "<group>"; };
 		B51539AF1DBE295700D839BA /* BTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTabBarController.m; sourceTree = "<group>"; };
-		B51539B01DBE295700D839BA /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
-		B51539B11DBE295700D839BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B51539B21DBE295700D839BA /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		B51539B51DBE295700D839BA /* NSString+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UIColor.h"; sourceTree = "<group>"; };
 		B51539B61DBE295700D839BA /* NSString+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UIColor.m"; sourceTree = "<group>"; };
 		B51539B71DBE295700D839BA /* UIColor+app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+app.h"; sourceTree = "<group>"; };
@@ -557,9 +551,6 @@
 				B51539D11DBE295700D839BA /* NetWorking */,
 				B51539D91DBE295700D839BA /* Utilities */,
 				B515399E1DBE25EE00D839BA /* Assets.xcassets */,
-				B51539B01DBE295700D839BA /* Default-568h.png */,
-				B51539B11DBE295700D839BA /* Default@2x.png */,
-				B51539B21DBE295700D839BA /* Default@3x.png */,
 				B51539A31DBE25EE00D839BA /* Info.plist */,
 				B51539921DBE25EE00D839BA /* Supporting Files */,
 			);
@@ -1139,10 +1130,7 @@
 				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
 				B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
-				B5153A5A1DBE295700D839BA /* Default@3x.png in Resources */,
 				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
-				B5153A581DBE295700D839BA /* Default-568h.png in Resources */,
-				B5153A591DBE295700D839BA /* Default@2x.png in Resources */,
 				9209429A1DC8835F0047864B /* AddressViewController.xib in Resources */,
 				B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */,
 				B5AE183D1DC5968700E45412 /* FMVideoTableViewCell.xib in Resources */,
@@ -1433,6 +1421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxteacher.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1448,6 +1437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxteacher.2016mobel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

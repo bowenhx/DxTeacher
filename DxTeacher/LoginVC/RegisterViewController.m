@@ -11,6 +11,11 @@
 
 @interface RegisterViewController ()
 {
+    
+    __weak IBOutlet UIScrollView *_scrollView;
+    
+    
+    
     __weak IBOutlet UIButton *_btnDxName;
     
     __weak IBOutlet UITextField *_textUserName;
@@ -53,6 +58,17 @@
     UIImage *img = [[UIImage imageNamed:@"det_vi_rad"] stretchableImageWithLeftCapWidth:5 topCapHeight:5];
     [_btnRegister setBackgroundImage:img forState:0];
     
+//    _scrollView.frame = CGRectMake(0, 0, self.screen_W, self.screen_H-64);
+//    _scrollView.layer.borderWidth = 1;
+    _scrollView.layer.borderColor = [UIColor redColor].CGColor;
+    if (self.screen_W <= 414) {
+        _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H + 50);
+    }
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   
 }
 - (IBAction)agreementAction:(UIButton *)sender {
     sender.selected = !sender.selected;

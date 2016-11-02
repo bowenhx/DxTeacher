@@ -138,7 +138,7 @@
     
     for (int i= 0; i< views.count; i++) {
         UIView *iView = views[i];
-        iView.backgroundColor = [UIColor randomColor];
+        //iView.backgroundColor = [UIColor randomColor];
 //        iView.layer.borderWidth = 1;
 //        iView.layer.borderColor = [UIColor randomColor].CGColor;
 //        iView.translatesAutoresizingMaskIntoConstraints = NO;

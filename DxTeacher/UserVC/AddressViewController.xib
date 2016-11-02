@@ -22,7 +22,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNv-EC-pEO">
                     <subviews>
-                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-2o-jr9">
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-2o-jr9">
                             <constraints>
                                 <constraint firstAttribute="width" constant="125" id="Lwp-NJ-SGF"/>
                                 <constraint firstAttribute="height" constant="34" id="xde-ce-rPe"/>
@@ -34,7 +34,7 @@
                                 <action selector="selectAddressType:" destination="-1" eventType="touchUpInside" id="VWX-0P-cHG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-1M-gn3">
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-1M-gn3">
                             <constraints>
                                 <constraint firstAttribute="width" constant="125" id="QcH-Po-FA9"/>
                                 <constraint firstAttribute="height" constant="30" id="nWg-ew-XNg"/>
@@ -55,8 +55,12 @@
                         <constraint firstAttribute="trailing" secondItem="7yJ-2o-jr9" secondAttribute="trailing" constant="31" id="rwz-7y-f1a"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="86V-zr-Aq9">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="35" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="86V-zr-Aq9">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wdG-Wt-nyx"/>
+                        <outlet property="delegate" destination="-1" id="34r-2U-tJW"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,7 +73,7 @@
                 <constraint firstItem="86V-zr-Aq9" firstAttribute="top" secondItem="sNv-EC-pEO" secondAttribute="bottom" id="SgW-P5-2wl"/>
                 <constraint firstAttribute="trailing" secondItem="86V-zr-Aq9" secondAttribute="trailing" id="gLK-Ue-jhg"/>
             </constraints>
-            <point key="canvasLocation" x="-51" y="-369"/>
+            <point key="canvasLocation" x="122" y="-383"/>
         </view>
     </objects>
 </document>
