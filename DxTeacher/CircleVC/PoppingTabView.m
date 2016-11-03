@@ -93,7 +93,7 @@
 //        }
 //    }
    
-    cell.textLabel.font = [UIFont systemFontOfSize:17];
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
     return cell;
 }
 
