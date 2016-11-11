@@ -43,7 +43,7 @@
     [_addressBtn2 setTitleColor:[UIColor colorAppBg] forState:UIControlStateSelected];
     _addressBtn1.selected = YES;
     
-    UIView *lineView =[[UIView alloc] initWithFrame:CGRectMake(self.screen_W/2-1, _headView.y, 1, _headView.h)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(self.screen_W/2-1, _headView.y, 1, _headView.h)];
     
     lineView.backgroundColor = [UIColor colorLineBg];
     [_headView addSubview:lineView];
@@ -111,9 +111,7 @@
             }
             [self loadSchoolPhoneData];
         }];
-        
 
-        
     }
     
 }

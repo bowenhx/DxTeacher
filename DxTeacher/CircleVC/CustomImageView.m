@@ -60,7 +60,8 @@
     // 数据源/delegate
     pickerBrowser.editing = YES;
     pickerBrowser.editText = @"保存";
-    pickerBrowser.photos = [NSArray setPhotoPickerPhotos:self.imgItems urlKey:@"original_path"];
+    NSArray *photos = [NSArray setPhotoPickerPhotos:self.imgItems urlKey:@"original_path"];
+    pickerBrowser.photos = photos;
     // 能够删除
     pickerBrowser.delegate = self;
     // 当前选中的值

@@ -96,7 +96,6 @@
 		B5153A801DBE295700D839BA /* ZLCameraImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A141DBE295700D839BA /* ZLCameraImageView.m */; };
 		B5153A811DBE295700D839BA /* ZLCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A161DBE295700D839BA /* ZLCameraView.m */; };
 		B5153A821DBE295700D839BA /* ZLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A181DBE295700D839BA /* ZLCameraViewController.m */; };
-		B5153A831DBE295700D839BA /* NSArray+Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A1D1DBE295700D839BA /* NSArray+Photos.m */; };
 		B5153A841DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A1F1DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m */; };
 		B5153A851DBE295700D839BA /* ZLPhotoRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A211DBE295700D839BA /* ZLPhotoRect.m */; };
 		B5153A861DBE295700D839BA /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153A241DBE295700D839BA /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m */; };
@@ -318,8 +317,6 @@
 		B5153A171DBE295700D839BA /* ZLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCameraViewController.h; sourceTree = "<group>"; };
 		B5153A181DBE295700D839BA /* ZLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCameraViewController.m; sourceTree = "<group>"; };
 		B5153A191DBE295700D839BA /* ZLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhoto.h; sourceTree = "<group>"; };
-		B5153A1C1DBE295700D839BA /* NSArray+Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Photos.h"; sourceTree = "<group>"; };
-		B5153A1D1DBE295700D839BA /* NSArray+Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Photos.m"; sourceTree = "<group>"; };
 		B5153A1E1DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhotoPickerBrowserPhoto.h; sourceTree = "<group>"; };
 		B5153A1F1DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoPickerBrowserPhoto.m; sourceTree = "<group>"; };
 		B5153A201DBE295700D839BA /* ZLPhotoRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhotoRect.h; sourceTree = "<group>"; };
@@ -795,8 +792,6 @@
 		B5153A1B1DBE295700D839BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5153A1C1DBE295700D839BA /* NSArray+Photos.h */,
-				B5153A1D1DBE295700D839BA /* NSArray+Photos.m */,
 				B5153A1E1DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.h */,
 				B5153A1F1DBE295700D839BA /* ZLPhotoPickerBrowserPhoto.m */,
 				B5153A201DBE295700D839BA /* ZLPhotoRect.h */,
@@ -1305,7 +1300,6 @@
 				B51539941DBE25EE00D839BA /* main.m in Sources */,
 				B5153A651DBE295700D839BA /* UploadingFormData.m in Sources */,
 				B5153A811DBE295700D839BA /* ZLCameraView.m in Sources */,
-				B5153A831DBE295700D839BA /* NSArray+Photos.m in Sources */,
 				B509C24E1DC4E43E001115BB /* DrugManageTableViewCell.m in Sources */,
 				B5153A861DBE295700D839BA /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
 			);

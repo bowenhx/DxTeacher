@@ -14,6 +14,9 @@
 @implementation ItemVIewsHeight
 
 + (CGFloat)loadItmesCounts:(NSInteger)count{
+    if (count == 0) {
+        return 0;
+    }
     float width = SCREEN_WIDTH - 86 - 8;
     float btn_wh = (width - SPACE * 4) / 3;
     

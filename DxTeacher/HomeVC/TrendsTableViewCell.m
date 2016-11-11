@@ -26,7 +26,7 @@
     self.labCheck.textColor = @"ff0000".color;
     self.labCheck.layer.borderWidth = 1;
     self.labCheck.layer.borderColor = @"ff0000".color.CGColor;
-    
+    [self.btnCheck setTitleColor:[UIColor colorAppBg] forState:0];
     
 }
 
@@ -72,6 +72,17 @@
     
     //计算图片height
     self.imagesHeight.constant = [ItemVIewsHeight loadItmesCounts:items.count];
+    
+    NSInteger status = [info[@"status"] integerValue];//0审核通过1未审核2审核拒绝
+    if (status == 0 ) {
+         [self.btnCheck setTitle:@"审核通过" forState:0];
+    }else if (status == 1){
+         [self.btnCheck setTitle:@"未审核" forState:0];
+    }else if (status == 2){
+         [self.btnCheck setTitle:@"审核拒绝" forState:0];
+    }
+   
+   
 }
 
 @end

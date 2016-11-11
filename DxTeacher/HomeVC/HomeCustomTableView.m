@@ -14,6 +14,7 @@
 @interface HomeCustomTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSInteger       _commentId;
+   
 }
 
 @property (nonatomic , assign) BOOL addNotCent;
@@ -27,6 +28,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.addNotCent = YES;
+        _page = 1;
         [self addSubview:self.tableView];
     }
     return self;
@@ -55,21 +57,52 @@
         
         //高度
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_tableView)]];
+
     }
     return _tableView;
 }
+- (void)setPage:(NSUInteger)page{
+    _page = page;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(beginRefreshingAction)];
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(uploadingAction)];
+}
 
-
+//下拉刷新
+- (void)beginRefreshingAction{
+    _page = 1;
+    self.index = _index;
+}
+//上拉加载更多
+- (void)uploadingAction{
+    _page ++;
+    self.index = _index;
+}
 - (void)setIndex:(NSUInteger)index{
     _index = index;
     [self showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":self.action ? self.action : @"getNewsList",@"aid":@(index)} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":self.action ? self.action : @"getNewsList",@"aid":@(index),@"page":@(_page)} completion:^(BNetData *model, NSString *netErr) {
         [self removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             //请求成功
-            [self.dataSource setArray:model.data];
+            NSArray *array = model.data;
+            if ( _page == 1 ) {
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [self.dataSource setArray:model.data];
+                    [_tableView.mj_footer resetNoMoreData];
+                }
+            }else{
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        [self.dataSource addObject:obj];
+                    }];
+                }else{
+                    [self showHUDTitleView:@"没有更多数据" image:nil];
+                    [_tableView.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+            
             [_tableView reloadData];
             
             if (self.dataSource.count == 0) {
@@ -80,11 +113,14 @@
             [self showHUDTitleView:model.message image:nil];
         }
         
+        [_tableView endRefreshing];
+        
     }];
     
 }
 #pragma mark 加载未审核数据（精彩瞬间和用药条管理）
 - (void)loadManageDataAction:(NSString *)typeAction{
+    _typeAction = typeAction;
     NSDictionary *info = [SavaData parseDicFromFile:User_File];
     [self showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] post:BASE_URL params:@{@"action":typeAction,@"userid":info[@"id"]} completion:^(BNetData *model, NSString *netErr) {
@@ -123,7 +159,7 @@
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             [self showSuccess:model.message];
-            
+            [self loadManageDataAction:_typeAction];
 //            [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
 //            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
         }else{
@@ -156,12 +192,12 @@
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
     if ([self.homeVC.title isEqualToString:@"我的审核"]) {
-        [cell.btnCheck setTitle:@"待确认" forState:0];
-        [cell.btnCheck setTitleColor:[UIColor colorAppBg] forState:0];
-        
+        [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+    }else{
+        cell.btnCheck.hidden = YES;
     }
     cell.imagesView.viewController = self.homeVC;
-    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+   
     return cell;
 
     

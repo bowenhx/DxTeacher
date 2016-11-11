@@ -17,6 +17,7 @@
 {
     __weak IBOutlet UITableView *_tableView;
     UIButton *_titleBtn;//标题title
+    NSUInteger _page;
 }
 @property (nonatomic , strong) PoppingTabView   *popTabView;        //弹窗tabView
 @property (nonatomic , strong) UITableView      *typeTabView;
@@ -28,6 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //     self.navigationItem.title = @"班级圈";
+    
+    _aidIndex = 52;
 }
 
 - (void)loadNewView{
@@ -42,7 +45,13 @@
     NSArray *types = @[@"通知通告",@"精彩瞬间",@"每周食谱",@"课程计划",@"园所安全"];
     self.popTabView.itemArrs = types;
     
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(beginRefreshingAction)];
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(uploadingAction)];
+    
+    [_tableView.mj_header beginRefreshing];
 }
+
+
 #pragma mark popView
 - (PoppingTabView *)popTabView{
     if (!_popTabView) {
@@ -55,6 +64,18 @@
     }
     return _popTabView;
 }
+
+//下拉刷新
+- (void)beginRefreshingAction{
+    [self loadViewData];
+}
+//上拉加载更多
+- (void)uploadingAction{
+    _page ++;
+    self.aidIndex = _aidIndex;
+}
+
+
 #pragma mark 发布
 - (void)tapRightBtn{
    
@@ -114,8 +135,9 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self hiddenPopSubTabView];
 }
-- (void)loadNewData{
-    self.aidIndex = 52;
+- (void)loadViewData{
+    _page = 1;
+    self.aidIndex = _aidIndex;
 
 }
 //判断发布权限
@@ -138,13 +160,29 @@
 - (void)setAidIndex:(NSInteger)aidIndex{
     _aidIndex = aidIndex;
     [self.view showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(aidIndex)} completion:^(BNetData *model, NSString *netErr) {
+    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(aidIndex),@"page":@(_page)} completion:^(BNetData *model, NSString *netErr) {
         [self.view removeHUDActivity];
         
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             //请求成功
-            [self.dataSource setArray:model.data];
+            NSArray *array = model.data;
+            if ( _page == 1 ) {
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [self.dataSource setArray:model.data];
+                    [_tableView.mj_footer resetNoMoreData];
+                }
+            }else{
+                if ([array isKindOfClass:[NSArray class]] && array.count) {
+                    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        [self.dataSource addObject:obj];
+                    }];
+                }else{
+                    [self.view showHUDTitleView:@"没有更多数据" image:nil];
+                    [_tableView.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+            
             [_tableView reloadData];
             
             if (self.dataSource.count == 0) {
@@ -154,6 +192,8 @@
         }else{
             [self.view showHUDTitleView:model.message image:nil];
         }
+        
+        [_tableView endRefreshing];
         
     }];
 }
@@ -197,7 +237,7 @@
 }
 #pragma mark PoppingTableViewDelegate
 - (void)selectItem:(id)obj index:(NSInteger)index{
-   
+    _page = 1;
     if (index == 0) {
         self.aidIndex = 52;
     }else{

@@ -22,7 +22,7 @@
             [data addObject:photo];
         }else if ([obj isKindOfClass:[NSString class]]) {
             ZLPhotoPickerBrowserPhoto *photo = [[ZLPhotoPickerBrowserPhoto alloc] init];
-            photo.photoURL = [NSURL URLWithString:obj];
+            photo.photoURL = [NSString getPathByAppendString:obj];
             [data addObject:photo];
         }
     }];

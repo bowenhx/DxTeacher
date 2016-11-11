@@ -18,8 +18,10 @@
 
 @property (nonatomic , copy) NSString *action;
 @property (nonatomic , assign) NSUInteger index;
+@property (nonatomic , assign)  NSUInteger   page;
 
 #pragma mark 加载未审核数据（精彩瞬间和用药条管理）
+@property (nonatomic , copy)NSString *typeAction;
 - (void)loadManageDataAction:(NSString *)typeAction;
 
 @end

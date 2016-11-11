@@ -130,7 +130,6 @@
 
 
 @implementation UIScrollView (EX_EndRefresh)
-/*
 - (void)endRefreshing{
     if (self.mj_header.isRefreshing) {
         [self.mj_header endRefreshing];
@@ -138,7 +137,7 @@
         [self.mj_footer endRefreshing];
     }
 }
-*/
+
 @end
 
 

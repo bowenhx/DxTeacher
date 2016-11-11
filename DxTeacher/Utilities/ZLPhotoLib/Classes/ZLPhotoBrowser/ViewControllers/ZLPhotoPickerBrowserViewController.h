@@ -11,7 +11,7 @@
 #import "ZLPhotoPickerCommon.h"
 #import "ZLPhotoPickerCustomToolBarView.h"
 #import "ZLPhotoPickerBrowserPhotoScrollView.h"
-#import "NSArray+Photos.h"
+
 
 @class ZLPhotoPickerBrowserViewController;
 
