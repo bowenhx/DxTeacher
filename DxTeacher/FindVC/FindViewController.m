@@ -78,7 +78,7 @@
 //    _scrollView.layer.borderWidth = 1;
 //    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
     
-   
+    [self.dataSource setArray:items];
     
     
 //    NSArray *images = @[
@@ -181,62 +181,63 @@
 }
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
-    switch (btn.tag) {
-        case 0:
-        {//教堂与课件
+//    switch (btn.tag) {
+//        case 0:
+//        {//教堂与课件
             CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
+            couresewareVC.aid = [self.dataSource[btn.tag][@"id"] integerValue];
             [self.navigationController pushViewController:couresewareVC animated:YES];
-        }
-            break;
-        case 1:
-        {//
-            
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-        case 4:
-        {
-            
-        }
-            break;
-        case 5:
-        {
-            
-        }
-            break;
-        case 6:
-        {
-            
-        }
-            break;
-        case 7:
-        {
-            
-        }
-            break;
-        case 8:
-        {
-            
-        }
-            break;
-        case 9:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
+//        }
+//            break;
+//        case 1:
+//        {//
+//            
+//        }
+//            break;
+//        case 2:
+//        {
+//            
+//        }
+//            break;
+//        case 3:
+//        {
+//            
+//        }
+//            break;
+//        case 4:
+//        {
+//            
+//        }
+//            break;
+//        case 5:
+//        {
+//            
+//        }
+//            break;
+//        case 6:
+//        {
+//            
+//        }
+//            break;
+//        case 7:
+//        {
+//            
+//        }
+//            break;
+//        case 8:
+//        {
+//            
+//        }
+//            break;
+//        case 9:
+//        {
+//            
+//        }
+//            break;
+//            
+//        default:
+//            break;
+//    }
     
     
 }

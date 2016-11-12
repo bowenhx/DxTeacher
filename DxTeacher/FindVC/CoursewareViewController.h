@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface CoursewareViewController : BaseViewController
-
+@property (nonatomic , assign) NSInteger aid;
 @end

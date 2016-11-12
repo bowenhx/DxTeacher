@@ -25,12 +25,12 @@
     
     self.title = @"教堂与课件";
 }
-- (void)loadNewView{
-    [super loadNewView];
+- (void)addHeadItems:(NSArray *)items{
     
     //初始化页面view
-    _itemViews = [[NSMutableArray alloc] initWithCapacity:4];
-    for (int i =0; i<4; i++) {
+    _itemViews = [[NSMutableArray alloc] initWithCapacity:items.count];
+    NSMutableArray *titles = [[NSMutableArray alloc] initWithCapacity:items.count];
+    for (int i =0; i<items.count; i++) {
         CustomTableView *view = [[CustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, self.screen_H-64)];
         view.homeVC = self;
 //        view.layer.borderWidth = 1;
@@ -38,15 +38,32 @@
         [_itemViews addObject:view];
     }
     
+    
+    [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [titles addObject:obj[@"title"]];
+    }];
     //item 页面布局
-    [_customView addItemView:_itemViews title:@[@"领域教案",
-                                                @"主题教案",
-                                                @"特色教案",
-                                                @"课件广场"] height: self.screen_H-64];
+    [_customView addItemView:_itemViews title:titles height: self.screen_H-64];
     
 
 }
-
+- (void)loadNewData{
+    [self.view showHUDActivityView:@"正在加载" shade:NO];
+    [[ANet share] post:BASE_URL params:@{@"action":@"getFind6ChildClass",@"aid":@(_aid)} completion:^(BNetData *model, NSString *netErr) {
+        [self.view removeHUDActivity];
+        NSLog(@"data = %@",model.data);
+        if (model.status == 0) {
+            NSArray *items = model.data;
+            if ([items isKindOfClass:[NSArray class]] && items.count) {
+                [self addHeadItems:items];
+            }
+            
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
