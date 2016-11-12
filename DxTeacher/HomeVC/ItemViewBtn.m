@@ -8,6 +8,7 @@
 
 #import "ItemViewBtn.h"
 #import "AppDefine.h"
+#import "UIButton+WebCache.h"
 
 @implementation ItemViewBtn
 
@@ -22,8 +23,15 @@
 - (void)setItemImgs:(NSString *)itemImgs{
     _itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _itemBtn.frame = self.bounds;
-    [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
-    _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
+    if ([itemImgs hasPrefix:@"http://"]) {
+        [_itemBtn sd_setImageWithURL:[NSURL URLWithString:itemImgs] forState:0];
+    }else{
+        [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
+        
+        _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
+    }
+   
+    
 //    _itemBtn.layer.borderWidth = 1;
 //    _itemBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //    _itemBtn.layer.cornerRadius = 6;

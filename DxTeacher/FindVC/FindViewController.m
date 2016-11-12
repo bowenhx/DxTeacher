@@ -70,33 +70,39 @@
     }
     [self.headView setItemsArr:itemArray];
 }
-
 - (void)loadNewView{
-//    _scrollView.layer.borderWidth = 1;
-//    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
     //添加循环轮播图片view
     [self.scrollView addSubview:self.headView];
-
+}
+- (void)loadItemNewViews:(NSArray *)items{
+//    _scrollView.layer.borderWidth = 1;
+//    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
     
-    NSArray *images = @[
-                        @[@"kqgl_1_unpressed",@"vi_jztxl",@"教堂与课件"],
-                        @[@"xwjll_1_unpressed",@"vi_jxzd",@"教学指导"],
-                        @[@"fbgl_1_unpressed",@"vi_czlj",@"成长路径"],
-                        @[@"jcsj_1_unpressed",@"vi_jchd",@"精彩活动"],
-                        @[@"dxfm_1_unpressed",@"vi_wntj",@"为您推荐"],
-                        @[@"czrz-_1_unpressed",@"vi_rmkj",@"热门课件"]
-                        ];
+   
+    
+    
+//    NSArray *images = @[
+//                        @[@"kqgl_1_unpressed",@"vi_jztxl",@"教堂与课件"],
+//                        @[@"xwjll_1_unpressed",@"vi_jxzd",@"教学指导"],
+//                        @[@"fbgl_1_unpressed",@"vi_czlj",@"成长路径"],
+//                        @[@"jcsj_1_unpressed",@"vi_jchd",@"精彩活动"],
+//                        @[@"dxfm_1_unpressed",@"vi_wntj",@"为您推荐"],
+//                        @[@"czrz-_1_unpressed",@"vi_rmkj",@"热门课件"]
+//                        ];
     
     float btn_wh = (self.screen_W - SPACE * 4) / 3;
     
     float line_Y = 0.0;
-    for (int i= 0; i<images.count; i++) {
+    for (int i= 0; i<items.count; i++) {
         float addBtnX = SPACE + (SPACE + btn_wh) * (i%3);
         float addBtnY = self.headView.max_Y + (SPACE + btn_wh) * (i/3);
         
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
-        iView.itemImgs = images[i][1];
-        iView.titles = images[i][2];
+        
+        NSString *imageURL = [NSString stringWithFormat:@"%@%@",BASE_IMG_URL,items[i][@"img_url"]];
+        
+        iView.itemImgs = imageURL;
+        iView.titles = items[i][@"title"];
         iView.tag = i;
         [self.scrollView addSubview:iView];
         iView.itemBtn.tag = i;
@@ -152,8 +158,27 @@
                       @"http://d-smrss.oss-cn-beijing.aliyuncs.com/customerportrait/004/903/847d2925-7d03-40dd-90d9-429d13aabab8_100x100.jpg", nil];
     
     [self refreshHeadImages:items];
+    
+    
+    [self loadItemData];
 }
-
+- (void)loadItemData{
+    [self.view showHUDActivityView:@"正在加载" shade:NO];
+    [[ANet share] post:BASE_URL params:@{@"action":@"getFind6Class"} completion:^(BNetData *model, NSString *netErr) {
+        [self.view removeHUDActivity];
+        NSLog(@"data = %@",model.data);
+        if (model.status == 0) {
+            NSArray *items = model.data;
+            if ([items isKindOfClass:[NSArray class]] && items.count) {
+                [self loadItemNewViews:items];
+            }
+            
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+}
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
     switch (btn.tag) {

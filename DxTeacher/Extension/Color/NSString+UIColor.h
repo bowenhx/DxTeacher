@@ -5,6 +5,7 @@
 //  Created by Guibin on 15/1/23.
 //  Copyright (c) 2015年 com.mobile-kingdom.bkapps All rights reserved.
 //
+
 //根地址
 #define BASE_IMG_URL  @"http://dx.sitemn.com"
 
