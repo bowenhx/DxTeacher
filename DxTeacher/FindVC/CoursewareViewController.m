@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"教堂与课件";
+//    self.title = @"教堂与课件";
 }
 - (void)addHeadItems:(NSArray *)items{
     
@@ -45,7 +45,22 @@
     //item 页面布局
     [_customView addItemView:_itemViews title:titles height: self.screen_H-64];
     
-
+    //默认加载首页通知数据
+    CustomTableView *iView = _itemViews[0];
+    iView.page = 1;
+    iView.index = [items[0][@"id"] integerValue];
+    
+    //item 变化数据加载处理
+    _customView.itemsEcentAction = ^(NSInteger index){
+        NSLog(@"index = %ld",(long)index);
+        
+        CustomTableView *iView = _itemViews[index];
+        iView.page = 1;
+        iView.index = [items[index][@"id"] integerValue];
+        
+        
+        
+    };
 }
 - (void)loadNewData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];

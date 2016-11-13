@@ -186,6 +186,7 @@
 //        {//教堂与课件
             CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
             couresewareVC.aid = [self.dataSource[btn.tag][@"id"] integerValue];
+            couresewareVC.navigationItem.title = self.dataSource[btn.tag][@"title"];
             [self.navigationController pushViewController:couresewareVC animated:YES];
 //        }
 //            break;

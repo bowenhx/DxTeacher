@@ -7,17 +7,25 @@
 //
 
 #import "FindTableViewCell.h"
-#import "FindListViewCell.h"
 
+@interface FindTableViewCell()
+{
+    
+}
+
+@end;
 @implementation FindTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    FindListViewCell *listView = [FindListViewCell findListViewCell];
-    [self addSubview:listView];
+    _listView = [FindListViewCell findListViewCell];
+    [self addSubview:_listView];
 }
 
+- (void)setInfo:(NSDictionary *)info{
+    
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

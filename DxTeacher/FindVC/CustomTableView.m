@@ -11,6 +11,7 @@
 #import "AppDefine.h"
 #import "ItemVIewsHeight.h"
 #import "FindTableViewCell.h"
+#import "FMVideoTableViewCell.h"
 
 @interface CustomTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -74,11 +75,13 @@
 }
 - (void)setIndex:(NSUInteger)index{
     _index = index;
+    
     [self showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(index),@"page":@(_page)} completion:^(BNetData *model, NSString *netErr) {
         [self removeHUDActivity];
-        
         NSLog(@"data = %@",model.data);
+       
+        
         if (model.status == 0) {
             //请求成功
             NSArray *array = model.data;
@@ -98,9 +101,8 @@
                 }
             }
             
-            [_tableView reloadData];
-            
             if (self.dataSource.count == 0) {
+                [self.dataSource removeAllObjects];
                 [self showHUDTitleView:@"此分类暂无数据" image:nil];
             }
             
@@ -108,7 +110,7 @@
             [self showHUDTitleView:model.message image:nil];
         }
         
-        
+        [_tableView reloadData];
         [_tableView endRefreshing];
         
     }];
@@ -123,20 +125,36 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;//self.dataSource.count;
+    return self.dataSource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *xibName = @"FindTableViewCell";
-    FindTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
+    if ([self.homeVC.navigationItem.title isEqualToString:@"热门课件"]) {
+        static NSString *xibName = @"FMVideoTableViewCell";
+        
+        FMVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewController = self.homeVC;
+        cell.findInfo = self.dataSource[indexPath.row];
+        return cell;
+
+    }else{
+        static NSString *xibName = @"FindTableViewCell";
+        FindTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.info = self.dataSource[indexPath.row];
+        //    cell.btnCheck.tag = indexPath.row;
+        //    cell.imagesView.viewController = self.homeVC;
+        //    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+        return cell;
+
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    cell.info = self.dataSource[indexPath.row];
-//    cell.btnCheck.tag = indexPath.row;
-//    cell.imagesView.viewController = self.homeVC;
-//    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
-    return cell;
+    
 }
 - (void)didDetailAction:(UIButton *)btn{
 
@@ -153,6 +171,9 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.homeVC.navigationItem.title isEqualToString:@"热门课件"]) {
+        return 225;
+    }
        return 70;
 }
 

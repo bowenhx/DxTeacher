@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FindListViewCell.h"
 
 @interface FindTableViewCell : UITableViewCell
+
+@property (nonatomic , strong) FindListViewCell *listView;
+
+@property (nonatomic , copy) NSDictionary *info;
+
 
 @end

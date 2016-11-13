@@ -30,5 +30,5 @@
 
 @property (nonatomic , strong) UIViewController *viewController;
 @property (nonatomic, copy) NSDictionary *info;
-
+@property (nonatomic, copy) NSDictionary *findInfo;
 @end

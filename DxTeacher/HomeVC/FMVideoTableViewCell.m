@@ -14,6 +14,7 @@
 
 @interface FMVideoTableViewCell ()
 
+@property (nonatomic , strong) NSURL *videoURL;
 @property (nonatomic,strong) MPMoviePlayerViewController *moviePlayer;//视频播放控制器
 
 @end
@@ -35,8 +36,7 @@
  */
 - (MPMoviePlayerViewController *)moviePlayer{
     if (!_moviePlayer) {
-        NSURL *url = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-        _moviePlayer=[[MPMoviePlayerViewController alloc] initWithContentURL:url];
+        _moviePlayer=[[MPMoviePlayerViewController alloc] initWithContentURL:self.videoURL];
         _moviePlayer.view.frame = self.viewController.view.bounds;
         _moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         _moviePlayer.moviePlayer.shouldAutoplay = NO;
@@ -72,8 +72,8 @@
     
     self.labContent.text = info[@"title"];
     
-    NSURL *url = [NSString getPathByAppendString:self.info[@"attach"][0][@"file_path"]];
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:url options:nil];
+    self.videoURL = [NSString getPathByAppendString:info[@"attach"][0][@"file_path"]];
+    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
     AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
     generate1.appliesPreferredTrackTransform = YES;
     NSError *err = NULL;
@@ -83,7 +83,29 @@
     self.imgVideo.image = one;
 }
 
-
+- (void)setFindInfo:(NSDictionary *)findInfo{
+    [self.headView img_setImageWithURL:findInfo[@"img_url"] placeholderImage:nil];
+    
+    self.labName.text = findInfo[@"fields"][@"author"];
+    
+    //时间
+    self.labTime.text = [NSString getDateStringWithString:findInfo[@"add_time"]];
+    
+    //播放次数
+//    self.labBrowse.text = [NSString stringWithFormat:@"已浏览%@次",info[@"click"]];
+    
+    self.labContent.text = findInfo[@"title"];
+    
+    self.videoURL = [NSString getPathByAppendString:findInfo[@"fields"][@"video_src"]];
+    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
+    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+    generate1.appliesPreferredTrackTransform = YES;
+    NSError *err = NULL;
+    CMTime time = CMTimeMake(1, 2);
+    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
+    self.imgVideo.image = one;
+}
 - (IBAction)playVideoAction:(UIButton *)sender {
     //播放
     [self.moviePlayer.moviePlayer play];
