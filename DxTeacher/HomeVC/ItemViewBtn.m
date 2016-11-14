@@ -27,10 +27,9 @@
         [_itemBtn sd_setImageWithURL:[NSURL URLWithString:itemImgs] forState:0];
     }else{
         [_itemBtn setImage:[UIImage imageNamed:itemImgs] forState:0];
-        
-        _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
     }
    
+    _itemBtn.imageEdgeInsets = UIEdgeInsetsMake(-15, 0, 15, 0);
     
 //    _itemBtn.layer.borderWidth = 1;
 //    _itemBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -41,13 +40,13 @@
 }
 
 - (void)setTitles:(NSString *)titles{
-    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
+    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-45, self.w, 20)];
     _labTitle.text = titles;
     _labTitle.font = [UIFont systemFontOfSize:13];
     _labTitle.textAlignment = NSTextAlignmentCenter;
     _labTitle.textColor = [UIColor darkGrayColor];
     [self addSubview:_labTitle];
-    
+//    _labTitle.layer.borderWidth = 1;
 }
 
 - (void)setItems:(NSArray *)items{
@@ -62,7 +61,7 @@
     [self addSubview:_itemBtn];
     
     
-    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-50, self.w, 20)];
+    _labTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, self.h-45, self.w, 20)];
     _labTitle.text = items[2];
     _labTitle.font = [UIFont systemFontOfSize:13];
 //    _labTitle.highlightedTextColor = 
@@ -70,5 +69,6 @@
     _labTitle.textAlignment = NSTextAlignmentCenter;
     _labTitle.textColor = [UIColor darkGrayColor];
     [self addSubview:_labTitle];
+//     _labTitle.layer.borderWidth = 1;
 }
 @end

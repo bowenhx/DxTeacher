@@ -215,6 +215,7 @@
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
     cell.imagesView.viewController = self;
+    [cell.btnCheck setTitle:@"详情" forState:UIControlStateNormal];
     [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
         
@@ -231,8 +232,9 @@
     return 172 + height;
 }
 - (void)didDetailAction:(UIButton *)btn{
+    
     DetailViewController *detail = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    detail.cid = [self.dataSource[btn.tag][@"albums"][0][@"id"] integerValue];
+    detail.cid = [self.dataSource[btn.tag][@"id"] integerValue];
     [self.navigationController pushViewController:detail animated:YES];
 }
 #pragma mark PoppingTableViewDelegate

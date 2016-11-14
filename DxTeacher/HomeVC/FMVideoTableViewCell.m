@@ -84,6 +84,23 @@
 }
 
 - (void)setFindInfo:(NSDictionary *)findInfo{
+    
+    {
+        //修改UI
+        self.labBrowse.hidden = YES;
+        self.moreViewBg.hidden = YES;
+        NSInteger status = [findInfo[@"status"] integerValue];
+        [self.btnVideoImg setImage:[UIImage imageNamed:@"vi_tjgz"] forState:0];
+        [self.btnVideoImg setImage:[UIImage imageNamed:@"vi_tjgz_1"] forState:UIControlStateSelected];
+        self.btnVideoImg.selected = status;
+        if (status) {
+            [self.btnVideoImg setTitle:@"取消收藏" forState:0];
+        }else{
+             [self.btnVideoImg setTitle:@"收藏" forState:0];
+        }
+    }
+    
+    
     [self.headView img_setImageWithURL:findInfo[@"img_url"] placeholderImage:nil];
     
     self.labName.text = findInfo[@"fields"][@"author"];

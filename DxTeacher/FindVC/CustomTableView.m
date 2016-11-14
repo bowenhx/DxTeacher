@@ -138,6 +138,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.viewController = self.homeVC;
         cell.findInfo = self.dataSource[indexPath.row];
+        cell.btnVideoImg.tag = indexPath.row;
+        [cell.btnVideoImg addTarget:self action:@selector(didSelectCollect:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
 
     }else{
@@ -154,6 +156,43 @@
         return cell;
 
     }
+    
+}
+- (void)didSelectCollect:(UIButton *)btn{
+    if (btn.selected) {
+        //取消收藏
+    }else{
+        //添加收藏
+        
+    }
+    
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    NSDictionary *dict = @{@"action":@"doFavorite",
+                           @"uid":info[@"id"],
+                           @"cid":self.dataSource[btn.tag][@"id"],
+                           @"title":self.dataSource[btn.tag][@"title"],
+                           @"type":@(!btn.selected)
+                           };
+    
+    
+    [self showHUDActivityView:@"正在加载" shade:NO];
+    [[ANet share] post:BASE_URL params:dict completion:^(BNetData *model, NSString *netErr) {
+        [self removeHUDActivity];
+        NSLog(@"data = %@",model.data);
+        
+        if (netErr) {
+            [self showHUDTitleView:netErr image:nil];
+        }else if (model.status == 0) {
+            [self showSuccess:model.message];
+            self.index = _index;
+        }else{
+            [self showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+     
+    
+    
     
 }
 - (void)didDetailAction:(UIButton *)btn{

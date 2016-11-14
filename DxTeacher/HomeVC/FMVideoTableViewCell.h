@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labTime;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnVideoImg;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *labBrowse;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgVideo;
@@ -23,6 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labContent;
 
+@property (weak, nonatomic) IBOutlet UIView *moreViewBg;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
