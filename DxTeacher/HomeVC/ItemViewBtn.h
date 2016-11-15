@@ -19,5 +19,8 @@
 @property (nonatomic , copy) NSArray *items;
 
 @property (nonatomic , strong) UIButton *itemBtn;
+
 @property (nonatomic , strong) UILabel *labTitle;
+
+@property (nonatomic , copy) NSDictionary *item;
 @end

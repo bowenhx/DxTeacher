@@ -158,6 +158,7 @@
     }
     
 }
+
 - (void)didSelectCollect:(UIButton *)btn{
     if (btn.selected) {
         //取消收藏
@@ -166,12 +167,17 @@
         
     }
     
+    NSInteger type = 1;
+    if (!btn.selected) {
+        
+    }
+    
     NSDictionary *info = [SavaData parseDicFromFile:User_File];
     NSDictionary *dict = @{@"action":@"doFavorite",
                            @"uid":info[@"id"],
                            @"cid":self.dataSource[btn.tag][@"id"],
                            @"title":self.dataSource[btn.tag][@"title"],
-                           @"type":@(!btn.selected)
+                           @"type":@(type)
                            };
     
     

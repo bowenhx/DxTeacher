@@ -33,6 +33,10 @@
 		92DD8D921DBF507500AEF307 /* ItemViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D911DBF507500AEF307 /* ItemViewBtn.m */; };
 		92DE35AF1DC2F24000531CDD /* BLoopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35AE1DC2F24000531CDD /* BLoopImageView.m */; };
 		92DE35B21DC2F27500531CDD /* BLoopImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE35B11DC2F27500531CDD /* BLoopImageItem.m */; };
+		92FBF7931DDAA8E300A3F808 /* GrowLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBF7911DDAA8E300A3F808 /* GrowLogViewController.m */; };
+		92FBF7941DDAA8E300A3F808 /* GrowLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FBF7921DDAA8E300A3F808 /* GrowLogViewController.xib */; };
+		92FBF7981DDABF5000A3F808 /* GrowLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FBF7961DDABF5000A3F808 /* GrowLogDetailViewController.m */; };
+		92FBF7991DDABF5000A3F808 /* GrowLogDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FBF7971DDABF5000A3F808 /* GrowLogDetailViewController.xib */; };
 		B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C22A1DC44329001115BB /* FindListImgView.xib */; };
 		B509C22F1DC445C3001115BB /* CoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C22D1DC445C3001115BB /* CoursewareViewController.m */; };
 		B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C22E1DC445C3001115BB /* CoursewareViewController.xib */; };
@@ -194,6 +198,12 @@
 		92DE35AE1DC2F24000531CDD /* BLoopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageView.m; sourceTree = "<group>"; };
 		92DE35B01DC2F27500531CDD /* BLoopImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLoopImageItem.h; sourceTree = "<group>"; };
 		92DE35B11DC2F27500531CDD /* BLoopImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLoopImageItem.m; sourceTree = "<group>"; };
+		92FBF7901DDAA8E300A3F808 /* GrowLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowLogViewController.h; sourceTree = "<group>"; };
+		92FBF7911DDAA8E300A3F808 /* GrowLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowLogViewController.m; sourceTree = "<group>"; };
+		92FBF7921DDAA8E300A3F808 /* GrowLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrowLogViewController.xib; sourceTree = "<group>"; };
+		92FBF7951DDABF5000A3F808 /* GrowLogDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowLogDetailViewController.h; sourceTree = "<group>"; };
+		92FBF7961DDABF5000A3F808 /* GrowLogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowLogDetailViewController.m; sourceTree = "<group>"; };
+		92FBF7971DDABF5000A3F808 /* GrowLogDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrowLogDetailViewController.xib; sourceTree = "<group>"; };
 		B509C22A1DC44329001115BB /* FindListImgView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindListImgView.xib; sourceTree = "<group>"; };
 		B509C22C1DC445C3001115BB /* CoursewareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursewareViewController.h; sourceTree = "<group>"; };
 		B509C22D1DC445C3001115BB /* CoursewareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursewareViewController.m; sourceTree = "<group>"; };
@@ -949,6 +959,12 @@
 				B5AE183E1DC5AEEC00E45412 /* VerifyViewController.h */,
 				B5AE183F1DC5AEEC00E45412 /* VerifyViewController.m */,
 				B5AE18401DC5AEEC00E45412 /* VerifyViewController.xib */,
+				92FBF7901DDAA8E300A3F808 /* GrowLogViewController.h */,
+				92FBF7911DDAA8E300A3F808 /* GrowLogViewController.m */,
+				92FBF7921DDAA8E300A3F808 /* GrowLogViewController.xib */,
+				92FBF7951DDABF5000A3F808 /* GrowLogDetailViewController.h */,
+				92FBF7961DDABF5000A3F808 /* GrowLogDetailViewController.m */,
+				92FBF7971DDABF5000A3F808 /* GrowLogDetailViewController.xib */,
 				B5B7E11D1DC20BC5009B3DCC /* View */,
 			);
 			path = HomeVC;
@@ -1108,6 +1124,7 @@
 				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
 				B5AE18361DC58C8500E45412 /* FMAudioTableViewCell.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
+				92FBF7941DDAA8E300A3F808 /* GrowLogViewController.xib in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
 				B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */,
@@ -1132,6 +1149,7 @@
 				B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */,
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
 				920942AB1DC885130047864B /* GenearchTableViewCell.xib in Resources */,
+				92FBF7991DDABF5000A3F808 /* GrowLogDetailViewController.xib in Resources */,
 				9209429C1DC8835F0047864B /* UserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1203,6 +1221,7 @@
 				B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */,
 				92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */,
 				B5153A901DBE295700D839BA /* ZLNavigationController.m in Sources */,
+				92FBF7981DDABF5000A3F808 /* GrowLogDetailViewController.m in Sources */,
 				B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */,
 				B509C2581DC4F324001115BB /* TrendsTableViewCell.m in Sources */,
 				B5153A691DBE295700D839BA /* SavaData.m in Sources */,
@@ -1225,6 +1244,7 @@
 				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
 				B509C2331DC46F68001115BB /* CustomTableView.m in Sources */,
 				92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */,
+				92FBF7931DDAA8E300A3F808 /* GrowLogViewController.m in Sources */,
 				B5153A6D1DBE295700D839BA /* SDImageCache.m in Sources */,
 				B5153A951DBE295700D839BA /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				B5B7E1211DC20C2A009B3DCC /* WorkManageViewController.m in Sources */,

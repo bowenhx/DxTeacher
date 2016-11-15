@@ -84,7 +84,7 @@
         if (bPush == 0) {
             SendMegViewController *sendMegVC = [[SendMegViewController alloc] initWithNibName:@"SendMegViewController" bundle:nil];
             if ([_titleBtn.titleLabel.text isEqualToString:@"班级圈"]) {
-                 sendMegVC.title = @"发布通知通告";
+                sendMegVC.title = @"发布通知通告";
             }else{
                 sendMegVC.title = [NSString stringWithFormat:@"发布%@",_titleBtn.titleLabel.text];
             }

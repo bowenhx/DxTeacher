@@ -17,6 +17,7 @@
 #import "FMViewController.h"
 #import "VerifyViewController.h"
 #import "AddressViewController.h"
+#import "GrowLogViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -203,7 +204,8 @@
             break;
         case 5:
         {//成长日志
-            
+            GrowLogViewController *growLogVC = [[GrowLogViewController alloc] initWithNibName:@"GrowLogViewController" bundle:nil];
+            [self.navigationController pushViewController:growLogVC animated:YES];
         }
             break;
         case 6:
