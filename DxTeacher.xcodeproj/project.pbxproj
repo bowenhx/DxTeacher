@@ -15,6 +15,7 @@
 		920942A41DC8836E0047864B /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9209429F1DC8836E0047864B /* TeacherTableViewCell.xib */; };
 		920942AA1DC885130047864B /* GenearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920942A81DC885130047864B /* GenearchTableViewCell.m */; };
 		920942AB1DC885130047864B /* GenearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920942A91DC885130047864B /* GenearchTableViewCell.xib */; };
+		92390D3C1DDDA681001D2570 /* PraiseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92390D3B1DDDA681001D2570 /* PraiseItemView.m */; };
 		92632A621DC8462B000D425A /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92632A611DC8462B000D425A /* BKReplyInputView.m */; };
 		929FD7BA1DC73CB100C68589 /* ReportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929FD7B81DC73CB100C68589 /* ReportTableViewCell.m */; };
 		929FD7BB1DC73CB100C68589 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FD7B91DC73CB100C68589 /* ReportTableViewCell.xib */; };
@@ -168,6 +169,8 @@
 		920942A71DC885130047864B /* GenearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenearchTableViewCell.h; sourceTree = "<group>"; };
 		920942A81DC885130047864B /* GenearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenearchTableViewCell.m; sourceTree = "<group>"; };
 		920942A91DC885130047864B /* GenearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenearchTableViewCell.xib; sourceTree = "<group>"; };
+		92390D3A1DDDA681001D2570 /* PraiseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PraiseItemView.h; sourceTree = "<group>"; };
+		92390D3B1DDDA681001D2570 /* PraiseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PraiseItemView.m; sourceTree = "<group>"; };
 		92632A601DC8462B000D425A /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
 		92632A611DC8462B000D425A /* BKReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReplyInputView.m; sourceTree = "<group>"; };
 		929FD7B71DC73CB100C68589 /* ReportTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewCell.h; sourceTree = "<group>"; };
@@ -1032,6 +1035,8 @@
 				B5AE18391DC5968700E45412 /* FMVideoTableViewCell.h */,
 				B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */,
 				B5AE183B1DC5968700E45412 /* FMVideoTableViewCell.xib */,
+				92390D3A1DDDA681001D2570 /* PraiseItemView.h */,
+				92390D3B1DDDA681001D2570 /* PraiseItemView.m */,
 				B509C25A1DC4F3C1001115BB /* HomeCustomTableView.h */,
 				B509C25B1DC4F3C1001115BB /* HomeCustomTableView.m */,
 				B509C2551DC4F324001115BB /* TrendsTableViewCell.h */,
@@ -1266,6 +1271,7 @@
 				9209429B1DC8835F0047864B /* UserViewController.m in Sources */,
 				B5153A9A1DBE295700D839BA /* DALabeledCircularProgressView.m in Sources */,
 				B5153A961DBE295700D839BA /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
+				92390D3C1DDDA681001D2570 /* PraiseItemView.m in Sources */,
 				B5153AA21DBE377200D839BA /* HomeViewController.m in Sources */,
 				B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */,
 				B5153AA51DBE378C00D839BA /* CircleViewController.m in Sources */,

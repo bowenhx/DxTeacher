@@ -79,7 +79,6 @@
         return cell;
     }else{
         static NSString *xibName = @"FMAudioTableViewCell";
-        
         FMAudioTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];

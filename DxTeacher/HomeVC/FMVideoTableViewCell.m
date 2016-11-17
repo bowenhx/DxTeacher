@@ -81,6 +81,8 @@
     CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
     UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
     self.imgVideo.image = one;
+    
+    self.moreViewBg.items = info[@"article_zan"];
 }
 
 - (void)setFindInfo:(NSDictionary *)findInfo{
@@ -89,7 +91,7 @@
         //修改UI
         self.labBrowse.hidden = YES;
         self.moreViewBg.hidden = YES;
-        NSInteger status = [findInfo[@"status"] integerValue];
+        NSInteger status = [findInfo[@"is_shoucang"] integerValue];
         [self.btnVideoImg setImage:[UIImage imageNamed:@"vi_tjgz"] forState:0];
         [self.btnVideoImg setImage:[UIImage imageNamed:@"vi_tjgz_1"] forState:UIControlStateSelected];
         self.btnVideoImg.selected = status;

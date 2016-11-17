@@ -75,12 +75,18 @@
 }
 - (void)setIndex:(NSUInteger)index{
     _index = index;
-    
+     NSDictionary *info = [SavaData parseDicFromFile:User_File];
     [self showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] post:BASE_URL params:@{@"action":@"getNewsList",@"aid":@(index),@"page":@(_page)} completion:^(BNetData *model, NSString *netErr) {
+    NSDictionary *dict = @{
+                           @"action":@"getNewsList",
+                           @"aid":@(index),
+                           @"page":@(_page),
+                           @"uid":info[@"id"]
+                           };
+    
+    [[ANet share] post:BASE_URL params:dict completion:^(BNetData *model, NSString *netErr) {
         [self removeHUDActivity];
         NSLog(@"data = %@",model.data);
-       
         
         if (model.status == 0) {
             //请求成功
@@ -160,25 +166,26 @@
 }
 
 - (void)didSelectCollect:(UIButton *)btn{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    NSDictionary *dict = nil;
     if (btn.selected) {
         //取消收藏
+        dict = @{@"action":@"doFavorite",
+                 @"uid":info[@"id"],
+                 @"fid":self.dataSource[btn.tag][@"id"]
+                 };
     }else{
         //添加收藏
-        
+       dict = @{@"action":@"doFavorite",
+                @"uid":info[@"id"],
+                @"cid":self.dataSource[btn.tag][@"id"],
+                @"title":self.dataSource[btn.tag][@"title"],
+                @"type":@(1)
+              };
     }
+
     
-    NSInteger type = 1;
-    if (!btn.selected) {
-        
-    }
-    
-    NSDictionary *info = [SavaData parseDicFromFile:User_File];
-    NSDictionary *dict = @{@"action":@"doFavorite",
-                           @"uid":info[@"id"],
-                           @"cid":self.dataSource[btn.tag][@"id"],
-                           @"title":self.dataSource[btn.tag][@"title"],
-                           @"type":@(type)
-                           };
+  
     
     
     [self showHUDActivityView:@"正在加载" shade:NO];
@@ -190,7 +197,11 @@
             [self showHUDTitleView:netErr image:nil];
         }else if (model.status == 0) {
             [self showSuccess:model.message];
-            self.index = _index;
+           
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.index = _index;
+            });
+           
         }else{
             [self showHUDTitleView:model.message image:nil];
         }

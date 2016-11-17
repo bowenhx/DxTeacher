@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PraiseItemView.h"
 
 @interface FMVideoTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *headView;
 
 @property (weak, nonatomic) IBOutlet UILabel *labName;
@@ -16,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labTime;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnVideoImg;
-
 
 @property (weak, nonatomic) IBOutlet UILabel *labBrowse;
 
@@ -26,7 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labContent;
 
-@property (weak, nonatomic) IBOutlet UIView *moreViewBg;
+@property (weak, nonatomic) IBOutlet PraiseItemView *moreViewBg;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
