@@ -66,7 +66,7 @@
 - (void)didSelectIndex:(UIButton *)btn{
     GrowLogDetailViewController *growDetailVC = [[GrowLogDetailViewController alloc] initWithNibName:@"GrowLogDetailViewController" bundle:nil];
     growDetailVC.title = [NSString stringWithFormat:@"%@的成长日志",self.dataSource[btn.tag][@"user_name"]];
-    growDetailVC.aidIndex = [self.dataSource[btn.tag][@"grade_id"] integerValue];
+    growDetailVC.aidIndex = [self.dataSource[btn.tag][@"childid"] integerValue];
     [self.navigationController pushViewController:growDetailVC animated:YES];
 }
 

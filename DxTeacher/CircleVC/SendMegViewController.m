@@ -72,17 +72,28 @@
     if ([@"" isStringBlank:_textView.text]) {
         [self.view showHUDTitleView:@"请输入内容再发布" image:nil];
     }
-   
+    
+    
     NSArray *files = [NSArray uploadingImageFiles:self.assets];
     NSDictionary *userDic = [SavaData parseDicFromFile:User_File];
-    
-    NSDictionary *info = @{@"action":@"doPublishNews",
-                           @"authorid":userDic[@"id"],
-                           @"noticecontent":_textView.text,
-                           @"Catgoryid":@(_index),
-                           @"Filecount":@(self.assets.count)
-                           };
-    
+   
+    NSDictionary *info = nil;
+    if ([self.title hasSuffix:@"日志"]) {
+        info = @{@"action":@"doCZRZ",
+                 @"authorid":userDic[@"id"],
+                 @"noticecontent":_textView.text,
+                 @"childid":@(_index),
+                 @"filecount":@(self.assets.count)
+                 };
+        
+    }else{
+        info = @{@"action":@"doPublishNews",
+                 @"authorid":userDic[@"id"],
+                 @"noticecontent":_textView.text,
+                 @"Catgoryid":@(_index),
+                 @"Filecount":@(self.assets.count)
+                 };
+    }
     
     [self.view showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] upload:BASE_URL params:info files:files precent:^(float precent) {
@@ -95,8 +106,12 @@
             
             [self.view showHUDTitleView:model.message image:nil];
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
-            
+             if ([self.title hasSuffix:@"日志"]) {
+                  [[NSNotificationCenter defaultCenter] postNotificationName:@"refreLogNotification" object:nil];
+             }else{
+                  [[NSNotificationCenter defaultCenter] postNotificationName:@"updataHomeStatus" object:nil];
+             }
+           
             [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
         }else{
             [self.view showHUDTitleView:model.message image:nil];

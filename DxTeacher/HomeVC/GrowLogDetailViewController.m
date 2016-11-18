@@ -10,7 +10,7 @@
 #import "TrendsTableViewCell.h"
 #import "DetailViewController.h"
 #import "ItemVIewsHeight.h"
-
+#import "SendMegViewController.h"
 
 @interface GrowLogDetailViewController ()
 {
@@ -27,9 +27,17 @@
     [super viewDidLoad];
     
 }
-
-- (void)loadNewData{
+- (void)loadNewView{
+    [self.rightBtn setTitle:@"写日志" forState:0];
     
+    [self.rightBtn setTitleColor:[UIColor whiteColor] forState:0];
+}
+- (void)loadNewData{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRefreshLogData) name:@"refreLogNotification" object:nil];
+}
+- (void)didRefreshLogData{
+    _page = 1;
+    self.aidIndex = _aidIndex;
 }
 //请求列表数据
 - (void)setAidIndex:(NSInteger)aidIndex{
@@ -72,7 +80,12 @@
         
     }];
 }
-
+- (void)tapRightBtn{
+    SendMegViewController *sendMegVC = [[SendMegViewController alloc] initWithNibName:@"SendMegViewController" bundle:nil];
+    sendMegVC.index = self.aidIndex;
+    sendMegVC.title = self.title;
+    [self.navigationController pushViewController:sendMegVC animated:YES];
+}
 #pragma mark
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -90,8 +103,10 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
+    cell.labName.text = self.dataSource[indexPath.row][@"childname"];
     cell.imagesView.viewController = self;
-    [cell.btnCheck setTitle:@"详情" forState:UIControlStateNormal];
+    cell.labCheck.hidden = YES;
+    [cell.btnCheck setTitle:@"私聊" forState:UIControlStateNormal];
     [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
     
