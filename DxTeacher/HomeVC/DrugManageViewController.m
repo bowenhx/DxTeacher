@@ -7,6 +7,9 @@
 //
 
 #import "DrugManageViewController.h"
+#import "DrugManageTableViewCell.h"
+#import "AppDefine.h"
+#import "NewUseDrugViewController.h"
 
 @interface DrugManageViewController ()
 {
@@ -22,9 +25,47 @@
     
     self.title = @"用药条管理";
     
-    
+    [self.rightBtn setTitle:@"新建" forState:0];
 }
 
+- (void)loadNewData{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    NSLog(@"info = %@",info);
+    [[ANet share] post:BASE_URL params:@{@"action":@"getDrugSearch",@"gradeid":info[@"grade_id"]} completion:^(BNetData *model, NSString *netErr) {
+        
+        NSLog(@"data = %@",model.data);
+        
+        if (model.status == 0) {
+            [self.dataSource setArray:model.data];
+            [_tableView reloadData];
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
+
+}
+- (void)tapRightBtn{
+    NewUseDrugViewController *newUseDrugVC = [[NewUseDrugViewController alloc] initWithNibName:@"NewUseDrugViewController" bundle:nil];
+    [self.navigationController pushViewController:newUseDrugVC animated:YES];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.dataSource.count;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *xibName = @"DrugManageTableViewCell";
+    DrugManageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+    cell.info = self.dataSource[indexPath.section];
+    return cell;
+}
 
 
 - (void)didReceiveMemoryWarning {

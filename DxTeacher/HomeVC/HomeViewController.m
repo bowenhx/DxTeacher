@@ -18,6 +18,7 @@
 #import "VerifyViewController.h"
 #import "AddressViewController.h"
 #import "GrowLogViewController.h"
+#import "DrugManageViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -210,7 +211,8 @@
             break;
         case 6:
         {//用药条管理
-            
+            DrugManageViewController *drugManageVC = [[DrugManageViewController alloc] initWithNibName:@"DrugManageViewController" bundle:nil];
+            [self.navigationController pushViewController:drugManageVC animated:YES];
         }
             break;
         case 7:

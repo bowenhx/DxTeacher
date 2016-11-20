@@ -134,6 +134,8 @@
 		B5153AB91DBE3CED00D839BA /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AB41DBE3CED00D839BA /* MMDrawerVisualState.m */; };
 		B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AB61DBE3CED00D839BA /* UIViewController+MMDrawerController.m */; };
 		B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */; };
+		B521800B1DE1CFBA00A0B31F /* NewUseDrugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52180091DE1CFBA00A0B31F /* NewUseDrugViewController.m */; };
+		B521800C1DE1CFBA00A0B31F /* NewUseDrugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B521800A1DE1CFBA00A0B31F /* NewUseDrugViewController.xib */; };
 		B599D4EA1DC38895006DA4F6 /* FindListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4E91DC38895006DA4F6 /* FindListViewCell.m */; };
 		B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */; };
 		B599D4F01DC397C6006DA4F6 /* FindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */; };
@@ -398,6 +400,9 @@
 		B5153AB61DBE3CED00D839BA /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		B5153ABC1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
 		B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
+		B52180081DE1CFBA00A0B31F /* NewUseDrugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUseDrugViewController.h; sourceTree = "<group>"; };
+		B52180091DE1CFBA00A0B31F /* NewUseDrugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUseDrugViewController.m; sourceTree = "<group>"; };
+		B521800A1DE1CFBA00A0B31F /* NewUseDrugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUseDrugViewController.xib; sourceTree = "<group>"; };
 		B599D4E81DC38895006DA4F6 /* FindListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindListViewCell.h; sourceTree = "<group>"; };
 		B599D4E91DC38895006DA4F6 /* FindListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindListViewCell.m; sourceTree = "<group>"; };
 		B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindListViewCell.xib; sourceTree = "<group>"; };
@@ -953,6 +958,9 @@
 				B509C2461DC4E374001115BB /* DrugManageViewController.h */,
 				B509C2471DC4E374001115BB /* DrugManageViewController.m */,
 				B509C2481DC4E374001115BB /* DrugManageViewController.xib */,
+				B52180081DE1CFBA00A0B31F /* NewUseDrugViewController.h */,
+				B52180091DE1CFBA00A0B31F /* NewUseDrugViewController.m */,
+				B521800A1DE1CFBA00A0B31F /* NewUseDrugViewController.xib */,
 				B509C2501DC4EE8D001115BB /* ClassesViewController.h */,
 				B509C2511DC4EE8D001115BB /* ClassesViewController.m */,
 				B509C2521DC4EE8D001115BB /* ClassesViewController.xib */,
@@ -1147,6 +1155,7 @@
 				B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */,
 				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
 				B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */,
+				B521800C1DE1CFBA00A0B31F /* NewUseDrugViewController.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
 				9209429A1DC8835F0047864B /* AddressViewController.xib in Resources */,
@@ -1220,6 +1229,7 @@
 				B5153A7C1DBE295700D839BA /* UIView+WebCacheOperation.m in Sources */,
 				B5153A891DBE295700D839BA /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				B5153A6F1DBE295700D839BA /* SDWebImageDecoder.m in Sources */,
+				B521800B1DE1CFBA00A0B31F /* NewUseDrugViewController.m in Sources */,
 				B5153A881DBE295700D839BA /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				B5AE183C1DC5968700E45412 /* FMVideoTableViewCell.m in Sources */,
 				B5153A981DBE295700D839BA /* ZLPhotoPickerImageView.m in Sources */,
