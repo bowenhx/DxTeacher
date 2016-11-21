@@ -20,6 +20,7 @@
 #import "GrowLogViewController.h"
 #import "DrugManageViewController.h"
 #import "MyCheckViewController.h"
+#import "CollectViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -270,6 +271,12 @@
         {//我的考勤
             MyCheckViewController *checkVC = [[MyCheckViewController alloc] initWithNibName:@"MyCheckViewController" bundle:nil];
             [self.navigationController pushViewController:checkVC animated:YES];
+        }
+            break;
+        case 6:
+        {//我的考勤
+            CollectViewController *collectVC = [[CollectViewController alloc] initWithNibName:@"CollectViewController" bundle:nil];
+            [self.navigationController pushViewController:collectVC animated:YES];
         }
             break;
             

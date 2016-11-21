@@ -26,6 +26,8 @@
 		92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A40A771DC34C4700C9B436 /* Main.storyboard */; };
 		92C3D9B61DE29AD200C823DD /* NewCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */; };
 		92C3D9B71DE29AD200C823DD /* NewCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */; };
+		92C3D9CA1DE2D1BA00C823DD /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C3D9C81DE2D1BA00C823DD /* CollectViewController.m */; };
+		92C3D9CB1DE2D1BA00C823DD /* CollectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C3D9C91DE2D1BA00C823DD /* CollectViewController.xib */; };
 		92D52C711DE27F95006929B5 /* MyCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D52C6F1DE27F95006929B5 /* MyCheckViewController.m */; };
 		92D52C721DE27F95006929B5 /* MyCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D52C701DE27F95006929B5 /* MyCheckViewController.xib */; };
 		92D52C761DE2801D006929B5 /* MyCheckTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D52C741DE2801D006929B5 /* MyCheckTabCell.m */; };
@@ -195,6 +197,9 @@
 		92C3D9B31DE29AD200C823DD /* NewCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCheckViewController.h; sourceTree = "<group>"; };
 		92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCheckViewController.m; sourceTree = "<group>"; };
 		92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCheckViewController.xib; sourceTree = "<group>"; };
+		92C3D9C71DE2D1BA00C823DD /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		92C3D9C81DE2D1BA00C823DD /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
+		92C3D9C91DE2D1BA00C823DD /* CollectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectViewController.xib; sourceTree = "<group>"; };
 		92D52C6E1DE27F95006929B5 /* MyCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCheckViewController.h; sourceTree = "<group>"; };
 		92D52C6F1DE27F95006929B5 /* MyCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCheckViewController.m; sourceTree = "<group>"; };
 		92D52C701DE27F95006929B5 /* MyCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCheckViewController.xib; sourceTree = "<group>"; };
@@ -485,6 +490,9 @@
 				92C3D9B31DE29AD200C823DD /* NewCheckViewController.h */,
 				92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */,
 				92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */,
+				92C3D9C71DE2D1BA00C823DD /* CollectViewController.h */,
+				92C3D9C81DE2D1BA00C823DD /* CollectViewController.m */,
+				92C3D9C91DE2D1BA00C823DD /* CollectViewController.xib */,
 				920942981DC8835F0047864B /* Views */,
 			);
 			path = UserVC;
@@ -1193,6 +1201,7 @@
 				920942AB1DC885130047864B /* GenearchTableViewCell.xib in Resources */,
 				92FBF7991DDABF5000A3F808 /* GrowLogDetailViewController.xib in Resources */,
 				9209429C1DC8835F0047864B /* UserViewController.xib in Resources */,
+				92C3D9CB1DE2D1BA00C823DD /* CollectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,6 +1264,7 @@
 				B5153A761DBE295700D839BA /* UIImage+GIF.m in Sources */,
 				B5153A7C1DBE295700D839BA /* UIView+WebCacheOperation.m in Sources */,
 				B5153A891DBE295700D839BA /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				92C3D9CA1DE2D1BA00C823DD /* CollectViewController.m in Sources */,
 				B5153A6F1DBE295700D839BA /* SDWebImageDecoder.m in Sources */,
 				B521800B1DE1CFBA00A0B31F /* NewUseDrugViewController.m in Sources */,
 				B5153A881DBE295700D839BA /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,

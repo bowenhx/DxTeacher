@@ -28,8 +28,7 @@
                         <constraint firstAttribute="width" constant="25" id="6rW-ce-CQJ"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="奇智奇才-社会（小班）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-qy-62o">
-                    <frame key="frameInset" minX="28" minY="30" width="147" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奇智奇才-社会（小班）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-qy-62o">
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="uqg-gm-UIT"/>
                     </constraints>
@@ -45,18 +44,17 @@
                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-v5-qij">
-                    <frame key="frameInset" minX="244" minY="8" width="68" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-v5-qij">
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="kbG-02-BOF"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="添加关注" image="vi_tjgz">
+                    <state key="normal" image="vi_tjgz">
                         <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <state key="selected" image="vi_tjgz_1"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="培养小朋友的交往能力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TM-jo-zvm">
-                    <frame key="frameInset" minX="28" minY="47" width="120" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="培养小朋友的交往能力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TM-jo-zvm">
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="TF5-CG-Mq6"/>
                     </constraints>
@@ -93,6 +91,7 @@
     </objects>
     <resources>
         <image name="vi_tjgz" width="20" height="20"/>
+        <image name="vi_tjgz_1" width="20" height="20"/>
         <image name="vi_vi" width="25" height="20"/>
     </resources>
 </document>
