@@ -114,6 +114,9 @@
             
         }else{
             [self showHUDTitleView:model.message image:nil];
+            if (_page>1) {
+                [_tableView.mj_footer endRefreshingWithNoMoreData];
+            }
         }
         
         [_tableView reloadData];

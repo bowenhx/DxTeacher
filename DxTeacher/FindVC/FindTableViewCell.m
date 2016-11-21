@@ -24,7 +24,8 @@
 }
 
 - (void)setInfo:(NSDictionary *)info{
-    
+    self.listView.labTitle.text = info[@"title"];
+    self.listView.labAbout.text = info[@"zhaiyao"];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

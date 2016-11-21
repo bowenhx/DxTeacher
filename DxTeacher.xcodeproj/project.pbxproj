@@ -24,6 +24,12 @@
 		929FD7C41DC7421A00C68589 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FD7C21DC7421A00C68589 /* DetailViewController.xib */; };
 		92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A40A751DC3325A00C9B436 /* PoppingTabView.m */; };
 		92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A40A771DC34C4700C9B436 /* Main.storyboard */; };
+		92C3D9B61DE29AD200C823DD /* NewCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */; };
+		92C3D9B71DE29AD200C823DD /* NewCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */; };
+		92D52C711DE27F95006929B5 /* MyCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D52C6F1DE27F95006929B5 /* MyCheckViewController.m */; };
+		92D52C721DE27F95006929B5 /* MyCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D52C701DE27F95006929B5 /* MyCheckViewController.xib */; };
+		92D52C761DE2801D006929B5 /* MyCheckTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D52C741DE2801D006929B5 /* MyCheckTabCell.m */; };
+		92D52C771DE2801D006929B5 /* MyCheckTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D52C751DE2801D006929B5 /* MyCheckTabCell.xib */; };
 		92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */; };
 		92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */; };
 		92DD8D871DBF3AC900AEF307 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD8D811DBF3AC900AEF307 /* GuideViewController.m */; };
@@ -186,6 +192,15 @@
 		92A40A741DC3325A00C9B436 /* PoppingTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoppingTabView.h; sourceTree = "<group>"; };
 		92A40A751DC3325A00C9B436 /* PoppingTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoppingTabView.m; sourceTree = "<group>"; };
 		92A40A781DC34C4700C9B436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92C3D9B31DE29AD200C823DD /* NewCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCheckViewController.h; sourceTree = "<group>"; };
+		92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCheckViewController.m; sourceTree = "<group>"; };
+		92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCheckViewController.xib; sourceTree = "<group>"; };
+		92D52C6E1DE27F95006929B5 /* MyCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCheckViewController.h; sourceTree = "<group>"; };
+		92D52C6F1DE27F95006929B5 /* MyCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCheckViewController.m; sourceTree = "<group>"; };
+		92D52C701DE27F95006929B5 /* MyCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCheckViewController.xib; sourceTree = "<group>"; };
+		92D52C731DE2801D006929B5 /* MyCheckTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCheckTabCell.h; sourceTree = "<group>"; };
+		92D52C741DE2801D006929B5 /* MyCheckTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCheckTabCell.m; sourceTree = "<group>"; };
+		92D52C751DE2801D006929B5 /* MyCheckTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCheckTabCell.xib; sourceTree = "<group>"; };
 		92DD8D7D1DBF3AC900AEF307 /* ForgetPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
 		92DD8D7E1DBF3AC900AEF307 /* ForgetPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
 		92DD8D7F1DBF3AC900AEF307 /* ForgetPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
@@ -464,6 +479,12 @@
 				920942951DC8835F0047864B /* UserViewController.h */,
 				920942961DC8835F0047864B /* UserViewController.m */,
 				920942971DC8835F0047864B /* UserViewController.xib */,
+				92D52C6E1DE27F95006929B5 /* MyCheckViewController.h */,
+				92D52C6F1DE27F95006929B5 /* MyCheckViewController.m */,
+				92D52C701DE27F95006929B5 /* MyCheckViewController.xib */,
+				92C3D9B31DE29AD200C823DD /* NewCheckViewController.h */,
+				92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */,
+				92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */,
 				920942981DC8835F0047864B /* Views */,
 			);
 			path = UserVC;
@@ -478,6 +499,9 @@
 				9209429D1DC8836E0047864B /* TeacherTableViewCell.h */,
 				9209429E1DC8836E0047864B /* TeacherTableViewCell.m */,
 				9209429F1DC8836E0047864B /* TeacherTableViewCell.xib */,
+				92D52C731DE2801D006929B5 /* MyCheckTabCell.h */,
+				92D52C741DE2801D006929B5 /* MyCheckTabCell.m */,
+				92D52C751DE2801D006929B5 /* MyCheckTabCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1141,10 +1165,12 @@
 				92FBF7941DDAA8E300A3F808 /* GrowLogViewController.xib in Resources */,
 				92DD8D861DBF3AC900AEF307 /* ForgetPwViewController.xib in Resources */,
 				B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */,
+				92D52C721DE27F95006929B5 /* MyCheckViewController.xib in Resources */,
 				B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */,
 				929FD7C41DC7421A00C68589 /* DetailViewController.xib in Resources */,
 				920942A41DC8836E0047864B /* TeacherTableViewCell.xib in Resources */,
 				92DD8D8F1DBF3B6E00AEF307 /* MBProgressHUD.bundle in Resources */,
+				92C3D9B71DE29AD200C823DD /* NewCheckViewController.xib in Resources */,
 				B5AE18471DC61E8D00E45412 /* SendMegViewController.xib in Resources */,
 				B509C23B1DC490F6001115BB /* RegisterViewController.xib in Resources */,
 				B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */,
@@ -1155,6 +1181,7 @@
 				B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */,
 				92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */,
 				B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */,
+				92D52C771DE2801D006929B5 /* MyCheckTabCell.xib in Resources */,
 				B521800C1DE1CFBA00A0B31F /* NewUseDrugViewController.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
@@ -1249,6 +1276,7 @@
 				B5153A991DBE295700D839BA /* DACircularProgressView.m in Sources */,
 				B5153A611DBE295700D839BA /* UIButton+EXCell.m in Sources */,
 				B5153A771DBE295700D839BA /* UIImage+MultiFormat.m in Sources */,
+				92D52C711DE27F95006929B5 /* MyCheckViewController.m in Sources */,
 				B5153A5C1DBE295700D839BA /* UIColor+app.m in Sources */,
 				B5153A7B1DBE295700D839BA /* UIImageView+WebCache.m in Sources */,
 				B509C22F1DC445C3001115BB /* CoursewareViewController.m in Sources */,
@@ -1289,6 +1317,7 @@
 				B5153A871DBE295700D839BA /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				B5153A851DBE295700D839BA /* ZLPhotoRect.m in Sources */,
 				B5153A6B1DBE295700D839BA /* NSData+GIF.m in Sources */,
+				92D52C761DE2801D006929B5 /* MyCheckTabCell.m in Sources */,
 				B5153A911DBE295700D839BA /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				B5153A931DBE295700D839BA /* ZLPhotoPickerViewController.m in Sources */,
 				920942A31DC8836E0047864B /* TeacherTableViewCell.m in Sources */,
@@ -1314,6 +1343,7 @@
 				B5AE18411DC5AEEC00E45412 /* VerifyViewController.m in Sources */,
 				B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */,
 				B5153A6C1DBE295700D839BA /* NSData+ImageContentType.m in Sources */,
+				92C3D9B61DE29AD200C823DD /* NewCheckViewController.m in Sources */,
 				B5153A641DBE295700D839BA /* UIView+Ex.m in Sources */,
 				929FD7C31DC7421A00C68589 /* DetailViewController.m in Sources */,
 				B5153A721DBE295700D839BA /* SDWebImageManager+MJ.m in Sources */,

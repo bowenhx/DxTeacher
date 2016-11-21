@@ -19,6 +19,7 @@
 #import "AddressViewController.h"
 #import "GrowLogViewController.h"
 #import "DrugManageViewController.h"
+#import "MyCheckViewController.h"
 
 @interface HomeViewController ()<BLoopImageViewDelegate>
 
@@ -263,6 +264,12 @@
         {
             AddressViewController *addressVC = [[AddressViewController alloc] initWithNibName:@"AddressViewController" bundle:nil];
             [self.navigationController pushViewController:addressVC animated:YES];
+        }
+            break;
+        case 3:
+        {//我的考勤
+            MyCheckViewController *checkVC = [[MyCheckViewController alloc] initWithNibName:@"MyCheckViewController" bundle:nil];
+            [self.navigationController pushViewController:checkVC animated:YES];
         }
             break;
             

@@ -33,8 +33,6 @@
     for (int i =0; i<items.count; i++) {
         CustomTableView *view = [[CustomTableView alloc] initWithFrame:CGRectMake(0, 0, self.screen_W, self.screen_H-64)];
         view.homeVC = self;
-//        view.layer.borderWidth = 1;
-//        view.layer.borderColor = [UIColor redColor].CGColor;
         [_itemViews addObject:view];
     }
     
@@ -42,6 +40,7 @@
     [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [titles addObject:obj[@"title"]];
     }];
+    
     //item 页面布局
     [_customView addItemView:_itemViews title:titles height: self.screen_H-64];
     
@@ -52,8 +51,6 @@
     
     //item 变化数据加载处理
     _customView.itemsEcentAction = ^(NSInteger index){
-        NSLog(@"index = %ld",(long)index);
-        
         CustomTableView *iView = _itemViews[index];
         iView.page = 1;
         iView.index = [items[index][@"id"] integerValue];
