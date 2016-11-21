@@ -26,6 +26,8 @@
     self.title = @"用药条管理";
     
     [self.rightBtn setTitle:@"新建" forState:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewData) name:@"refreshLoadDrugdata" object:nil];
 }
 
 - (void)loadNewData{
@@ -64,9 +66,15 @@
     }
     
     cell.info = self.dataSource[indexPath.section];
+    cell.btnUseDrug.tag = indexPath.row;
+    [cell.btnUseDrug addTarget:self action:@selector(selectUseAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
-
+- (void)selectUseAction:(UIButton *)btn{
+//    NewUseDrugViewController *newUseDrugVC = [[NewUseDrugViewController alloc] initWithNibName:@"NewUseDrugViewController" bundle:nil];
+//    newUseDrugVC.dictionary = self.dataSource[btn.tag];
+//    [self.navigationController pushViewController:newUseDrugVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

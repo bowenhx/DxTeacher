@@ -5,9 +5,10 @@
 //  Created by Stray on 16/11/20.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
-
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "NewUseDrugViewController.h"
-
+#import "IDImagePickerCoordinator.h"
 @interface NewUseDrugViewController ()<UITextFieldDelegate,UIActionSheetDelegate>{
     IBOutlet UIView *_datePickViewBg;
     __weak IBOutlet UIDatePicker *_datePickerView;
@@ -15,7 +16,9 @@
     UIButton *_tempBtn;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (nonatomic , strong) NSMutableDictionary *dictionary;
+@property (nonatomic, strong) IDImagePickerCoordinator *imagePickerCoordinator;
+@property (nonatomic,strong) MPMoviePlayerViewController *moviePlayer;//视频播放控制器
+@property (nonatomic , strong) NSURL *videoURL;
 @end
 
 @implementation NewUseDrugViewController
@@ -33,6 +36,7 @@
 }
 - (void)loadNewData{
     NSDictionary *info = [SavaData parseDicFromFile:User_File];
+    self.dictionary[@"action"] = @"doPublishDrug";
     self.dictionary[@"uid"] = info[@"id"];
     [[ANet share] post:BASE_URL params:@{@"action":@"getChildList",@"uid":info[@"id"]} completion:^(BNetData *model, NSString *netErr) {
         
@@ -46,9 +50,27 @@
         
     }];
 }
+/**
+ *  创建媒体播放控制器
+ *
+ *  @return 媒体播放控制器
+ */
+- (MPMoviePlayerViewController *)moviePlayer{
+    if (!_moviePlayer) {
+        _moviePlayer=[[MPMoviePlayerViewController alloc] initWithContentURL:self.videoURL];
+        _moviePlayer.view.frame = self.view.bounds;
+        _moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        _moviePlayer.moviePlayer.shouldAutoplay = NO;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(movieFinishedCallback:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+                                                   object:_moviePlayer.moviePlayer];
+    }
+    return _moviePlayer;
+}
+
 - (void)loadNewView{
-    
-    
     
     
     NSArray *item = @[@"时        间：",@"宝宝名称：",@"药品名称：",@"数        量：",@"用药时间：",@"送  药  人：",@"责  任  人：",@"病        因："];
@@ -70,7 +92,7 @@
             button.frame = CGRectMake(labText.max_X + 5, labText.y - 7, self.screen_W - labText.max_X - 30, 35);
             button.layer.borderWidth = 1;
             button.layer.borderColor = [UIColor colorLineBg].CGColor;
-            button.titleLabel.font= [UIFont systemFontOfSize:17];
+            button.titleLabel.font = [UIFont systemFontOfSize:17];
             [button setTitleColor:[UIColor darkGrayColor] forState:0];
             button.tag = 100 +i;
             [self.scrollView addSubview:button];
@@ -120,7 +142,7 @@
             [self.scrollView addSubview:sendBtn];
             
             
-            [button addTarget:self action:@selector(addVideoAction) forControlEvents:UIControlEventTouchUpInside];
+            [button addTarget:self action:@selector(addVideoAction:) forControlEvents:UIControlEventTouchUpInside];
             
             [sendBtn addTarget:self action:@selector(sendDrugAction) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -168,7 +190,22 @@
 }
 
 //添加视频
-- (void)addVideoAction{
+- (void)addVideoAction:(UIButton *)btn{
+    if (btn.imageView.image) {
+        [self presentViewController:self.moviePlayer animated:YES completion:^{
+            
+        }];
+
+        [self.moviePlayer.moviePlayer play];
+        return;
+    }
+    self.imagePickerCoordinator = [IDImagePickerCoordinator new];
+    [self presentViewController:[_imagePickerCoordinator cameraVC] animated:YES completion:nil];
+    @WeakObj(self);
+    _imagePickerCoordinator.backImage = ^(UIImage *image,NSURL *url){
+        [btn setImage:image forState:0];
+        selfWeak.videoURL = url;
+    };
     
 }
 //发送用药信息
@@ -190,8 +227,9 @@
         if (model.status == 0) {
             
             [self.view showHUDTitleView:model.message image:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshLoadDrugdata" object:nil];
             
-            //[self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
+            [self performSelector:@selector(tapBackBtn) withObject:nil afterDelay:.7];
         }else{
             [self.view showHUDTitleView:model.message image:nil];
         }
@@ -284,7 +322,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if ([_tempField isFirstResponder]) {
+        [_tempField resignFirstResponder];
+    }
 
+}
+-(void)movieFinishedCallback:(NSNotification*)notify{
+    // 视频播放完或者在presentMoviePlayerViewControllerAnimated下的Done按钮被点击响应的通知。
+    MPMoviePlayerController* theMovie = [notify object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:theMovie];
+    [self dismissMoviePlayerViewControllerAnimated];
+}
 /*
 #pragma mark - Navigation
 

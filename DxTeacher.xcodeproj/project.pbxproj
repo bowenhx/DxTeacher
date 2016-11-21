@@ -162,6 +162,11 @@
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
 		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
 		B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */; };
+		B5F649CB1DE3246300D7A376 /* IDImagePickerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F649CA1DE3246300D7A376 /* IDImagePickerCoordinator.m */; };
+		B5F649CD1DE3254300D7A376 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649CC1DE3254300D7A376 /* AVFoundation.framework */; };
+		B5F649CF1DE3258400D7A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649CE1DE3258400D7A376 /* Foundation.framework */; };
+		B5F649D11DE3259000D7A376 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649D01DE3259000D7A376 /* MobileCoreServices.framework */; };
+		B5F649D31DE3259900D7A376 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649D21DE3259900D7A376 /* AssetsLibrary.framework */; };
 		FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */; };
 /* End PBXBuildFile section */
 
@@ -451,6 +456,12 @@
 		B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
 		B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVIewsHeight.m; sourceTree = "<group>"; };
+		B5F649C91DE3246300D7A376 /* IDImagePickerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDImagePickerCoordinator.h; path = DxTeacher/IDImagePickerCoordinator.h; sourceTree = "<group>"; };
+		B5F649CA1DE3246300D7A376 /* IDImagePickerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDImagePickerCoordinator.m; path = DxTeacher/IDImagePickerCoordinator.m; sourceTree = "<group>"; };
+		B5F649CC1DE3254300D7A376 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B5F649CE1DE3258400D7A376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5F649D01DE3259000D7A376 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B5F649D21DE3259900D7A376 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.release.xcconfig"; sourceTree = "<group>"; };
 		DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxTeacher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -460,6 +471,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F649D31DE3259900D7A376 /* AssetsLibrary.framework in Frameworks */,
+				B5F649D11DE3259000D7A376 /* MobileCoreServices.framework in Frameworks */,
+				B5F649CF1DE3258400D7A376 /* Foundation.framework in Frameworks */,
+				B5F649CD1DE3254300D7A376 /* AVFoundation.framework in Frameworks */,
 				FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +485,10 @@
 		5B441DFFC81DE7F1DDCDFC2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F649D21DE3259900D7A376 /* AssetsLibrary.framework */,
+				B5F649D01DE3259000D7A376 /* MobileCoreServices.framework */,
+				B5F649CE1DE3258400D7A376 /* Foundation.framework */,
+				B5F649CC1DE3254300D7A376 /* AVFoundation.framework */,
 				DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */,
 			);
 			name = Frameworks;
@@ -565,6 +584,8 @@
 		B51539861DBE25ED00D839BA = {
 			isa = PBXGroup;
 			children = (
+				B5F649C91DE3246300D7A376 /* IDImagePickerCoordinator.h */,
+				B5F649CA1DE3246300D7A376 /* IDImagePickerCoordinator.m */,
 				B51539911DBE25EE00D839BA /* DxTeacher */,
 				B51539901DBE25ED00D839BA /* Products */,
 				DBED4C58791E40095C8D8B14 /* Pods */,
@@ -1267,6 +1288,7 @@
 				92C3D9CA1DE2D1BA00C823DD /* CollectViewController.m in Sources */,
 				B5153A6F1DBE295700D839BA /* SDWebImageDecoder.m in Sources */,
 				B521800B1DE1CFBA00A0B31F /* NewUseDrugViewController.m in Sources */,
+				B5F649CB1DE3246300D7A376 /* IDImagePickerCoordinator.m in Sources */,
 				B5153A881DBE295700D839BA /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				B5AE183C1DC5968700E45412 /* FMVideoTableViewCell.m in Sources */,
 				B5153A981DBE295700D839BA /* ZLPhotoPickerImageView.m in Sources */,

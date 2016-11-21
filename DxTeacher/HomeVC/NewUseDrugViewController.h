@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface NewUseDrugViewController : BaseViewController
-
+@property (nonatomic , strong) NSMutableDictionary *dictionary;
 @end
