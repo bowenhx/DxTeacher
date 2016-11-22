@@ -10,8 +10,11 @@
 #import "FindListViewCell.h"
 
 @interface FindTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
-@property (nonatomic , strong) FindListViewCell *listView;
+@property (weak, nonatomic) IBOutlet UIButton *collect;
+
+@property (weak, nonatomic) IBOutlet UILabel *content;
 
 @property (nonatomic , copy) NSDictionary *info;
 

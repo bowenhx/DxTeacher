@@ -45,6 +45,7 @@
         camera.sourceType = UIImagePickerControllerSourceTypeCamera;
         camera.videoQuality = UIImagePickerControllerQualityTypeMedium;
         camera.mediaTypes = @[(NSString *)kUTTypeMovie];
+        camera.videoMaximumDuration = 60;
         camera.delegate = self;
     }
     return camera;

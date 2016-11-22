@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"新建药条";
+    
     
 }
 - (NSMutableDictionary *)dictionary{
@@ -98,11 +98,19 @@
             [self.scrollView addSubview:button];
             [button addTarget:self action:@selector(didSelectItemAction:) forControlEvents:UIControlEventTouchUpInside];
             if (i == 0) {
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"yyyy-MM-dd"];
-                NSString *strDate = [formatter stringFromDate:[NSDate date]];
-                [button setTitle:strDate forState:0];
-                self.dictionary[@"drugs_date"] = strDate;
+                if ([self.title hasPrefix:@"新建"]) {
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"yyyy-MM-dd"];
+                    NSString *strDate = [formatter stringFromDate:[NSDate date]];
+                    [button setTitle:strDate forState:0];
+                    self.dictionary[@"drugs_date"] = strDate;
+                }else{
+                    [self showDataView:button];
+                }
+            }else{
+                if (![self.title hasPrefix:@"新建"]) {
+                    [self showDataView:button];
+                }
             }
         }else{
             UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(labText.max_X + 5, labText.y - 7, self.screen_W - labText.max_X - 30, 35)];
@@ -112,6 +120,10 @@
             textField.layer.borderWidth = 1;
             textField.layer.borderColor = [UIColor colorLineBg].CGColor;
             [self.scrollView addSubview:textField];
+            
+            if (![self.title hasPrefix:@"新建"]) {
+                 [self showDataView:textField];
+            }
         }
         
         
@@ -129,7 +141,7 @@
             
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(labText.max_X + 5, labText.y - 20, 70, 70);
-            [button setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:0];
+            button.tag = 20;
             [self.scrollView addSubview:button];
             
             UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -141,6 +153,11 @@
             [sendBtn setTitle:@"提交" forState:0];
             [self.scrollView addSubview:sendBtn];
             
+            if ([self.title hasPrefix:@"新建"]) {
+                 [button setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:0];
+            }else{
+                [self showDataView:button];
+            }
             
             [button addTarget:self action:@selector(addVideoAction:) forControlEvents:UIControlEventTouchUpInside];
             
@@ -150,9 +167,87 @@
         
     }
     
+    self.scrollView.contentSize = CGSizeMake(self.screen_W, itemY + 150);
     
     [self pickerDateView];
     
+}
+- (void)showDataView:(id)iView{
+    if ([iView isKindOfClass:[UIButton class]]) {
+        UIButton *button = iView;
+        button.enabled = NO;
+        switch (button.tag) {
+            case 100:
+                [button setTitle:_dictionary[@"drugs_date"] forState:0];
+                break;
+            case 101:{
+                [button setTitle:_dictionary[@"drugs_child"] forState:0];
+                self.dictionary[@"childid"] = _dictionary[@"drugs_child"];
+            }
+                break;
+//            case 0:
+//                [button setTitle:_dictionary[@"drugs_date"] forState:0];
+//                break;
+//            case 0:
+//                [button setTitle:_dictionary[@"drugs_date"] forState:0];
+//                break;
+            default:{
+                button.enabled = YES;
+                NSString *url = _dictionary[@"file_path"];
+                if ( ![@"" isStringBlank:url] && ( [url hasSuffix:@"mov"] || [url hasSuffix:@"mp4"])) {
+                    self.videoURL = [NSString getPathByAppendString:url];
+                    if (self.videoURL) {
+                        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
+                        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+                        generate1.appliesPreferredTrackTransform = YES;
+                        NSError *err = NULL;
+                        CMTime time = CMTimeMake(1, 2);
+                        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+                        UIImage *image = [[UIImage alloc] initWithCGImage:oneRef];
+                        [button setImage:image forState:0];
+                    }else{
+                        [button setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:0];
+                    }
+                }else{
+                    [button setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:0];
+                }
+                
+            }
+                break;
+        }
+    }else if ([iView isKindOfClass:[UITextField class]]){
+        UITextField *textF = iView;
+        textF.userInteractionEnabled = NO;
+        switch (textF.tag) {
+            case 2:
+                textF.text = _dictionary[@"title"];
+                break;
+            case 3:
+                textF.text = _dictionary[@"drugs_quantum"];
+                break;
+            case 4:
+                textF.text = _dictionary[@"drugs_time"];
+                break;
+            case 5:
+                textF.text = _dictionary[@"drugs_sender"];
+                break;
+            case 6:
+                textF.text = _dictionary[@"drugs_sender"];
+                break;
+            case 7:
+                textF.text = _dictionary[@"drugs_reason"];
+                break;
+            default:
+                break;
+        }
+    }
+//    self.labDrugName.text = info[@"title"];
+//    
+//    self.labNum.text = info[@"drugs_quantum"];
+//    
+//    self.labUseTime.text = info[@"drugs_time"];
+//    
+//    self.labPerson.text = info[@"drugs_sender"];
 }
 - (void)pickerDateView
 {
@@ -214,11 +309,24 @@
         [_tempField resignFirstResponder];
     }
 
-    self.dictionary[@"filecount"] = @(0);
+    NSInteger filcount = self.videoURL ? 1 : 0;
+    self.dictionary[@"filecount"] = @(filcount);
+    
+    NSDictionary *uploadInfo = nil;
+    if ([self.title hasPrefix:@"新建"]) {
+        uploadInfo = self.dictionary;
+    }else{
+        uploadInfo = @{
+                       @"action":@"doUploadDrugVideo",
+                       @"uid":_dictionary[@"uid"],
+                       @"drugid":_dictionary[@"id"],
+                       @"filecount":@(filcount)
+                        };
+    }
     
     
     [self.view showHUDActivityView:@"正在加载" shade:NO];
-    [[ANet share] upload:BASE_URL params:self.dictionary files:nil precent:^(float precent) {
+    [[ANet share] upload:BASE_URL params:uploadInfo files:filcount == 1 ? @[@[@"file1",self.videoURL]] : nil precent:^(float precent) {
         
     } completion:^(BNetData *model, NSString *netErr) {
         [self.view removeHUDActivity];
@@ -284,8 +392,12 @@
     }];
     
 }
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     _tempField = textField;
+    if (textField.tag >2) {
+        [_scrollView setContentOffset:CGPointMake(0, textField.y-50) animated:YES];
+    }
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     switch (textField.tag) {
@@ -311,6 +423,11 @@
         default:
             break;
     }
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    return YES;
 }
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex) {

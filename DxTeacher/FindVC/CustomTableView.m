@@ -159,9 +159,8 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.info = self.dataSource[indexPath.row];
-        //    cell.btnCheck.tag = indexPath.row;
-        //    cell.imagesView.viewController = self.homeVC;
-        //    [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+        cell.collect.tag = indexPath.row;
+        [cell.collect addTarget:self action:@selector(didSelectCollect:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
 
     }
@@ -225,7 +224,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

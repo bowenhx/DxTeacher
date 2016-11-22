@@ -497,8 +497,8 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
         NSData * fileData;
         if ([value isKindOfClass:[UIImage class]]) {
             fileData = UIImageJPEGRepresentation(value, 0.5);
-        }else if ([value isKindOfClass:[NSString class]]){
-            fileData = [NSData dataWithContentsOfFile:value];
+        }else if ([value isKindOfClass:[NSURL class]]){
+            fileData = [NSData dataWithContentsOfURL:value];
         }
         
         if (fileData) {

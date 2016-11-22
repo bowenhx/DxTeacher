@@ -19,13 +19,18 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    _listView = [FindListViewCell findListViewCell];
-    [self addSubview:_listView];
 }
 
 - (void)setInfo:(NSDictionary *)info{
-    self.listView.labTitle.text = info[@"title"];
-    self.listView.labAbout.text = info[@"zhaiyao"];
+    self.title.text = info[@"title"];
+    self.content.text = info[@"zhaiyao"];
+    
+    NSInteger status = [info[@"is_shoucang"] integerValue];
+    [self.collect setImage:[UIImage imageNamed:@"vi_tjgz"] forState:0];
+    [self.collect setImage:[UIImage imageNamed:@"vi_tjgz_1"] forState:UIControlStateSelected];
+    self.collect.selected = status;
+    
+
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

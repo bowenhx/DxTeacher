@@ -22,8 +22,8 @@
     self.btnUse.layer.borderWidth = 1;
     self.btnUse.layer.borderColor = [UIColor colorLineBg].CGColor;
     
-    self.btnUseDrug.backgroundColor = [UIColor colorAppBg];
-    self.btnUseDrug.layer.cornerRadius = 3;
+    UIImage *image = [[UIImage imageNamed:@"det_vi_rad"] stretchableImageWithLeftCapWidth:5 topCapHeight:5];
+    [ self.btnUseDrug setBackgroundImage:image forState:0];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

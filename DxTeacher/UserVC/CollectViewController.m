@@ -48,15 +48,12 @@
     FindTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xibName];
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
-       
     }
     
     cell.info = self.dataSource[indexPath.section];
-    cell.listView.labSection.hidden = YES;
-    [cell.listView.btnMore setY:15];
-    cell.listView.btnMore.tag = indexPath.section;
-    cell.listView.btnMore.selected = YES;
-    [cell.listView.btnMore addTarget:self action:@selector(cancelCollectAction:) forControlEvents:UIControlEventTouchUpInside];
+    cell.collect.tag = indexPath.section;
+    cell.collect.selected = YES;
+    [cell.collect addTarget:self action:@selector(cancelCollectAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 

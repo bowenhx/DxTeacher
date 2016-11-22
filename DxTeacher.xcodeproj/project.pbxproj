@@ -24,6 +24,8 @@
 		929FD7C41DC7421A00C68589 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929FD7C21DC7421A00C68589 /* DetailViewController.xib */; };
 		92A40A761DC3325A00C9B436 /* PoppingTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A40A751DC3325A00C9B436 /* PoppingTabView.m */; };
 		92A40A791DC34C4700C9B436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A40A771DC34C4700C9B436 /* Main.storyboard */; };
+		92A62DF41DE445C6006D93F3 /* FindDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A62DF21DE445C6006D93F3 /* FindDetailViewController.m */; };
+		92A62DF51DE445C6006D93F3 /* FindDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A62DF31DE445C6006D93F3 /* FindDetailViewController.xib */; };
 		92C3D9B61DE29AD200C823DD /* NewCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */; };
 		92C3D9B71DE29AD200C823DD /* NewCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */; };
 		92C3D9CA1DE2D1BA00C823DD /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C3D9C81DE2D1BA00C823DD /* CollectViewController.m */; };
@@ -199,6 +201,9 @@
 		92A40A741DC3325A00C9B436 /* PoppingTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoppingTabView.h; sourceTree = "<group>"; };
 		92A40A751DC3325A00C9B436 /* PoppingTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoppingTabView.m; sourceTree = "<group>"; };
 		92A40A781DC34C4700C9B436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92A62DF11DE445C6006D93F3 /* FindDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindDetailViewController.h; sourceTree = "<group>"; };
+		92A62DF21DE445C6006D93F3 /* FindDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailViewController.m; sourceTree = "<group>"; };
+		92A62DF31DE445C6006D93F3 /* FindDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindDetailViewController.xib; sourceTree = "<group>"; };
 		92C3D9B31DE29AD200C823DD /* NewCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCheckViewController.h; sourceTree = "<group>"; };
 		92C3D9B41DE29AD200C823DD /* NewCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCheckViewController.m; sourceTree = "<group>"; };
 		92C3D9B51DE29AD200C823DD /* NewCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCheckViewController.xib; sourceTree = "<group>"; };
@@ -989,6 +994,9 @@
 				B509C22C1DC445C3001115BB /* CoursewareViewController.h */,
 				B509C22D1DC445C3001115BB /* CoursewareViewController.m */,
 				B509C22E1DC445C3001115BB /* CoursewareViewController.xib */,
+				92A62DF11DE445C6006D93F3 /* FindDetailViewController.h */,
+				92A62DF21DE445C6006D93F3 /* FindDetailViewController.m */,
+				92A62DF31DE445C6006D93F3 /* FindDetailViewController.xib */,
 				B599D4E71DC3884D006DA4F6 /* Views */,
 			);
 			path = FindVC;
@@ -1221,6 +1229,7 @@
 				B515399F1DBE25EE00D839BA /* Assets.xcassets in Resources */,
 				920942AB1DC885130047864B /* GenearchTableViewCell.xib in Resources */,
 				92FBF7991DDABF5000A3F808 /* GrowLogDetailViewController.xib in Resources */,
+				92A62DF51DE445C6006D93F3 /* FindDetailViewController.xib in Resources */,
 				9209429C1DC8835F0047864B /* UserViewController.xib in Resources */,
 				92C3D9CB1DE2D1BA00C823DD /* CollectViewController.xib in Resources */,
 			);
@@ -1372,6 +1381,7 @@
 				B5153A711DBE295700D839BA /* SDWebImageDownloaderOperation.m in Sources */,
 				B5153A561DBE295700D839BA /* BNavigationController.m in Sources */,
 				B5153A921DBE295700D839BA /* ZLPhotoPickerGroupViewController.m in Sources */,
+				92A62DF41DE445C6006D93F3 /* FindDetailViewController.m in Sources */,
 				B5AE18411DC5AEEC00E45412 /* VerifyViewController.m in Sources */,
 				B5153A5B1DBE295700D839BA /* NSString+UIColor.m in Sources */,
 				B5153A6C1DBE295700D839BA /* NSData+ImageContentType.m in Sources */,

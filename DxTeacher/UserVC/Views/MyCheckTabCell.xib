@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="60"/>
+                <frame key="frameInset" width="320" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ue-lM-hRf">
@@ -66,7 +66,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUW-79-NIl">
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="dg4-xF-D9K"/>
+                            <constraint firstAttribute="height" constant="21" id="WV2-BJ-u29"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -75,19 +75,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="R3J-Fw-xCu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="Ji0-7Y-BPF"/>
-                    <constraint firstItem="DUW-79-NIl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="KqP-JP-Vda"/>
+                    <constraint firstItem="DUW-79-NIl" firstAttribute="leading" secondItem="7Mq-AB-z2J" secondAttribute="trailing" constant="-4.5" id="OPO-0i-iAD"/>
                     <constraint firstAttribute="trailing" secondItem="R3J-Fw-xCu" secondAttribute="trailing" constant="28" id="OQD-9F-a8A"/>
                     <constraint firstItem="7Mq-AB-z2J" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="PLY-XI-SLB"/>
                     <constraint firstItem="udP-Ld-VNt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Vmb-B3-v3J"/>
                     <constraint firstItem="3KS-DF-9eE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="YpM-F5-6cL"/>
+                    <constraint firstItem="0xs-Gi-GvA" firstAttribute="leading" secondItem="R3J-Fw-xCu" secondAttribute="trailing" constant="-6" id="ctD-Xs-Osx"/>
                     <constraint firstItem="3KS-DF-9eE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="75" id="gzh-ih-PGv"/>
                     <constraint firstItem="0xs-Gi-GvA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="k87-DS-hHO"/>
-                    <constraint firstItem="DUW-79-NIl" firstAttribute="leading" secondItem="3KS-DF-9eE" secondAttribute="trailing" constant="85" id="m2P-fo-dt6"/>
                     <constraint firstItem="2Ue-lM-hRf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="n7f-i8-LKT"/>
                     <constraint firstItem="udP-Ld-VNt" firstAttribute="top" secondItem="2Ue-lM-hRf" secondAttribute="bottom" constant="4" id="ooD-l2-Z2i"/>
                     <constraint firstItem="2Ue-lM-hRf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="orm-rS-gTl"/>
-                    <constraint firstItem="0xs-Gi-GvA" firstAttribute="leading" secondItem="DUW-79-NIl" secondAttribute="trailing" constant="100" id="tsU-vE-tiA"/>
                     <constraint firstItem="7Mq-AB-z2J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="xtm-4l-icd"/>
+                    <constraint firstItem="DUW-79-NIl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="yQq-I9-yAo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
