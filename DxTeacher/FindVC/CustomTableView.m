@@ -12,6 +12,7 @@
 #import "ItemVIewsHeight.h"
 #import "FindTableViewCell.h"
 #import "FMVideoTableViewCell.h"
+#import "FindDetailViewController.h"
 
 @interface CustomTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -144,7 +145,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
         }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         cell.viewController = self.homeVC;
         cell.findInfo = self.dataSource[indexPath.row];
         cell.btnVideoImg.tag = indexPath.row;
@@ -157,7 +158,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
         }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
         cell.info = self.dataSource[indexPath.row];
         cell.collect.tag = indexPath.row;
         [cell.collect addTarget:self action:@selector(didSelectCollect:) forControlEvents:UIControlEventTouchUpInside];
@@ -214,17 +215,13 @@
     
     
 }
-- (void)didDetailAction:(UIButton *)btn{
-
-    
-//    DetailViewController *detailVC = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-//    detailVC.info = self.dataSource[btn.tag];
-//    [self.homeVC.navigationController pushViewController:detailVC animated:YES];
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FindDetailViewController *detailVC = [[FindDetailViewController alloc] initWithNibName:@"FindDetailViewController" bundle:nil];
+    detailVC.cid = [self.dataSource[indexPath.row][@"id"] integerValue];
+    [self.homeVC.navigationController pushViewController:detailVC animated:YES];
 }
 
 

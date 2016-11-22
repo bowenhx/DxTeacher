@@ -164,6 +164,8 @@
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
 		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
 		B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */; };
+		B5C1E1B61DE47DB50019D21F /* FindDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C1E1B41DE47DB50019D21F /* FindDetailTableViewCell.m */; };
+		B5C1E1B71DE47DB50019D21F /* FindDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C1E1B51DE47DB50019D21F /* FindDetailTableViewCell.xib */; };
 		B5F649CB1DE3246300D7A376 /* IDImagePickerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F649CA1DE3246300D7A376 /* IDImagePickerCoordinator.m */; };
 		B5F649CD1DE3254300D7A376 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649CC1DE3254300D7A376 /* AVFoundation.framework */; };
 		B5F649CF1DE3258400D7A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F649CE1DE3258400D7A376 /* Foundation.framework */; };
@@ -461,6 +463,9 @@
 		B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
 		B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVIewsHeight.m; sourceTree = "<group>"; };
+		B5C1E1B31DE47DB50019D21F /* FindDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindDetailTableViewCell.h; sourceTree = "<group>"; };
+		B5C1E1B41DE47DB50019D21F /* FindDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindDetailTableViewCell.m; sourceTree = "<group>"; };
+		B5C1E1B51DE47DB50019D21F /* FindDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindDetailTableViewCell.xib; sourceTree = "<group>"; };
 		B5F649C91DE3246300D7A376 /* IDImagePickerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDImagePickerCoordinator.h; path = DxTeacher/IDImagePickerCoordinator.h; sourceTree = "<group>"; };
 		B5F649CA1DE3246300D7A376 /* IDImagePickerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDImagePickerCoordinator.m; path = DxTeacher/IDImagePickerCoordinator.m; sourceTree = "<group>"; };
 		B5F649CC1DE3254300D7A376 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1091,6 +1096,9 @@
 				B599D4ED1DC397C6006DA4F6 /* FindTableViewCell.h */,
 				B599D4EE1DC397C6006DA4F6 /* FindTableViewCell.m */,
 				B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */,
+				B5C1E1B31DE47DB50019D21F /* FindDetailTableViewCell.h */,
+				B5C1E1B41DE47DB50019D21F /* FindDetailTableViewCell.m */,
+				B5C1E1B51DE47DB50019D21F /* FindDetailTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1169,6 +1177,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = RCNCA68CS6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1222,6 +1235,7 @@
 				B521800C1DE1CFBA00A0B31F /* NewUseDrugViewController.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
+				B5C1E1B71DE47DB50019D21F /* FindDetailTableViewCell.xib in Resources */,
 				9209429A1DC8835F0047864B /* AddressViewController.xib in Resources */,
 				B509C2301DC445C3001115BB /* CoursewareViewController.xib in Resources */,
 				B5AE183D1DC5968700E45412 /* FMVideoTableViewCell.xib in Resources */,
@@ -1325,6 +1339,7 @@
 				92DD8D851DBF3AC900AEF307 /* ForgetPwViewController.m in Sources */,
 				B5153A661DBE295700D839BA /* ANet.m in Sources */,
 				B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */,
+				B5C1E1B61DE47DB50019D21F /* FindDetailTableViewCell.m in Sources */,
 				B5153A6E1DBE295700D839BA /* SDWebImageCompat.m in Sources */,
 				92DD8D881DBF3AC900AEF307 /* LoginViewController.m in Sources */,
 				B509C2331DC46F68001115BB /* CustomTableView.m in Sources */,

@@ -10,7 +10,6 @@
 #import "AppDefine.h"
 #import "CustomTableView.h"
 #import "CustomItemView.h"
-
 @interface CoursewareViewController ()
 @property (weak, nonatomic) IBOutlet CustomItemView *customView;
 
@@ -48,14 +47,13 @@
     CustomTableView *iView = _itemViews[0];
     iView.page = 1;
     iView.index = [items[0][@"id"] integerValue];
+
     
     //item 变化数据加载处理
     _customView.itemsEcentAction = ^(NSInteger index){
         CustomTableView *iView = _itemViews[index];
         iView.page = 1;
         iView.index = [items[index][@"id"] integerValue];
-        
-        
         
     };
 }
