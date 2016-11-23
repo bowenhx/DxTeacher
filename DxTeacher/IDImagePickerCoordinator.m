@@ -1,9 +1,9 @@
 //
 //  IDImagePickerCoordinator.m
-//  VideoCaptureDemo
+//  DxManager
 //
-//  Created by Adriaan Stellingwerff on 1/04/2015.
-//  Copyright (c) 2015 Infoding. All rights reserved.
+//  Created by ligb on 16/10/8.
+//  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
 
 #import "IDImagePickerCoordinator.h"
