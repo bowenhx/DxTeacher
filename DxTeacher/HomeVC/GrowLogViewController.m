@@ -9,6 +9,7 @@
 #import "GrowLogViewController.h"
 #import "ItemViewBtn.h"
 #import "GrowLogDetailViewController.h"
+#import "UIButton+WebCache.h"
 
 @interface GrowLogViewController ()
 {
@@ -34,6 +35,10 @@
         ItemViewBtn *iView = [[ItemViewBtn alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, btn_wh, btn_wh)];
         iView.item = array[i];
         iView.tag = i;
+        NSURL *avatar = [NSString getPathByAppendString:array[i][@"avatar"]];
+        if (avatar) {
+            [iView.itemBtn sd_setBackgroundImageWithURL:avatar forState:0];
+        }
         [self.view addSubview:iView];
         iView.itemBtn.tag = i;
         [iView.itemBtn addTarget:self action:@selector(didSelectIndex:) forControlEvents:UIControlEventTouchUpInside];

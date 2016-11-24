@@ -58,6 +58,7 @@
 //    _itemBtn.layer.borderWidth = 1;
 //    _itemBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //    _itemBtn.layer.cornerRadius = 6;
+
     [self addSubview:_itemBtn];
     
     
